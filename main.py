@@ -9,7 +9,7 @@ import socketserver
 import time
 import mimetypes
 
-from detector import ALL_CHECKS, detect
+from detector import ALL_CHECKS, detect, analyze_password, analyze_email
 from data.phishing_types import PHISHING_TYPES
 from data.quiz import QUIZ
 from data.flashcards import FLASHCARDS
@@ -17,6 +17,7 @@ from data.examples import EXAMPLES
 from data.future import FUTURE_MODULES
 from data.glossary import GLOSSARY_CATEGORIES, GLOSSARY_TERMS
 from data.timeline import TIMELINE, get_timeline_stats
+from data.course import COURSE
 
 PORT = 8080
 VERSION = "3.3.0"
@@ -84,6 +85,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             return self._json(FUTURE_MODULES)
         if p == "/api/glossary":
             return self._json({"categories": GLOSSARY_CATEGORIES, "terms": GLOSSARY_TERMS})
+        if p == "/api/course":
+            return self._json(COURSE)
         if p == "/api/timeline":
             return self._json({"events": TIMELINE, "stats": get_timeline_stats()})
 
@@ -93,6 +96,22 @@ class Handler(http.server.BaseHTTPRequestHandler):
         return self._send(404, "text/plain", "Not found")
 
     def do_POST(self):
+        if self.path == "/api/password":
+            length = int(self.headers.get("Content-Length", 0))
+            try:
+                payload = json.loads(self.rfile.read(length).decode("utf-8"))
+                pwd = payload.get("password", "")
+            except Exception:
+                return self._json({"error": "bad request"}, 400)
+            return self._json(analyze_password(pwd))
+        if self.path == "/api/email-analyze":
+            length = int(self.headers.get("Content-Length", 0))
+            try:
+                payload = json.loads(self.rfile.read(length).decode("utf-8"))
+                text = payload.get("text", "")
+            except Exception:
+                return self._json({"error": "bad request"}, 400)
+            return self._json(analyze_email(text))
         if self.path == "/api/detect":
             length = int(self.headers.get("Content-Length", 0))
             try:

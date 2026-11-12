@@ -1,0 +1,754 @@
+[
+  {
+    "q": "Email Phishing",
+    "a": "Mass emails jo trusted brand (bank, PayPal, Amazon) jaise dikhte hain. Urgency + verify link ka combination."
+  },
+  {
+    "q": "Spear Phishing",
+    "a": "Targeted, personalized. Attacker pehle victim ke baare me OSINT (LinkedIn, social media) karta hai."
+  },
+  {
+    "q": "Whaling",
+    "a": "CEO/CFO/Board members ko target karna. Senior execs ke liye special spear phishing."
+  },
+  {
+    "q": "Smishing",
+    "a": "SMS + Phishing. Fake SMS me bank alert, parcel, KYC, lottery bait. Shortened URLs common."
+  },
+  {
+    "q": "Vishing",
+    "a": "Voice + Phishing. Phone call pe bank/police/Microsoft banta. OTP maangta ya remote access install."
+  },
+  {
+    "q": "Clone Phishing",
+    "a": "Asli email ka copy — sender, subject, formatting same. Link/attachment malicious se replace."
+  },
+  {
+    "q": "HTTPS Phishing",
+    "a": "HTTPS + lock icon ≠ safe. Free SSL certs se hackers bhi HTTPS use karte. Domain verify karo."
+  },
+  {
+    "q": "Popup Phishing",
+    "a": "Browser me achanak virus alert popup. Toll-free number deta. Microsoft kabhi popup se alert nahi bhejta."
+  },
+  {
+    "q": "Angler Phishing",
+    "a": "Social media pe fake 'support' account. Complaint tweet pe instant reply. DM me credentials maangta."
+  },
+  {
+    "q": "BEC",
+    "a": "Business Email Compromise. Company email impersonate. Fake invoice / urgent wire transfer."
+  },
+  {
+    "q": "Pharming",
+    "a": "DNS hijack. URL sahi (paypal.com) par site nakli. DNSSEC se bachao."
+  },
+  {
+    "q": "Evil Twin",
+    "a": "Fake WiFi hotspot asli jaisa naam. 'Starbucks_Free_WiFi'. Public WiFi pe VPN zaroori."
+  },
+  {
+    "q": "Watering Hole",
+    "a": "Target group ki common website compromise. Visitors ko malware milta."
+  },
+  {
+    "q": "Tabnabbing",
+    "a": "Inactive tab ka content change — fake 'session expired'. Favicon + title bhi change."
+  },
+  {
+    "q": "Pretexting",
+    "a": "Fake story — IT support, police, insurance. Believable backstory se info nikalna."
+  },
+  {
+    "q": "AI-Generated Phishing",
+    "a": "ChatGPT/Claude se perfect grammar emails. Purane spelling mistakes wala 'tell' ab nahi."
+  },
+  {
+    "q": "Deepfake Phishing",
+    "a": "AI video/audio clone. CFO video call, mom voice. Code word rakho, out-of-band verify."
+  },
+  {
+    "q": "QR Phishing (Quishing)",
+    "a": "Malicious QR. Restaurant menu, parking meter, wedding card. Scan se pehle URL preview."
+  },
+  {
+    "q": "OAuth Consent Phishing",
+    "a": "Fake app ko 'Allow' karwa ke token chori. Password nahi chahiye. Permissions padho."
+  },
+  {
+    "q": "Supply Chain Phishing",
+    "a": "Trusted software update me malware (SolarWinds, 3CX). Build process compromise."
+  },
+  {
+    "q": "Calendar Phishing",
+    "a": "Fake meeting invite — 'Salary Revision', 'Bonus'. Auto-accepted. Description me link."
+  },
+  {
+    "q": "Voicemail Phishing",
+    "a": "Fake voicemail notification. Attachment vm.wav.exe (double extension) ya transcript me link."
+  },
+  {
+    "q": "SMS Sender ID Spoofing",
+    "a": "Sender ID 'HDFCBK' spoof. Asli thread me message — trust build hoti."
+  },
+  {
+    "q": "Reels Phishing",
+    "a": "Instagram/YouTube Reels bio me phishing link. 'Free Netflix', 'Earn ₹5000/day' bait."
+  },
+  {
+    "q": "Crypto Phishing",
+    "a": "Fake wallet connect, seed phrase maangna, fake NFT mint. Wallet drainer kits $500 me."
+  },
+  {
+    "q": "MFA Fatigue",
+    "a": "Baar-baar 2FA push. Victim annoyed hoke approve. Number matching se bachao."
+  },
+  {
+    "q": "Typosquatting",
+    "a": "Typo-based fake domain. gooogle.com, amaz0n.com. Edit distance 1-2."
+  },
+  {
+    "q": "Homograph Attack",
+    "a": "Lookalike chars. Cyrillic 'а' in 'аpple', number '0' in 'faceb00k'."
+  },
+  {
+    "q": "Punycode",
+    "a": "xn-- prefix. International chars → ASCII. Homograph attack ke liye use."
+  },
+  {
+    "q": "2FA Types",
+    "a": "Hardware key > Authenticator app > Push > SMS > Email OTP. Hardware key best."
+  },
+  {
+    "q": "HTTPS lock icon",
+    "a": "Sirf encryption batata hai. Free SSL se hackers bhi lagate. Domain verify karo, lock icon pe trust mat karo."
+  },
+  {
+    "q": "URL Anatomy",
+    "a": "https://sub.domain.tld/path. Asli domain hamesha aakhri 2 parts. Baaki sab subdomain ya path ho sakta hai."
+  },
+  {
+    "q": "Subdomain trick",
+    "a": "instagram.secure-login.xyz — brand URL me hai par asli domain 'secure-login.xyz'. Classic phishing."
+  },
+  {
+    "q": "Homograph attack",
+    "a": "Lookalike characters. Cyrillic 'a' in apple, number 0 in faceb00k. Visually same dikhta hai."
+  },
+  {
+    "q": "Typosquatting",
+    "a": "Typo-based fake domain. gooogle.com, amaz0n.com, paypa1.com. Edit distance 1-2 rakhte hain."
+  },
+  {
+    "q": "Punycode",
+    "a": "xn-- prefix. International characters ko ASCII me encode. Homograph attack ke liye use."
+  },
+  {
+    "q": "Cheap TLD",
+    "a": ".tk, .ml, .ga, .cf, .gq, .xyz free milte hain. 90% phishing inhi TLDs pe."
+  },
+  {
+    "q": "URL shortener",
+    "a": "bit.ly, tinyurl.com. Asli destination chhupa. Hover ya unshorten karo pehle."
+  },
+  {
+    "q": "@ symbol trick",
+    "a": "http://google.com@evil.com — browser @ ke pehle ignore karta, evil.com khulta hai."
+  },
+  {
+    "q": "IP-based URL",
+    "a": "http://192.168.1.1/login — domain nahi, IP. Legit sites aise nahi."
+  },
+  {
+    "q": "Double extension",
+    "a": "file.pdf.exe — PDF jaisa dikhta, executable hai. Windows me extension hide hota default."
+  },
+  {
+    "q": "Suspicious extension",
+    "a": ".exe, .scr, .bat, .cmd, .js, .vbs, .jar, .msi, .apk — direct download mat karo."
+  },
+  {
+    "q": "Open redirect",
+    "a": "?redirect=http://evil.com — login ke baad kahin aur bhejta. OAuth attacks me common."
+  },
+  {
+    "q": "Data URI",
+    "a": "data:text/html,<script> — inline content. Phishing pages bina hosting chalate."
+  },
+  {
+    "q": "JavaScript URI",
+    "a": "javascript:alert(1) — direct code execute. Legacy browsers me XSS."
+  },
+  {
+    "q": "Percent encoding",
+    "a": "%2E%2E%2F type sequences. URL obfuscation technique, phishing me common."
+  },
+  {
+    "q": "Email spoofing",
+    "a": "Sender name dikhta real, address fake. Always actual email address dekho."
+  },
+  {
+    "q": "Reply-To mismatch",
+    "a": "From: ceo@company.com, Reply-To: attacker@evil.com. Attacker ke paas reply jaata."
+  },
+  {
+    "q": "Display name spoofing",
+    "a": "'Amazon Security' dikhta hai, actual address security@amaz0n-verify.tk hai."
+  },
+  {
+    "q": "SPF fail",
+    "a": "Sender Policy Framework. Fail matlab domain ne email authorize nahi kiya. Spoofed."
+  },
+  {
+    "q": "DKIM fail",
+    "a": "DomainKeys. Email signature verify nahi hui. Tampered ya spoofed."
+  },
+  {
+    "q": "DMARC policy",
+    "a": "SPF + DKIM + alignment. Reject policy best — spoofed emails block."
+  },
+  {
+    "q": "Email headers",
+    "a": "Gmail me 3-dot menu → Show original. Full headers me path trace karo."
+  },
+  {
+    "q": "Received chain",
+    "a": "Top se bottom padho. Latest hop sabse upar. Har server add karta hai."
+  },
+  {
+    "q": "Attachment types",
+    "a": "ZIP, RAR, ISO, IMG files me malware chhupa ho sakta. Password-protected ZIP AV bypass."
+  },
+  {
+    "q": "Macro malware",
+    "a": "Office file me VBA macro. 'Enable Content' click se execute hota. Never enable."
+  },
+  {
+    "q": "Emotet",
+    "a": "Malware-as-a-Service. Phishing email + malicious attachment. Botnet me convert karta."
+  },
+  {
+    "q": "TrickBot",
+    "a": "Banking trojan. Emotet ke saath aata. Credentials + screen capture."
+  },
+  {
+    "q": "Ransomware",
+    "a": "Files encrypt + ransom demand. Phishing common entry. Backups + offline storage defense."
+  },
+  {
+    "q": "RAT (Remote Access Trojan)",
+    "a": "Full remote control. Files access, screen watch, keystroke log, camera access."
+  },
+  {
+    "q": "Keylogger",
+    "a": "Keystrokes record karta. Software ya hardware. Passwords capture."
+  },
+  {
+    "q": "Rootkit",
+    "a": "OS level hide. Detection mushkil. Full reinstall sometimes needed."
+  },
+  {
+    "q": "Botnet",
+    "a": "Infected devices ka network. DDoS, spam, crypto mining ke liye."
+  },
+  {
+    "q": "C2 server",
+    "a": "Command & Control. Malware phone home karta. Traffic block = bot dead."
+  },
+  {
+    "q": "Zero-day",
+    "a": "Unknown vulnerability. Patch nahi hai. Attackers ke paas exploit."
+  },
+  {
+    "q": "Exploit kit",
+    "a": "Automated attack toolkit. Browser scan + exploit + malware install."
+  },
+  {
+    "q": "Drive-by download",
+    "a": "Site visit pe automatic malware. No click needed. Browser vulnerable ho."
+  },
+  {
+    "q": "Watering hole",
+    "a": "Target group ki common website infect. Wait karo, victim aayega."
+  },
+  {
+    "q": "Supply chain",
+    "a": "Trusted vendor compromise. SolarWinds, 3CX, npm packages. Automatic update se spread."
+  },
+  {
+    "q": "Adversary-in-the-middle",
+    "a": "AiTM. Reverse proxy se session cookie chori. MFA bypass possible."
+  },
+  {
+    "q": "Session hijacking",
+    "a": "Cookie steal se account access. HTTPS + Secure flag + HttpOnly help."
+  },
+  {
+    "q": "CSRF",
+    "a": "Cross-Site Request Forgery. Site pe unauthorized action. Token-based defense."
+  },
+  {
+    "q": "XSS",
+    "a": "Cross-Site Scripting. Malicious JS inject. Cookies, keystrokes target."
+  },
+  {
+    "q": "SQL injection",
+    "a": "Database query me malicious input. Data leak, auth bypass."
+  },
+  {
+    "q": "Clickjacking",
+    "a": "Invisible iframe overlay. Fake UI pe click karwana. X-Frame-Options defend."
+  },
+  {
+    "q": "DNS spoofing",
+    "a": "Fake DNS response. URL sahi, IP attacker. DNSSEC protect."
+  },
+  {
+    "q": "Pharming",
+    "a": "DNS hijack attack. User ke system/router pe. URL sahi, site fake."
+  },
+  {
+    "q": "Evil twin WiFi",
+    "a": "Same naam WiFi hotspot. Attacker traffic sniff. Public WiFi pe VPN mandatory."
+  },
+  {
+    "q": "Rogue AP",
+    "a": "Unauthorized access point. Corporate network me inject."
+  },
+  {
+    "q": "Juice jacking",
+    "a": "Public USB charger se malware. USB data lines se attack."
+  },
+  {
+    "q": "Bluesnarfing",
+    "a": "Bluetooth data theft. Pairing exploit. Bluetooth off when not needed."
+  },
+  {
+    "q": "Bluejacking",
+    "a": "Bluetooth spam messages. Unsolicited. Annoying but low risk."
+  },
+  {
+    "q": "SIM swap",
+    "a": "Phone number attacker SIM pe port. 2FA SMS intercept. Carrier PIN help."
+  },
+  {
+    "q": "SS7 attack",
+    "a": "Telecom protocol exploit. SMS/calls intercept. Government-level attack."
+  },
+  {
+    "q": "Caller ID spoofing",
+    "a": "Fake number display. Vishing ke liye. Callback karo official number pe."
+  },
+  {
+    "q": "Number spoofing",
+    "a": "SMS sender ID fake. 'HDFCBK' dikhta, actual attacker. SMS pe trust mat karo."
+  },
+  {
+    "q": "2FA fatigue",
+    "a": "Baar-baar push notifications. Victim approve kar deta tired hokar. Number matching defend."
+  },
+  {
+    "q": "OTP phishing",
+    "a": "Attacker OTP maangta 'verify' ke liye. Bank NEVER OTP maangta."
+  },
+  {
+    "q": "Password spraying",
+    "a": "Common passwords many accounts pe. Lockout avoid. Long passwords defend."
+  },
+  {
+    "q": "Credential stuffing",
+    "a": "Leaked credentials reuse. Ek site leak = many accounts. Password manager + unique."
+  },
+  {
+    "q": "Brute force",
+    "a": "Every password try. Long + complex se defend. Account lockout."
+  },
+  {
+    "q": "Dictionary attack",
+    "a": "Wordlist based. Common passwords pehle. Passphrase defend."
+  },
+  {
+    "q": "Rainbow table",
+    "a": "Precomputed hash lookup. Salt se defend. bcrypt/argon2 use."
+  },
+  {
+    "q": "Hash vs encryption",
+    "a": "Hash = one-way. Encryption = reversible. Password hash karo, encrypt nahi."
+  },
+  {
+    "q": "Salt",
+    "a": "Random data password ke saath hash me. Rainbow table defeat."
+  },
+  {
+    "q": "bcrypt",
+    "a": "Adaptive password hashing. Slow by design. Recommended."
+  },
+  {
+    "q": "Argon2",
+    "a": "Modern password hashing. Memory-hard. bcrypt alternative."
+  },
+  {
+    "q": "Password manager",
+    "a": "Unique passwords + domain-bound autofill. Bitwarden, 1Password, KeePass."
+  },
+  {
+    "q": "Master password",
+    "a": "Password manager ka password. Long passphrase + 2FA. Kabhi share nahi."
+  },
+  {
+    "q": "Passphrase",
+    "a": "4+ random words. 'Correct-Horse-Battery-Staple'. Long + memorable."
+  },
+  {
+    "q": "Password rotation",
+    "a": "Regular change ab recommended nahi (NIST). Breach pe change karo."
+  },
+  {
+    "q": "Breach check",
+    "a": "haveibeenpwned.com. Email check karo. Password breach me to change."
+  },
+  {
+    "q": "2FA types",
+    "a": "Hardware key > Authenticator app > Push > SMS > Email. Hardware best."
+  },
+  {
+    "q": "TOTP",
+    "a": "Time-based OTP. 30 sec rotate. Google Authenticator, Authy, Aegis."
+  },
+  {
+    "q": "HOTP",
+    "a": "Counter-based OTP. Hardware tokens me use. TOTP zyada common."
+  },
+  {
+    "q": "FIDO2",
+    "a": "Fast Identity Online. Passwordless standard. WebAuthn + CTAP2."
+  },
+  {
+    "q": "WebAuthn",
+    "a": "W3C browser API. Passkeys + security keys support."
+  },
+  {
+    "q": "Passkey",
+    "a": "FIDO2 credential. Biometric + cryptography. Domain-bound. Phishing-proof."
+  },
+  {
+    "q": "YubiKey",
+    "a": "Hardware security key. USB + NFC. FIDO2, U2F, PIV."
+  },
+  {
+    "q": "Titan key",
+    "a": "Google's hardware key. FIDO2 compatible. Cheaper alternative."
+  },
+  {
+    "q": "Recovery codes",
+    "a": "2FA backup codes. Print karo, safe rakho. Offline store."
+  },
+  {
+    "q": "Backup email",
+    "a": "Recovery email. Secure rakho. Alag strong password + 2FA."
+  },
+  {
+    "q": "Recovery phone",
+    "a": "Backup number. SIM swap se bachao. Carrier PIN lock."
+  },
+  {
+    "q": "Password reset flow",
+    "a": "Email link common. Link domain verify karo. Token expire check."
+  },
+  {
+    "q": "Magic link",
+    "a": "Email me login link. Password nahi. Phishing me reuse hota."
+  },
+  {
+    "q": "SSO",
+    "a": "Single Sign-On. Ek login multiple apps. SAML, OAuth, OIDC."
+  },
+  {
+    "q": "SAML",
+    "a": "Security Assertion Markup Language. Enterprise SSO standard."
+  },
+  {
+    "q": "OIDC",
+    "a": "OpenID Connect. OAuth 2.0 based identity layer. Google, Microsoft use."
+  },
+  {
+    "q": "OAuth 2.0",
+    "a": "Authorization framework. Third-party access. Consent phishing risk."
+  },
+  {
+    "q": "Consent phishing",
+    "a": "Fake app ko Allow karwa ke token chori. Password nahi chahiye."
+  },
+  {
+    "q": "Token theft",
+    "a": "OAuth/SSO token chori. Session hijack. Password change bhi kaam nahi."
+  },
+  {
+    "q": "JWT",
+    "a": "JSON Web Token. Stateless auth. Signature verify important."
+  },
+  {
+    "q": "JWT 'none' algorithm",
+    "a": "Attacker sig remove. Server accept kare to bypass. Always whitelist algorithms."
+  },
+  {
+    "q": "Session token",
+    "a": "Cookie based session. HttpOnly, Secure, SameSite flags."
+  },
+  {
+    "q": "Cookie flags",
+    "a": "Secure (HTTPS only), HttpOnly (JS no access), SameSite (CSRF protect)."
+  },
+  {
+    "q": "CORS",
+    "a": "Cross-Origin Resource Sharing. Misconfigured = data leak."
+  },
+  {
+    "q": "CSP",
+    "a": "Content Security Policy. XSS defense. Header me define."
+  },
+  {
+    "q": "HSTS",
+    "a": "HTTP Strict Transport Security. Force HTTPS. Downgrade attack protect."
+  },
+  {
+    "q": "Certificate pinning",
+    "a": "App sirf specific cert accept. MITM rokta. Mobile apps me common."
+  },
+  {
+    "q": "Certificate transparency",
+    "a": "Public log of SSL certs. Fake certs detect. crt.sh pe check."
+  },
+  {
+    "q": "Penetration testing",
+    "a": "Authorized attack simulation. Written permission required. Ethical hacking."
+  },
+  {
+    "q": "Red team",
+    "a": "Offensive security. Attack simulation. Test defenses."
+  },
+  {
+    "q": "Blue team",
+    "a": "Defensive security. SOC, incident response, monitoring."
+  },
+  {
+    "q": "Purple team",
+    "a": "Red + blue collaboration. Knowledge sharing. Better defenses."
+  },
+  {
+    "q": "Bug bounty",
+    "a": "Vulnerability disclosure program. Ethical hackers ko reward. HackerOne, Bugcrowd."
+  },
+  {
+    "q": "Responsible disclosure",
+    "a": "Vulnerability report vendor ko. 90 days window common. Public after fix."
+  },
+  {
+    "q": "CVE",
+    "a": "Common Vulnerabilities and Exposures. Unique ID per vuln. cve.mitre.org."
+  },
+  {
+    "q": "CVSS",
+    "a": "Common Vulnerability Scoring System. 0-10 severity. 9+ critical."
+  },
+  {
+    "q": "CWE",
+    "a": "Common Weakness Enumeration. Weakness type. CWE-79 XSS, CWE-89 SQLi."
+  },
+  {
+    "q": "OWASP Top 10",
+    "a": "Web app top risks. Injection, broken auth, XSS, misconfig, etc."
+  },
+  {
+    "q": "OWASP LLM Top 10",
+    "a": "AI/LLM risks. Prompt injection #1. Insecure output, training data poisoning."
+  },
+  {
+    "q": "MITRE ATT&CK",
+    "a": "Adversary tactics + techniques knowledge base. Defense planning."
+  },
+  {
+    "q": "Cyber Kill Chain",
+    "a": "7 phases: Recon, Weaponize, Deliver, Exploit, Install, C2, Action."
+  },
+  {
+    "q": "Diamond Model",
+    "a": "Intrusion analysis. Adversary, capability, infrastructure, victim."
+  },
+  {
+    "q": "Threat hunting",
+    "a": "Proactive threat search. Assumption of breach. Hypotheses + data."
+  },
+  {
+    "q": "IOC",
+    "a": "Indicator of Compromise. Malicious IP, domain, hash, URL."
+  },
+  {
+    "q": "TTP",
+    "a": "Tactics, Techniques, Procedures. Behavior pattern. More durable than IOC."
+  },
+  {
+    "q": "IoA",
+    "a": "Indicator of Attack. Behavior based. More proactive than IOC."
+  },
+  {
+    "q": "SOC",
+    "a": "Security Operations Center. 24/7 monitoring. Tier 1/2/3 analysts."
+  },
+  {
+    "q": "SIEM",
+    "a": "Security Info & Event Management. Log aggregation. Splunk, Sentinel, QRadar."
+  },
+  {
+    "q": "SOAR",
+    "a": "Security Orchestration Automation Response. Playbook automation. Swimlane, Palo Alto."
+  },
+  {
+    "q": "EDR",
+    "a": "Endpoint Detection & Response. CrowdStrike, SentinelOne, Defender."
+  },
+  {
+    "q": "XDR",
+    "a": "Extended Detection & Response. Cross-platform. Endpoint + network + cloud."
+  },
+  {
+    "q": "MDR",
+    "a": "Managed Detection & Response. Outsourced SOC service."
+  },
+  {
+    "q": "NDR",
+    "a": "Network Detection & Response. Traffic analysis. Darktrace, Vectra."
+  },
+  {
+    "q": "DLP",
+    "a": "Data Loss Prevention. Sensitive data exfiltration block."
+  },
+  {
+    "q": "CASB",
+    "a": "Cloud Access Security Broker. Cloud app visibility + control."
+  },
+  {
+    "q": "SASE",
+    "a": "Secure Access Service Edge. Network + security convergence."
+  },
+  {
+    "q": "ZTNA",
+    "a": "Zero Trust Network Access. Per-app access. VPN alternative."
+  },
+  {
+    "q": "Zero Trust",
+    "a": "'Never trust, always verify'. Micro-segmentation. Continuous auth."
+  },
+  {
+    "q": "Microsegmentation",
+    "a": "Network chhote segments me. Lateral movement rok."
+  },
+  {
+    "q": "Least privilege",
+    "a": "Minimum access. JIT (Just-in-Time) access. Regular review."
+  },
+  {
+    "q": "PAM",
+    "a": "Privileged Access Management. Admin credentials vault. CyberArk, BeyondTrust."
+  },
+  {
+    "q": "IAM",
+    "a": "Identity & Access Management. Okta, Azure AD, Ping. Users + permissions."
+  },
+  {
+    "q": "RBAC",
+    "a": "Role-Based Access Control. Role se permissions. Easier management."
+  },
+  {
+    "q": "ABAC",
+    "a": "Attribute-Based Access Control. Fine-grained. Context aware."
+  },
+  {
+    "q": "MFA",
+    "a": "Multi-Factor Auth. Something you know + have + are. 2+ factors."
+  },
+  {
+    "q": "Adaptive MFA",
+    "a": "Context-based MFA. Risky login = extra factor. Safe = skip."
+  },
+  {
+    "q": "Conditional access",
+    "a": "Policy-based access. Device, location, risk based."
+  },
+  {
+    "q": "Device trust",
+    "a": "Device posture check. Patch level, AV, encryption. Access gate."
+  },
+  {
+    "q": "BYOD",
+    "a": "Bring Your Own Device. Personal device corporate access. MDM required."
+  },
+  {
+    "q": "MDM",
+    "a": "Mobile Device Management. Intune, Jamf. Corporate control."
+  },
+  {
+    "q": "Incident response",
+    "a": "IR phases: Prepare, Identify, Contain, Eradicate, Recover, Lessons."
+  },
+  {
+    "q": "Forensics",
+    "a": "Digital evidence collection. Chain of custody. Legal admissible."
+  },
+  {
+    "q": "Chain of custody",
+    "a": "Evidence tracking. Who, when, where. Legal requirement."
+  },
+  {
+    "q": "Tabletop exercise",
+    "a": "Team simulation. Incident response practice. No real impact."
+  },
+  {
+    "q": "Business continuity",
+    "a": "BCP. Operations continue during incident. Backup + DR plan."
+  },
+  {
+    "q": "Disaster recovery",
+    "a": "DR. Restore after major incident. RTO/RPO targets."
+  },
+  {
+    "q": "RTO",
+    "a": "Recovery Time Objective. Max downtime acceptable."
+  },
+  {
+    "q": "RPO",
+    "a": "Recovery Point Objective. Max data loss acceptable."
+  },
+  {
+    "q": "ISO 27001",
+    "a": "InfoSec management standard. Certification. Global recognition."
+  },
+  {
+    "q": "SOC 2",
+    "a": "Service Organization Control. Trust principles. SaaS companies use."
+  },
+  {
+    "q": "GDPR",
+    "a": "EU data protection. 72h breach notification. Heavy fines."
+  },
+  {
+    "q": "DPDP Act",
+    "a": "India's Digital Personal Data Protection. 2023. Consent-based."
+  },
+  {
+    "q": "HIPAA",
+    "a": "US healthcare data. PHI protection. Compliance mandatory."
+  },
+  {
+    "q": "PCI DSS",
+    "a": "Payment card industry. Card data protection. 12 requirements."
+  },
+  {
+    "q": "NIST CSF",
+    "a": "Cybersecurity Framework. Identify, Protect, Detect, Respond, Recover."
+  },
+  {
+    "q": "CIS Controls",
+    "a": "Center for Internet Security. 18 controls. Prioritized."
+  }
+]

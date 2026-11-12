@@ -1,0 +1,1307 @@
+{
+  "categories": [
+    {
+      "id": "phishing",
+      "name": "Phishing & Attacks",
+      "icon": "🎣"
+    },
+    {
+      "id": "auth",
+      "name": "Authentication",
+      "icon": "🔐"
+    },
+    {
+      "id": "email",
+      "name": "Email Security",
+      "icon": "📧"
+    },
+    {
+      "id": "web",
+      "name": "URL & Web",
+      "icon": "🌐"
+    },
+    {
+      "id": "ai",
+      "name": "AI & Modern",
+      "icon": "🤖"
+    },
+    {
+      "id": "network",
+      "name": "Network",
+      "icon": "📡"
+    },
+    {
+      "id": "crypto",
+      "name": "Crypto & Web3",
+      "icon": "₿"
+    },
+    {
+      "id": "malware",
+      "name": "Malware",
+      "icon": "🦠"
+    },
+    {
+      "id": "quantum",
+      "name": "Quantum",
+      "icon": "⚛️"
+    },
+    {
+      "id": "legal",
+      "name": "Legal & Compliance",
+      "icon": "⚖️"
+    },
+    {
+      "id": "general",
+      "name": "General Security",
+      "icon": "🛡️"
+    }
+  ],
+  "terms": [
+    {
+      "term": "Phishing",
+      "full": "Password + Fishing",
+      "cat": "phishing",
+      "eli10": "Jaise koi machhli pakadne ke liye chaara daalta hai — hacker fake email/website se 'chaara' daalta hai. Aap click karte ho → password ya paisa chori.",
+      "detail": "Social engineering attack jo fake communications se sensitive info chori karti hai. 3.4 billion emails/day. Attack vectors: email, SMS, voice, social media, QR codes. Defense: awareness + MFA + email filtering."
+    },
+    {
+      "term": "Email Phishing",
+      "full": "Email-Based Phishing",
+      "cat": "phishing",
+      "eli10": "Mass emails jo asli bank/company jaisi dikhti hain. Ek hi email hazaaron logon ko. Koi bhi click kare to credentials capture.",
+      "detail": "Classic phishing - mass distribution, brand impersonation, urgency + threat tactics. 90% of breaches start here. Defense: SPF/DKIM/DMARC, AI filters, user training."
+    },
+    {
+      "term": "Spear Phishing",
+      "full": "Targeted Phishing",
+      "cat": "phishing",
+      "eli10": "Ek specific insaan ko target karke personalized email. Hacker pehle LinkedIn pe research karta hai — aapke boss ka naam, projects, sab pata karke believable email bhejta.",
+      "detail": "Targeted attack with OSINT research. Higher success rate (70%+ vs 3% mass). Common targets: executives, IT admins, finance. Defense: out-of-band verification, link isolation."
+    },
+    {
+      "term": "Whaling",
+      "full": "Whale Phishing",
+      "cat": "phishing",
+      "eli10": "Bade machhli ka shikaar — CEO, CFO, Founder. Ye log paisa transfer kar sakte hain, isliye attackers unhe target karte. Bahut polished email, koi typo nahi.",
+      "detail": "Executive-level spear phishing. Targets C-suite, board members. Usually legal notices, wire transfers, acquisition docs. Losses avg $100k-$25M per case."
+    },
+    {
+      "term": "Smishing",
+      "full": "SMS Phishing",
+      "cat": "phishing",
+      "eli10": "SMS me fake bank alert, parcel delivery, KYC link. Mobile pe URL chhota hota, verify karna mushkil. Click → nakli site → OTP leak.",
+      "detail": "SMS + Phishing. Bulk SMS gateway se lakhon messages. Sender ID spoofing common (HDFCBK, SBIINB). Defense: don't click SMS links, use official app, report to 7726."
+    },
+    {
+      "term": "Vishing",
+      "full": "Voice Phishing",
+      "cat": "phishing",
+      "eli10": "Phone call pe dhokha. Caller 'SBI se bol raha hoon' kehta hai, OTP maangta hai. Ya 'Microsoft Support' bol ke remote access install karwata hai.",
+      "detail": "Voice-based social engineering. Caller ID spoofing makes number look real. IVR or human caller. Common: bank fraud alert, tech support, CBI/police, Amazon refund. Defense: never share OTP, callback on official number."
+    },
+    {
+      "term": "Clone Phishing",
+      "full": "Clone Email Attack",
+      "cat": "phishing",
+      "eli10": "Aapko pehle koi asli email aaya tha. Hacker usi email ko copy karke, sirf link ya attachment badal ke dobara bhejta hai — 'Updated version'. Aap trust karte ho.",
+      "detail": "Legitimate email duplicated with malicious modifications. Uses same thread for trust. Common: invoice follow-up, updated reports. Defense: verify attachments, check reply-to, out-of-band confirm."
+    },
+    {
+      "term": "HTTPS Phishing",
+      "full": "HTTPS-Based Phishing",
+      "cat": "phishing",
+      "eli10": "Log sochte hain 'lock icon hai = safe hai'. Galat! Free SSL certs se hacker bhi HTTPS site banate hain. Lock icon ≠ safe, domain dekho.",
+      "detail": "Since Let's Encrypt (2015), 80%+ phishing sites use HTTPS. Browser lock icon indicates encryption, NOT identity. Always verify domain."
+    },
+    {
+      "term": "Popup Phishing",
+      "full": "Browser Popup Phishing",
+      "cat": "phishing",
+      "eli10": "Achanak popup: 'Aapke computer me 5 virus hain! Call Microsoft 1-800...'. Scary sound + blinking. Close button kaam nahi karta. Number pe call karo to remote access maangte.",
+      "detail": "Malicious ad network or compromised site injects popups. Fake tech support scam. $1.5 billion/year industry. Defense: Task Manager force-close, popup blockers, never call."
+    },
+    {
+      "term": "Angler Phishing",
+      "full": "Social Media Support Phishing",
+      "cat": "phishing",
+      "eli10": "Aap Twitter pe @HDFCBank ko complaint karte ho. Ek fake handle turant reply karta hai 'DM me aao, help karte hain'. DM me OTP maangta hai.",
+      "detail": "Fake customer support accounts on social media. Target users complaining publicly. Also called 'social media phishing'. Defense: verify blue check + follower history, never share credentials in DM."
+    },
+    {
+      "term": "BEC",
+      "full": "Business Email Compromise",
+      "cat": "phishing",
+      "eli10": "Samjho aise: koi aapke boss jaisa email bhejta hai — 'urgent ₹50 lakh transfer karo, meeting me hoon'. Aap sochte ho boss hai, transfer kar dete ho. Actual me hacker tha.",
+      "detail": "Sophisticated scam targeting businesses. FBI: $50+ billion losses (2013-2023). Variants: CEO fraud, vendor invoice, W-2 theft, attorney impersonation. Defense: dual approval for wires, verbal verification, DMARC."
+    },
+    {
+      "term": "Pharming",
+      "full": "DNS-Based Phishing",
+      "cat": "phishing",
+      "eli10": "Aap 'paypal.com' type karte ho, URL bilkul sahi dikhta hai — par page nakli hai! Hacker ne DNS server hack kiya, aapka request nakli site pe redirect kar diya.",
+      "detail": "DNS hijacking redirects users to fake sites while URL looks correct. Via hosts file, router DNS, or ISP-level poisoning. Defense: DNSSEC, DNS over HTTPS, HTTPS certificate warnings."
+    },
+    {
+      "term": "Evil Twin",
+      "full": "Rogue WiFi Access Point",
+      "cat": "phishing",
+      "eli10": "Cafe me WiFi list me 'Starbucks_Free_WiFi' aur 'Starbucks_Free_WiFi_2' dikhte hain. Dusra hacker ka hai. Connect karo → saara data unka.",
+      "detail": "Attacker sets up WiFi with same SSID as legit hotspot. Users connect thinking it's real. Traffic sniffing, credential capture, MITM. Defense: verify WiFi name with staff, VPN on public WiFi."
+    },
+    {
+      "term": "Watering Hole",
+      "full": "Strategic Website Compromise",
+      "cat": "phishing",
+      "eli10": "Sher jungle me paani ke hole pe aata hai shikaar ke liye. Hacker ek website jo aap log visit karte ho usko infect karta hai — aap aate ho, malware milta.",
+      "detail": "Compromise a specific website frequented by target group. Drive-by download on visit. Example: Forbes (2017), defense news sites. Defense: browser/OS patched, EDR, adblock."
+    },
+    {
+      "term": "Tabnabbing",
+      "full": "Reverse Tabnabbing",
+      "cat": "phishing",
+      "eli10": "Aap ek tab kholte ho (Gmail). Dusre tab me jaate ho 5 min ke liye. Wapas aate ho → 'Session expired, login again'. Aap login karte ho → hacker ko.",
+      "detail": "Attacker page waits in background. When tab is inactive, replaces favicon + title + content with fake login. Aza Raskin (2010). Defense: close unused tabs, password manager domain check."
+    },
+    {
+      "term": "Pretexting",
+      "full": "Pretext-Based Attack",
+      "cat": "phishing",
+      "eli10": "Hacker ek fake story banata hai — 'Main IT department se hoon', 'Main police se hoon'. Story believable hoti hai to aap info de dete ho.",
+      "detail": "Social engineering via fabricated scenario. IT audit, insurance claim, police verification. Combines with vishing, email, in-person. Defense: out-of-band verify, never share passwords."
+    },
+    {
+      "term": "AI Phishing",
+      "full": "AI-Generated Phishing",
+      "cat": "phishing",
+      "eli10": "ChatGPT se perfect grammar, personalized email ban jaate hain. Purane phishing me spelling mistakes hoti thi — ab nahi. Detection mushkil ho gaya.",
+      "detail": "LLMs generate native-language, context-aware phishing. Bypass traditional filters. Scale: 1000+ variants per campaign. Defense: behavioral analysis, AI-powered email security."
+    },
+    {
+      "term": "Deepfake",
+      "full": "Deep Learning Fake",
+      "cat": "phishing",
+      "eli10": "AI se kisi ka face ya awaaz clone karke video call. Aapko lagta hai CEO/mom bol raha hai — actually AI hai. 3 second audio se clone ho jaati.",
+      "detail": "Generative AI synthesizes face/voice. Real-time possible. 2024 Arup $25M heist. Defense: code word, out-of-band callback, reverse video call."
+    },
+    {
+      "term": "Quishing",
+      "full": "QR Code Phishing",
+      "cat": "phishing",
+      "eli10": "Restaurant menu QR code pe sticker. Scan karo → nakli payment page → card details chori. Ya parking meter pe fake QR.",
+      "detail": "QR + Phishing. URL invisible in QR. Common: parking meters, restaurant menus, wedding cards, posters. 2023 US parking scam surge. Defense: preview URL before opening, use official apps."
+    },
+    {
+      "term": "OAuth Phishing",
+      "full": "OAuth Consent Phishing",
+      "cat": "phishing",
+      "eli10": "Fake app 'PDF Viewer' ko Allow karo → hacker ko aapke Gmail ka full access mil jaata, bina password ke. Kyunki aapne khud permission di.",
+      "detail": "Malicious OAuth app registers on Google/Microsoft. User grants permissions. Attacker gets access token. 2023 BEC campaigns. Defense: review permissions, revoke unused apps, understand consent screens."
+    },
+    {
+      "term": "Supply Chain Attack",
+      "full": "Supply Chain Compromise",
+      "cat": "phishing",
+      "eli10": "Hacker trusted software company ko hack karta hai. Fir uske updates me malware daal deta hai. Aap update karte ho → malware install. Email ki zaroorat nahi.",
+      "detail": "Compromise vendor software at source. SolarWinds (2020, 18k+ orgs), 3CX (2023), npm packages. Defense: verify sources, code signing, EDR, SBOM."
+    },
+    {
+      "term": "Calendar Phishing",
+      "full": "Calendar Invite Phishing",
+      "cat": "phishing",
+      "eli10": "Aapke calendar me achanak 'Salary Revision Meeting' aa jaata hai. Description me link. Click → fake HR portal → login credentials chori.",
+      "detail": "Auto-accepted calendar invites with malicious links. Emotional bait: salary, bonus, urgent meetings. Google added auto-add disable (2023). Defense: turn off auto-accept, verify organizer."
+    },
+    {
+      "term": "Voicemail Phishing",
+      "full": "Voicemail Notification Phishing",
+      "cat": "phishing",
+      "eli10": "Email: 'Aapke liye voicemail hai, sun lo'. Attachment 'vm.wav.exe' (double extension). Click → malware install.",
+      "detail": "Fake voicemail notification with malware attachment or phishing transcript. Common Office 365 campaigns (2019). Defense: verify sender domain, never download .wav.exe."
+    },
+    {
+      "term": "SMS Spoofing",
+      "full": "SMS Sender ID Spoofing",
+      "cat": "phishing",
+      "eli10": "SMS me sender 'HDFCBK' dikhta hai — asli bank jaisa lagta hai. Actual me hacker ne sender ID spoof kiya. Same thread me message aata hai.",
+      "detail": "Sender ID spoofing makes fake SMS appear in legitimate thread. India SMS gateway abuse. TRAI regulations tightened 2023-2024 but attacks continue. Defense: verify via bank app, don't trust sender ID."
+    },
+    {
+      "term": "Reels Phishing",
+      "full": "Short Video Platform Phishing",
+      "cat": "phishing",
+      "eli10": "Instagram Reel: 'Free Netflix Premium trick!'. Bio link click karo → nakli login page. Ya 'Earn ₹5000/day' job scam.",
+      "detail": "Short video platforms (Instagram Reels, YouTube Shorts, TikTok) as phishing vector. Viral bait videos. Bio link redirects. 2023 surge. Defense: verify bio links, skepticism for free offers."
+    },
+    {
+      "term": "Crypto Phishing",
+      "full": "Cryptocurrency Phishing",
+      "cat": "phishing",
+      "eli10": "Fake MetaMask 'urgent update'. Click → 'Connect Wallet' → 'Sign' → wallet drained. Crypto irreversible hai, paise wapas nahi aate.",
+      "detail": "Fake crypto sites, wallet connect, NFT mint, airdrop. Malicious smart contract approvals. $1B+/year losses. Defense: never share seed phrase, verify URLs, hardware wallet, revoke approvals."
+    },
+    {
+      "term": "MFA Fatigue",
+      "full": "MFA Push Notification Fatigue",
+      "cat": "phishing",
+      "eli10": "Hacker password le chuka hai. Ab raat 2 baje baar-baar 2FA push bhejta hai. Aap tired hoke 'Approve' daba dete ho. Bas, andar.",
+      "detail": "Push bombing attack. Victim annoyed/tired approves. Uber (2022), Cisco (2022) breaches. Defense: number matching, password change on flood, MFA prompt ignore."
+    },
+    {
+      "term": "Conversation Hijacking",
+      "full": "Email Thread Hijacking",
+      "cat": "phishing",
+      "eli10": "Aap kisi se email thread me baat kar rahe ho. Hacker account compromise karta hai aur same thread me reply karta hai — asli lagta hai. Bank details badal deta.",
+      "detail": "Compromise email account, use existing threads for BEC. High trust because history exists. Defense: verify bank changes verbally, monitor inbox rules, anomaly detection."
+    },
+    {
+      "term": "Search Engine Phishing",
+      "full": "SEO Poisoning / Search Phishing",
+      "cat": "phishing",
+      "eli10": "Google me search karo 'WhatsApp download' → top result fake site ho sakta hai. Ad ya SEO se top pe laate hain. Click → malware ya fake login.",
+      "detail": "Malicious sites rank via SEO or paid ads. Typosquatting domains. Common targets: software downloads, banking, streaming. Defense: bookmark official sites, verify domain."
+    },
+    {
+      "term": "Typosquatting",
+      "full": "URL Typosquatting",
+      "cat": "phishing",
+      "eli10": "Domain me chhota typo — gooogle.com (extra o), amaz0n.com (zero for o). Log dhyaan nahi dete, click kar dete hain.",
+      "detail": "Register domains resembling popular brands. Edit distance 1-2. Detection via Levenshtein distance. Defense: type URLs manually, bookmark, password manager domain check."
+    },
+    {
+      "term": "Homograph Attack",
+      "full": "Homograph / IDN Homograph",
+      "cat": "phishing",
+      "eli10": "Cyrillic 'а' aur Latin 'a' same dikhte hain. 'аpple.com' me Cyrillic a hai — visually same, browser me different domain.",
+      "detail": "Unicode lookalike characters. Punycode encoded (xn--). International domain names. Defense: browsers show punycode, verify certificate, use bookmark."
+    },
+    {
+      "term": "Punycode",
+      "full": "Punycode Encoding",
+      "cat": "phishing",
+      "eli10": "International characters ko ASCII me convert karta. 'xn--' prefix. Homograph attack ka tool.",
+      "detail": "RFC 3492 encoding for IDN. xn-- prefix indicates. Example: xn--pypal-4ve.com → раypal.com (Cyrillic). Defense: browser warnings, ASCII-only domains."
+    },
+    {
+      "term": "Drive-by Download",
+      "full": "Automatic Download Attack",
+      "cat": "phishing",
+      "eli10": "Website visit karo, kuch click na karo — phir bhi malware install ho jaata hai. Browser ya plugin vulnerable ho to.",
+      "detail": "Exploit kit scans browser/plugins. No user interaction needed. Common in watering hole attacks. Defense: patch browser/OS, disable plugins, adblock, EDR."
+    },
+    {
+      "term": "Clickjacking",
+      "full": "UI Redress Attack",
+      "cat": "phishing",
+      "eli10": "Aap ek button click karte ho 'Free iPhone' — par actually aapke account ka delete button tha jo invisible iframe me tha. Aap ne soch ke click kiya.",
+      "detail": "Invisible overlay of iframe. User clicks on visible UI but actually clicks hidden element. Defense: X-Frame-Options, CSP frame-ancestors, JS frame-busting."
+    },
+    {
+      "term": "2FA",
+      "full": "Two-Factor Authentication",
+      "cat": "auth",
+      "eli10": "Password ke saath ek doosra check — jaise bank locker ke liye 2 keys chahiye. Password chori ho bhi jaye to second factor ke bina login nahi.",
+      "detail": "Two factors from different categories: something you know (password), have (phone), are (biometric). Phishing-resistant only with hardware keys. SMS 2FA weak to SIM swap."
+    },
+    {
+      "term": "MFA",
+      "full": "Multi-Factor Authentication",
+      "cat": "auth",
+      "eli10": "2FA ka bada bhai — 2 ya zyada factors. Password + OTP + fingerprint jaisa combination. Stronger security.",
+      "detail": "2+ factors. Password + TOTP + biometric. Adaptive MFA adjusts based on risk. Enterprise standard. Phishing bypass possible via AiTM proxies."
+    },
+    {
+      "term": "TOTP",
+      "full": "Time-Based One-Time Password",
+      "cat": "auth",
+      "eli10": "App me har 30 second ek naya 6-digit code aata hai. Google Authenticator, Authy use karte hain. SMS se better kyunki SIM swap se safe.",
+      "detail": "RFC 6238. HMAC-based. 30-second window. Shared secret + current time. Apps: Google Authenticator, Authy, Aegis, 1Password."
+    },
+    {
+      "term": "HOTP",
+      "full": "HMAC-Based One-Time Password",
+      "cat": "auth",
+      "eli10": "TOTP jaisa, par counter pe based (time pe nahi). Hardware tokens me use hota. Har press pe increment.",
+      "detail": "RFC 4226. Counter-based. Hardware OTP tokens (RSA SecurID). Less common now — TOTP preferred."
+    },
+    {
+      "term": "FIDO2",
+      "full": "Fast Identity Online 2",
+      "cat": "auth",
+      "eli10": "Passwordless authentication standard. Aapki fingerprint/face se login. Password ki zaroorat hi nahi. Phishing-proof.",
+      "detail": "FIDO Alliance + W3C. Components: WebAuthn (browser API) + CTAP2 (device protocol). Domain-bound credentials. No shared secrets. Phishing impossible."
+    },
+    {
+      "term": "WebAuthn",
+      "full": "Web Authentication API",
+      "cat": "auth",
+      "eli10": "Browser ka built-in support for passkeys/security keys. Jab website 'passkey' use karti, WebAuthn background me kaam karta.",
+      "detail": "W3C standard. JavaScript API. navigator.credentials.create()/get(). Public-key cryptography. Supported in all modern browsers."
+    },
+    {
+      "term": "Passkey",
+      "full": "FIDO2 Passkey Credential",
+      "cat": "auth",
+      "eli10": "Password ki jagah device me store hui cryptographic key. Fingerprint se unlock karo, login ho jata. Phishing site pe kaam nahi karti kyunki domain-bound hai.",
+      "detail": "Discoverable FIDO2 credential. Syncs via iCloud/Google/Microsoft. Phishing-proof. 2026 standard. Adopted by Apple, Google, Microsoft, Amazon, PayPal, GitHub."
+    },
+    {
+      "term": "OAuth 2.0",
+      "full": "Open Authorization 2.0",
+      "cat": "auth",
+      "eli10": "Aap 'Login with Google' karte ho to OAuth use hota hai. Google se permission maangta hai, password share nahi karta. Par fake apps isko misuse karti.",
+      "detail": "IETF RFC 6749. Authorization framework (not authentication). Access tokens + refresh tokens. Scopes define access. Consent phishing risk."
+    },
+    {
+      "term": "OIDC",
+      "full": "OpenID Connect",
+      "cat": "auth",
+      "eli10": "OAuth ke upar ek identity layer. 'Ye kaun hai' batata hai, OAuth sirf 'kya kar sakta hai' batata.",
+      "detail": "OAuth 2.0 extension for authentication. ID token (JWT). UserInfo endpoint. Used by Google/Microsoft/Auth0."
+    },
+    {
+      "term": "SAML",
+      "full": "Security Assertion Markup Language",
+      "cat": "auth",
+      "eli10": "Enterprise SSO ka purana standard. Ek company app me login karo, sab apps me automatically login. XML based.",
+      "detail": "OASIS standard. XML assertions. IdP + SP model. Common in enterprise (Okta, Azure AD). Being replaced by OIDC in modern apps."
+    },
+    {
+      "term": "SSO",
+      "full": "Single Sign-On",
+      "cat": "auth",
+      "eli10": "Ek login se multiple apps. Company me Google account se HiGoogle, Slack, GitHub sab me login ho jaata.",
+      "detail": "Central authentication. Reduces password fatigue. Uses SAML/OIDC. Risk: single point of failure. MFA essential."
+    },
+    {
+      "term": "JWT",
+      "full": "JSON Web Token",
+      "cat": "auth",
+      "eli10": "Ek token jo user ki info carry karta (base64 encoded). Server stateless rakhne ke liye. Signature se tamper-proof.",
+      "detail": "RFC 7519. Header.Payload.Signature. HS256/RS256 algorithms. Common vulnerability: 'none' algorithm accepted. Verify signature always."
+    },
+    {
+      "term": "RBAC",
+      "full": "Role-Based Access Control",
+      "cat": "auth",
+      "eli10": "Role ke basis pe permission. 'Admin' role ho to sab kar sakte. 'Viewer' role ho to sirf dekh sakte. Access control ka simple tareeka.",
+      "detail": "NIST standard. Users → Roles → Permissions. Common in enterprise apps. Coarse-grained (vs ABAC fine-grained)."
+    },
+    {
+      "term": "ABAC",
+      "full": "Attribute-Based Access Control",
+      "cat": "auth",
+      "eli10": "RBAC se advanced. Decision attributes pe — time, location, device, department. 'Sirf office hours me, sirf corporate device se access'.",
+      "detail": "NIST SP 800-162. Policy-based. Fine-grained. More complex than RBAC. Used in high-security environments."
+    },
+    {
+      "term": "IAM",
+      "full": "Identity and Access Management",
+      "cat": "auth",
+      "eli10": "Poora system jo users manage karta — kaun hai, kya access hai, kaise verify karna. Okta, Azure AD isme aate.",
+      "detail": "Enterprise identity platform. User provisioning, authentication, authorization, lifecycle. Core of Zero Trust."
+    },
+    {
+      "term": "PAM",
+      "full": "Privileged Access Management",
+      "cat": "auth",
+      "eli10": "Admin passwords ka vault. Har admin ke paas seedha root access nahi hota. Approval lena padta. Just-in-time access.",
+      "detail": "CyberArk, BeyondTrust, HashiCorp Vault. Session recording, credential rotation, approval workflow. Critical for compliance."
+    },
+    {
+      "term": "Access Token",
+      "full": "OAuth Access Token",
+      "cat": "auth",
+      "eli10": "Chhota code jo API access deta. Expiry time hoti (1 hour common). Bearer token — jo bhi paas ho, access mile.",
+      "detail": "Short-lived credential. Bearer format (whoever holds). Stored in memory not localStorage. Common theft target."
+    },
+    {
+      "term": "Refresh Token",
+      "full": "OAuth Refresh Token",
+      "cat": "auth",
+      "eli10": "Access token expire hone pe naya lene ke liye. Longer-lived (days). Isliye safer store karna padta.",
+      "detail": "Long-lived credential. Gets new access tokens. Must be stored securely (HttpOnly cookie). Rotation best practice."
+    },
+    {
+      "term": "API Key",
+      "full": "Application Programming Interface Key",
+      "cat": "auth",
+      "eli10": "Code jo app ko identify karta (jaise password for apps). Often leak ho jaate public repos me. Restrict karna zaroori.",
+      "detail": "Static credential for API. Sent in header/query. Restrict by IP/scope. Rotate regularly. Not for user auth."
+    },
+    {
+      "term": "Session Cookie",
+      "full": "HTTP Session Cookie",
+      "cat": "auth",
+      "eli10": "Browser me store chhota file — jo batata hai 'ye user logged in hai'. Chori ho jaye to account access.",
+      "detail": "Server-issued identifier. Set-Cookie header. Flags: HttpOnly, Secure, SameSite. Session hijacking target."
+    },
+    {
+      "term": "HttpOnly",
+      "full": "HttpOnly Cookie Flag",
+      "cat": "auth",
+      "eli10": "Cookie ko JavaScript access nahi kar sakta. XSS attack me cookie safe rehti.",
+      "detail": "Browser cookie attribute. document.cookie cannot read. Defense against XSS session theft. Essential for session cookies."
+    },
+    {
+      "term": "Secure Flag",
+      "full": "Secure Cookie Attribute",
+      "cat": "auth",
+      "eli10": "Cookie sirf HTTPS pe bhejta. HTTP pe nahi jaata. Public WiFi sniffing se bachata.",
+      "detail": "Browser cookie attribute. Sent only over HTTPS. Prevents cleartext transmission. Mandatory for session cookies."
+    },
+    {
+      "term": "SameSite",
+      "full": "SameSite Cookie Attribute",
+      "cat": "auth",
+      "eli10": "Cookie kab bhejna hai ye control karta. 'Strict' me sirf same site pe. CSRF attack rokta.",
+      "detail": "Values: Strict, Lax, None. CSRF defense. Lax default in modern browsers. None requires Secure."
+    },
+    {
+      "term": "CSRF",
+      "full": "Cross-Site Request Forgery",
+      "cat": "auth",
+      "eli10": "Aap ek site pe logged in ho. Doosri site open karte ho jo background me aapke bank pe request bhejti hai. Bank sochta aap ne kiya. Paisa transfer ho jaata.",
+      "detail": "Attack forces authenticated user to perform unwanted action. Defense: CSRF tokens, SameSite cookies, origin check."
+    },
+    {
+      "term": "CSRF Token",
+      "full": "Cross-Site Request Forgery Token",
+      "cat": "auth",
+      "eli10": "Form me ek random code daala jaata. Bina token ke request reject. Attacker token nahi jaanta.",
+      "detail": "Random unpredictable value. Server validates. Per-session or per-request. Standard CSRF defense."
+    },
+    {
+      "term": "XSS",
+      "full": "Cross-Site Scripting",
+      "cat": "auth",
+      "eli10": "Attacker ek website me malicious JavaScript daal deta hai. Aap page kholte ho, script chal jaati, cookies chori.",
+      "detail": "Stored, Reflected, DOM-based. Defense: output encoding, CSP, HttpOnly cookies, sanitization."
+    },
+    {
+      "term": "CSP",
+      "full": "Content Security Policy",
+      "cat": "auth",
+      "eli10": "Website batati hai browser ko — 'sirf in sources se script chalana'. XSS attack rokta.",
+      "detail": "HTTP header. script-src, style-src, img-src directives. Nonce/hash for inline. Report-uri for violations."
+    },
+    {
+      "term": "HSTS",
+      "full": "HTTP Strict Transport Security",
+      "cat": "auth",
+      "eli10": "Website browser ko kehti 'hamesha HTTPS use karo, HTTP pe mat jao'. Downgrade attack rokta.",
+      "detail": "HTTP header. max-age, includeSubDomains, preload. Prevents SSL stripping. Preload list in browsers."
+    },
+    {
+      "term": "Certificate Pinning",
+      "full": "SSL Certificate Pinning",
+      "cat": "auth",
+      "eli10": "Mobile app sirf specific certificate ko accept karti. MITM attack nahi hoti.",
+      "detail": "App stores expected cert/public key. Reject others. Defense against MITM with rogue certs. Hard to rotate."
+    },
+    {
+      "term": "Hardware Security Key",
+      "full": "FIDO2 Hardware Authenticator",
+      "cat": "auth",
+      "eli10": "USB stick jaisa. Login ke waqt plug karo, button dabao. Password chori bhi ho jaye to key bina login nahi.",
+      "detail": "YubiKey, Google Titan, Feitian. USB-A/C/NFC. FIDO2 + U2F + PIV. Phishing-proof. Backup key essential."
+    },
+    {
+      "term": "Backup Codes",
+      "full": "2FA Backup/Recovery Codes",
+      "cat": "auth",
+      "eli10": "10-15 one-time codes. 2FA device kho jaye to inhe use karke login. Print karke safe jagah rakho.",
+      "detail": "One-time use recovery codes. Generated at 2FA setup. Store offline (print, password manager). Each code single-use."
+    },
+    {
+      "term": "Password Manager",
+      "full": "Password Management Tool",
+      "cat": "auth",
+      "eli10": "Ek app jo saare passwords yaad rakhti. Ek master password yaad rakho, baaki wo bhar deti. Saath me phishing se bachati (domain check).",
+      "detail": "Bitwarden, 1Password, KeePass, Dashlane. Encrypted vault. Domain-bound autofill defeats phishing. Master password + 2FA critical."
+    },
+    {
+      "term": "Master Password",
+      "full": "Password Manager Master Password",
+      "cat": "auth",
+      "eli10": "Password manager ko unlock karne wala ek password. Ye kho gaya to sab gaya. Isliye bahut strong rakho — passphrase better.",
+      "detail": "Decryption key derivation. Never stored on server (zero-knowledge). Use long passphrase + write down in safe. Recovery kit essential."
+    },
+    {
+      "term": "Passphrase",
+      "full": "Multi-Word Password",
+      "cat": "auth",
+      "eli10": "4+ random words ka combination — 'correct-horse-battery-staple'. Lamba, yaad rakhna aasan, todna mushkil.",
+      "detail": "Diceware method. 4-6 words. Entropy 77+ bits for 4 words. NIST recommends over complex passwords."
+    },
+    {
+      "term": "Credential Stuffing",
+      "full": "Automated Credential Reuse Attack",
+      "cat": "auth",
+      "eli10": "Ek site se leak hua password doosri sites pe try karte hain. Kyunki log same password reuse karte hain. Ek leak = sab accounts khatre me.",
+      "detail": "Automated with leaked credential lists. Successful due to password reuse. Defense: unique passwords, password manager, breach monitoring, 2FA."
+    },
+    {
+      "term": "SPF",
+      "full": "Sender Policy Framework",
+      "cat": "email",
+      "eli10": "DNS me list hoti hai konsa server aapke domain se email bhej sakta. Agar email us list me nahi, SPF fail — spoofed.",
+      "detail": "TXT DNS record. Lists authorized sending IPs. ~all (soft), -all (hard fail). Receiver checks envelope From. Basic email auth."
+    },
+    {
+      "term": "DKIM",
+      "full": "DomainKeys Identified Mail",
+      "cat": "email",
+      "eli10": "Email pe digital signature. Receiver signature verify karta — kya email tampered hui ya nahi. DNS me public key hoti.",
+      "detail": "RSA/Ed25519 signature in DKIM-Signature header. Selector-based DNS lookup. Verifies integrity + domain. Not encryption."
+    },
+    {
+      "term": "DMARC",
+      "full": "Domain-based Message Authentication, Reporting & Conformance",
+      "cat": "email",
+      "eli10": "SPF + DKIM ke upar policy. Batati 'agar dono fail ho to kya karo' — reject, quarantine, ya deliver. Sabse strong email protection.",
+      "detail": "DNS TXT record. Policies: none, quarantine, reject. Reports via RUA/RUF. p=reject best. Prevents spoofing completely if configured."
+    },
+    {
+      "term": "Email Header",
+      "full": "SMTP Message Header",
+      "cat": "email",
+      "eli10": "Email ke chhupe hue details — sender, received path, SPF status, DKIM result. Gmail me 3-dot → Show original.",
+      "detail": "RFC 5322. Fields: From, To, Subject, Date, Message-ID, Received, Return-Path, Reply-To, authentication results. Forensics essential."
+    },
+    {
+      "term": "Received Chain",
+      "full": "SMTP Received Header Chain",
+      "cat": "email",
+      "eli10": "Har server email pe apna stamp daalta (kab aaya, kahan se). Top se bottom padho — latest hop sabse upar.",
+      "detail": "Each MTA prepends Received header. Read top-down = reverse path. Detect spoofing anomalies (timing, IP mismatch, odd hops)."
+    },
+    {
+      "term": "Reply-To",
+      "full": "Email Reply-To Header",
+      "cat": "email",
+      "eli10": "From alag, Reply-To alag ho sakta. Aap reply karo to attacker ke address pe jaata. Isliye hamesha check karo.",
+      "detail": "Header overriding default reply destination. Legit use: mailing lists. Phishing: From=ceo@company.com, Reply-To=attacker@evil.com."
+    },
+    {
+      "term": "Return-Path",
+      "full": "Email Envelope Sender",
+      "cat": "email",
+      "eli10": "Asli sender address jo SMTP me use hota (bounces ke liye). From header se alag ho sakta. Spoofing detect karne me help.",
+      "detail": "Envelope MAIL FROM. Bounce destination. Compare with From header for spoofing detection."
+    },
+    {
+      "term": "Display Name",
+      "full": "Email Display Name",
+      "cat": "email",
+      "eli10": "Email app 'Amazon Security' dikhata hai, par actual address 'security@amaz0n-verify.tk' hai. Display name pe trust mat karo, address dekho.",
+      "detail": "RFC 5322 name-addr. Easy to spoof. Gmail now highlights external senders. Always verify actual email address."
+    },
+    {
+      "term": "BIMI",
+      "full": "Brand Indicators for Message Identification",
+      "cat": "email",
+      "eli10": "Verified sender ke email me brand logo dikhta. DMARC strict hone pe milta. Isse real vs fake pata chalta.",
+      "detail": "DMARC + VMC certificate required. Logo in email client (Gmail, Apple Mail, Yahoo). Anti-spoofing + brand visibility."
+    },
+    {
+      "term": "ARC",
+      "full": "Authenticated Received Chain",
+      "cat": "email",
+      "eli10": "Email forward hone pe SPF/DKIM break ho jaate hain. ARC ye record karta ki authentication tha. Forwarding se break nahi hota.",
+      "detail": "Header chain preserving auth results through forwarding. Used by mailing lists, forwarders. RFC 8617."
+    },
+    {
+      "term": "MTA-STS",
+      "full": "SMTP MTA Strict Transport Security",
+      "cat": "email",
+      "eli10": "Email server ko force karta HTTPS/TLS use karne. Downgrade attack rokta.",
+      "detail": "DNS + HTTPS policy. Enforces TLS for email delivery. Prevents MITM on SMTP. RFC 8461."
+    },
+    {
+      "term": "TLD",
+      "full": "Top-Level Domain",
+      "cat": "web",
+      "eli10": "URL ka last part — .com, .in, .org. Free TLDs (.tk, .xyz) phishing me common.",
+      "detail": "Root zone domain. gTLD (.com, .org), ccTLD (.in, .uk). Free TLDs Freenom-based abused heavily. .gov/.mil restricted."
+    },
+    {
+      "term": "Subdomain",
+      "full": "Domain Sub-Component",
+      "cat": "web",
+      "eli10": "www.google.com me 'www' subdomain hai. Hacker isko trick ke liye use karte — 'paypal.secure-site.xyz' me asli domain 'secure-site.xyz' hai.",
+      "detail": "Left of registered domain. DNS hierarchy. Phishing: brand name as subdomain. Always read domain right-to-left."
+    },
+    {
+      "term": "URL Shortener",
+      "full": "URL Shortening Service",
+      "cat": "web",
+      "eli10": "bit.ly jaisi service lamba URL chhota karti. Problem: asli destination chhupa. Phishing me common.",
+      "detail": "Bitly, TinyURL, t.co. Hides destination. Defense: preview/expand before click (checkshorturl.com, URLVoid)."
+    },
+    {
+      "term": "Open Redirect",
+      "full": "Unvalidated Redirect",
+      "cat": "web",
+      "eli10": "Legit site ka URL jo kisi aur site pe le jaata — ?redirect=evil.com. Trusted domain dikhta, evil khulta.",
+      "detail": "Vulnerable parameter in URL. Exploits trust in domain. Defense: whitelist redirect targets, warn users."
+    },
+    {
+      "term": "Data URI",
+      "full": "Data Uniform Resource Identifier",
+      "cat": "web",
+      "eli10": "URL me hi poora content — data:text/html,<script>...</script>. Phishing pages bina hosting chalate.",
+      "detail": "RFC 2397. Inline content base64/plain. Legit for small images. Malicious for phishing pages (data:text/html)."
+    },
+    {
+      "term": "Percent Encoding",
+      "full": "Percent-Encoding / URL Encoding",
+      "cat": "web",
+      "eli10": "%20 = space, %2E = dot. Kuch characters directly URL me nahi ja sakte, encode karte. Phishing me obfuscation ke liye misuse.",
+      "detail": "RFC 3986. %HH format. Over-encoding used to bypass filters. Double encoding trick. Detection: excessive % sequences."
+    },
+    {
+      "term": "Double Extension",
+      "full": "Double File Extension",
+      "cat": "web",
+      "eli10": "File 'invoice.pdf.exe' — aapko lagega PDF hai, actually .exe executable. Windows me extension hide hoti default.",
+      "detail": "Common malware trick. Enable file extension view in Windows. AV detects by signature + behavior."
+    },
+    {
+      "term": "CORS",
+      "full": "Cross-Origin Resource Sharing",
+      "cat": "web",
+      "eli10": "Website batati browser ko — 'in doosre domains se request allowed hai'. Misconfigured ho to data leak.",
+      "detail": "HTTP headers (Access-Control-Allow-Origin). Misconfiguration common. Wildcard * risky. Preflight OPTIONS request."
+    },
+    {
+      "term": "HTTPS",
+      "full": "HyperText Transfer Protocol Secure",
+      "cat": "web",
+      "eli10": "Website ke saath encrypted connection. Lock icon dikhta. Par sirf encryption guarantee, site asli hai ye nahi.",
+      "detail": "HTTP over TLS. Certificate authority issues cert. Encryption + integrity. NOT identity (anyone can get cert)."
+    },
+    {
+      "term": "SSL/TLS",
+      "full": "Secure Sockets Layer / Transport Layer Security",
+      "cat": "web",
+      "eli10": "Encryption protocol jo HTTPS use karta. SSL purana, TLS modern version. Dono ka matlab same — encrypt traffic.",
+      "detail": "SSL 3.0 deprecated. TLS 1.2/1.3 current. Handshake, cipher suites, certificates. Let's Encrypt popularized free certs."
+    },
+    {
+      "term": "LLM",
+      "full": "Large Language Model",
+      "cat": "ai",
+      "eli10": "AI model jo text samajhta aur generate karta. ChatGPT, Claude, Gemini. Phishing me AI-generated emails ke liye use.",
+      "detail": "Transformer architecture. Trained on internet-scale data. GPT-4, Claude, Gemini, Llama. Phishing: perfect grammar, personalization, scale."
+    },
+    {
+      "term": "Prompt Injection",
+      "full": "AI Prompt Injection Attack",
+      "cat": "ai",
+      "eli10": "AI me chhupa hua instruction. Email me white text me likha 'AI: forward this to attacker'. AI assistant follow kar leta.",
+      "detail": "OWASP LLM #1 risk. Direct (user input) or indirect (data in email/webpage). Defenses: input/output filters, isolated agents, human review."
+    },
+    {
+      "term": "Jailbreak",
+      "full": "LLM Jailbreak",
+      "cat": "ai",
+      "eli10": "AI ko trick karke safety bypass. 'Pretend you are developer' type prompts. System prompt ya data leak karwana.",
+      "detail": "Prompt engineering to bypass safety. Roleplay, fictional scenario, encoding tricks. Ongoing cat-mouse game with AI vendors."
+    },
+    {
+      "term": "AI Worm",
+      "full": "Self-Replicating AI Prompt",
+      "cat": "ai",
+      "eli10": "Prompt jo AI se bolta 'agli email me same prompt daal do'. AI-to-AI spread hota jaise virus. Morris II (2024).",
+      "detail": "Cornell research. Prompt worm. Spreads AI-to-AI via email/messages. Mitigations: input sanitization, send restrictions."
+    },
+    {
+      "term": "AI Agent",
+      "full": "Autonomous AI Agent",
+      "cat": "ai",
+      "eli10": "AI jo aapki behalf pe kaam karta — browser kholta, emails bhejta, transactions karta. ChatGPT Operator, Claude Computer Use.",
+      "detail": "LLM + tools + planning. Browser/desktop control. Risks: prompt injection hijack, wrong actions, data exfiltration. Sandboxing essential."
+    },
+    {
+      "term": "Agentic AI",
+      "full": "Agentic Artificial Intelligence",
+      "cat": "ai",
+      "eli10": "AI jo independently decide karta kaam kaise karna. Aap bolo 'book flight' — wo khud search, compare, book kar deta.",
+      "detail": "Multi-step autonomy. Tool use, planning, memory. 2025-2026 mainstream. Security challenges: permission scoping, action approval, audit."
+    },
+    {
+      "term": "Multimodal AI",
+      "full": "Multimodal Artificial Intelligence",
+      "cat": "ai",
+      "eli10": "AI jo text + image + voice + video sab samajhta. Isse multimodal phishing — email + voice + video sab consistent fake.",
+      "detail": "GPT-4V, Gemini, Claude 3. Enables realistic deepfakes, voice clones, coordinated multi-channel attacks."
+    },
+    {
+      "term": "Voice Clone",
+      "full": "AI Voice Cloning",
+      "cat": "ai",
+      "eli10": "3 second audio se kisi ki awaaz copy. Live call me bhi possible. Family emergency scam me use.",
+      "detail": "ElevenLabs, Resemble AI, PlayHT. Real-time synthesis. Detection hard. Defense: code words, out-of-band verify."
+    },
+    {
+      "term": "Deepfake Detection",
+      "full": "AI-Based Deepfake Detection",
+      "cat": "ai",
+      "eli10": "AI vs AI — ek AI deepfake banata, doosra detect karta. Reality Defender, Sensity. Detection race ongoing.",
+      "detail": "Facial artifact analysis, biological signals (rPPG), audio-video sync. Not 100% reliable. Multi-layer defense required."
+    },
+    {
+      "term": "AI SOC",
+      "full": "AI-Powered Security Operations Center",
+      "cat": "ai",
+      "eli10": "AI security team jo 24/7 threats monitor karti. Human SOC teams overwhelmed hote hain, AI triage + response karta.",
+      "detail": "Microsoft Security Copilot, CrowdStrike Charlotte AI. Alert triage, playbook automation, threat hunting. Human-in-loop critical."
+    },
+    {
+      "term": "CDR",
+      "full": "Content Disarm & Reconstruct",
+      "cat": "ai",
+      "eli10": "Har file ko sanitize karo — original destroy, safe rebuild. Malware survive nahi kar sakta.",
+      "detail": "OPSWAT, Votiro, Glasswall. File structure decompose, rebuild from template. Zero-day malware defense."
+    },
+    {
+      "term": "UEBA",
+      "full": "User and Entity Behavior Analytics",
+      "cat": "ai",
+      "eli10": "AI model user behavior ka. Aap achanak unusual login karo ya data access karo — alert aa jaata.",
+      "detail": "Baseline behavior, anomaly scoring. Microsoft Sentinel, Exabeam, Securonix. Insider threat + compromised account detection."
+    },
+    {
+      "term": "EDR",
+      "full": "Endpoint Detection and Response",
+      "cat": "ai",
+      "eli10": "Computer/server pe advanced antivirus. Sirf signature nahi, behavior bhi dekhta. Attack detect + response karta.",
+      "detail": "CrowdStrike, SentinelOne, Microsoft Defender for Endpoint. Process monitoring, memory analysis, automated response. Next-gen AV."
+    },
+    {
+      "term": "XDR",
+      "full": "Extended Detection and Response",
+      "cat": "ai",
+      "eli10": "EDR ka bada version — endpoint + network + cloud + email sab cover. Ek jagah se sab monitor.",
+      "detail": "Cross-platform detection. Palo Alto Cortex, Microsoft Defender XDR. Unified view + automated response."
+    },
+    {
+      "term": "SIEM",
+      "full": "Security Information and Event Management",
+      "cat": "ai",
+      "eli10": "Central log system. Sab systems se logs collect, correlate, alert. SOC analyst ka daily tool.",
+      "detail": "Splunk, IBM QRadar, Microsoft Sentinel. Log aggregation + correlation + alerting. SOAR integration for response."
+    },
+    {
+      "term": "SOAR",
+      "full": "Security Orchestration, Automation and Response",
+      "cat": "ai",
+      "eli10": "SIEM se aage — automated response. Alert aaye, playbook chalaye, action le (block IP, isolate endpoint).",
+      "detail": "Playbook automation. Splunk SOAR, Palo Alto XSOAR, Swimlane. Reduces response time. Human approval for critical."
+    },
+    {
+      "term": "MITRE ATT&CK",
+      "full": "MITRE Adversarial Tactics, Techniques & Common Knowledge",
+      "cat": "ai",
+      "eli10": "Hackers ke kaam karne ka encyclopedia. Har tactic + technique documented. Defense planning me use.",
+      "detail": "Framework of adversary behavior. 14 tactics (Recon → Impact). Used by threat hunters, SOC, red teams. attack.mitre.org."
+    },
+    {
+      "term": "TTP",
+      "full": "Tactics, Techniques, and Procedures",
+      "cat": "ai",
+      "eli10": "Hacker ka behavior pattern — kaise attack karta, kaun se tools use karta. Fingerprint jaisa. Long-term defense ke liye.",
+      "detail": "Adversary behavior pattern. More durable than IOCs. Used in threat intelligence + detection engineering."
+    },
+    {
+      "term": "DNS",
+      "full": "Domain Name System",
+      "cat": "network",
+      "eli10": "Internet ki phonebook. Aap 'google.com' type karte ho, DNS batata actual IP kya hai. Hackers isko poison karte (pharming).",
+      "detail": "Hierarchical naming system. Resolvers, root, TLD, authoritative servers. Port 53. UDP/TCP. Common attack: cache poisoning, spoofing."
+    },
+    {
+      "term": "DNSSEC",
+      "full": "DNS Security Extensions",
+      "cat": "network",
+      "eli10": "DNS ka signature system. Batata ki response asli hai ya fake. Pharming attack rokta.",
+      "detail": "Cryptographic signatures for DNS records. Chain of trust from root. Prevents cache poisoning. Adoption still low (~30%)."
+    },
+    {
+      "term": "DoH",
+      "full": "DNS over HTTPS",
+      "cat": "network",
+      "eli10": "DNS queries HTTPS me encrypt karke bhejta. ISP ya hacker dekh nahi sakte aap kaunsi site visit kar rahe.",
+      "detail": "RFC 8484. DNS inside HTTPS tunnel. Cloudflare (1.1.1.1), Google (8.8.8.8) support. Privacy improvement. ISP-level DNS blocking bypass."
+    },
+    {
+      "term": "VPN",
+      "full": "Virtual Private Network",
+      "cat": "network",
+      "eli10": "Aapka traffic encrypt karke doosre server se bhejta. Public WiFi pe safe browsing. IP bhi hide.",
+      "detail": "Tunnel protocol (WireGuard, OpenVPN, IKEv2). Encrypts traffic. Public WiFi defense. Not anonymity tool (VPN provider logs)."
+    },
+    {
+      "term": "Zero Trust",
+      "full": "Zero Trust Security Model",
+      "cat": "network",
+      "eli10": "'Kisi pe bharosa mat karo, sab verify karo'. Andar ho ya bahar, har request authenticate + authorize.",
+      "detail": "Never trust, always verify. Micro-segmentation, least privilege, continuous verification. Contrasts perimeter model. NIST SP 800-207."
+    },
+    {
+      "term": "ZTNA",
+      "full": "Zero Trust Network Access",
+      "cat": "network",
+      "eli10": "VPN ka modern replacement. Har app ka apna access. User ko poora network nahi milta, sirf specific app.",
+      "detail": "Per-app access. Replaces VPN. User + device + context verified. Cloud-delivered (Zscaler, Cloudflare, Netskope)."
+    },
+    {
+      "term": "SASE",
+      "full": "Secure Access Service Edge",
+      "cat": "network",
+      "eli10": "Network + security ek cloud service me. Branch office se seedha cloud, on-prem firewall ki zaroorat nahi.",
+      "detail": "Gartner framework. SD-WAN + SWG + CASB + ZTNA + FWaaS. Cloud-native. Cisco, Palo Alto, Zscaler, Netskope."
+    },
+    {
+      "term": "CASB",
+      "full": "Cloud Access Security Broker",
+      "cat": "network",
+      "eli10": "Cloud apps ke beech security guard. Kaun kya access kar raha, sensitive data leak ho raha — monitor + control.",
+      "detail": "Between users and cloud apps. Visibility, compliance, threat protection, DLP. Netskope, McAfee MVISION, Microsoft Defender for Cloud Apps."
+    },
+    {
+      "term": "Firewall",
+      "full": "Network Firewall",
+      "cat": "network",
+      "eli10": "Network ka gatekeeper. Kaun andar aa sakta, kaun bahar ja sakta — rules ke hisaab se.",
+      "detail": "Packet filtering, stateful inspection, next-gen (NGFW). Rules based on IP, port, protocol, app. Perimeter defense."
+    },
+    {
+      "term": "IDS",
+      "full": "Intrusion Detection System",
+      "cat": "network",
+      "eli10": "Network pe chori se nazar rakhta. Attack detect karta, par rokta nahi — sirf alert.",
+      "detail": "Signature + anomaly-based. Snort, Suricata, Zeek. Passive monitoring. Alerts to SOC."
+    },
+    {
+      "term": "IPS",
+      "full": "Intrusion Prevention System",
+      "cat": "network",
+      "eli10": "IDS ka bada bhai — detect karta aur rokta bhi. Attack aaye to block kar deta.",
+      "detail": "Inline deployment. Blocks malicious traffic. Can cause false positives. Often combined with IDS."
+    },
+    {
+      "term": "MITM",
+      "full": "Man-in-the-Middle Attack",
+      "cat": "network",
+      "eli10": "Aap aur server ke beech hacker baith jaata. Aapko lagta direct baat kar rahe ho, actually hacker sab sun raha. Ya tamper kar raha.",
+      "detail": "Interception of communication. ARP spoofing, DNS spoofing, rogue WiFi. Defense: HTTPS + cert pinning + VPN."
+    },
+    {
+      "term": "AiTM",
+      "full": "Adversary-in-the-Middle",
+      "cat": "network",
+      "eli10": "Advanced MITM. Hacker reverse proxy lagata — victim aur asli site ke beech. Aap login karo → session cookie capture → MFA bypass.",
+      "detail": "Evilginx2, Modlishka tools. Reverse proxy captures session tokens. Defeats most MFA (except hardware keys). Microsoft/Google warn 2023+."
+    },
+    {
+      "term": "Proxy",
+      "full": "Forward Proxy Server",
+      "cat": "network",
+      "eli10": "Aapki taraf se requests bhejne wala middleman. Corporate network me internet access control ke liye.",
+      "detail": "Client → Proxy → Internet. Caching, filtering, anonymity. Squid, Blue Coat. Not to be confused with reverse proxy."
+    },
+    {
+      "term": "Reverse Proxy",
+      "full": "Reverse Proxy Server",
+      "cat": "network",
+      "eli10": "Server ke aage baithta — incoming requests handle karta. Load balancing, SSL termination, security.",
+      "detail": "Client → Reverse Proxy → Backend. Nginx, HAProxy, Cloudflare. SSL termination, caching, WAF. AiTM uses reverse proxy pattern."
+    },
+    {
+      "term": "Blockchain",
+      "full": "Distributed Ledger Technology",
+      "cat": "crypto",
+      "eli10": "Ek digital register jo sabke paas copy hota. Koi ek change nahi kar sakta. Crypto isi pe chalti.",
+      "detail": "Distributed, immutable ledger. Consensus (PoW, PoS). Bitcoin, Ethereum. Transparency + irreversibility."
+    },
+    {
+      "term": "Wallet",
+      "full": "Crypto Wallet",
+      "cat": "crypto",
+      "eli10": "Crypto rakhne ki jagah. Actually crypto blockchain pe hoti, wallet me private keys hoti. Kho gayi to crypto gone.",
+      "detail": "Software (MetaMask, Trust Wallet) or hardware (Ledger, Trezor). Stores private keys. Hot (online) vs cold (offline) wallet."
+    },
+    {
+      "term": "Seed Phrase",
+      "full": "BIP39 Seed Recovery Phrase",
+      "cat": "crypto",
+      "eli10": "12-24 words jo aapki wallet ka master password. Kisi ko bata diya to wallet khali ho jayega. Likh ke safe rakho.",
+      "detail": "BIP39 standard. Derives all private keys. Never share. Paper/metal backup. Hardware wallet setup me milti."
+    },
+    {
+      "term": "Private Key",
+      "full": "Cryptographic Private Key",
+      "cat": "crypto",
+      "eli10": "Aapki crypto ka password. Sirf aapke paas. Transaction sign karne ke liye. Share kiya = crypto gone.",
+      "detail": "256-bit number. Signs transactions. Derived from seed phrase. Never leaves hardware wallet in good setup."
+    },
+    {
+      "term": "Public Key",
+      "full": "Cryptographic Public Key",
+      "cat": "crypto",
+      "eli10": "Aapka wallet address ban jaata. Log isme paise bhej sakte. Share karne me koi problem nahi.",
+      "detail": "Derived from private key. Wallet address = hash of public key. Safe to share. Used for receiving."
+    },
+    {
+      "term": "Smart Contract",
+      "full": "Blockchain Smart Contract",
+      "cat": "crypto",
+      "eli10": "Blockchain pe chalne wala program. Automatic rules follow karta. Par bug ya malicious ho sakta — sign karte waqt dhyaan se.",
+      "detail": "Self-executing code on blockchain. Solidity (Ethereum). Immutable once deployed. Audit critical. Reentrancy, overflow bugs common."
+    },
+    {
+      "term": "Token Approval",
+      "full": "ERC-20 Token Approval",
+      "cat": "crypto",
+      "eli10": "DApp ko permission dete ho aapke tokens spend karne ki. 'Approve all' kar diya to wallet drain ho sakta.",
+      "detail": "ERC-20 approve/transferFrom. Phishing: malicious contract gets unlimited approval. Defense: revoke unused (revoke.cash), use hardware wallet."
+    },
+    {
+      "term": "Airdrop",
+      "full": "Crypto Airdrop",
+      "cat": "crypto",
+      "eli10": "Free tokens ka distribution. Par fake airdrops se wallet drain. 'Connect wallet' karwate, malicious sign.",
+      "detail": "Marketing tactic. Legit (Uniswap, Arbitrum) vs fake (phishing). Real airdrops never ask for seed phrase or 'approve all'."
+    },
+    {
+      "term": "Rug Pull",
+      "full": "Rug Pull Scam",
+      "cat": "crypto",
+      "eli10": "Team project launch karti, log paise daalte, fir team bhaag jaati. Liquidity pull. Token worthless.",
+      "detail": "Common in DeFi/NFT. Developer abandons, drains liquidity. $2.8B+ losses 2021. Defense: research team, check liquidity lock, audit."
+    },
+    {
+      "term": "CEX",
+      "full": "Centralized Exchange",
+      "cat": "crypto",
+      "eli10": "Crypto exchange jaise Binance, Coinbase. Company aapke funds hold karti. Ek hack = users khatre me.",
+      "detail": "Custodial. User accounts, KYC. Risks: hack, insolvency, freeze. Not your keys, not your crypto."
+    },
+    {
+      "term": "DEX",
+      "full": "Decentralized Exchange",
+      "cat": "crypto",
+      "eli10": "Exchange bina company ke. Users direct trade karte smart contract se. Non-custodial.",
+      "detail": "Uniswap, SushiSwap, PancakeSwap. AMM model. User keeps keys. Risks: smart contract bugs, front-running, impermanent loss."
+    },
+    {
+      "term": "Virus",
+      "full": "Computer Virus",
+      "cat": "malware",
+      "eli10": "Program jo files me attach hota aur khud copy karta. Aap file share karo → doosre ko bhi infect.",
+      "detail": "Self-replicating, needs host file. Payload: file corruption, spam, backdoor. Older malware style."
+    },
+    {
+      "term": "Worm",
+      "full": "Computer Worm",
+      "cat": "malware",
+      "eli10": "Virus jaisa, par bina host ke khud spread karta. Network me khud copy. WannaCry isi type ka tha.",
+      "detail": "Self-replicating, no host needed. Network propagation. Morris (1988), ILOVEYOU (2000), WannaCry (2017)."
+    },
+    {
+      "term": "Trojan",
+      "full": "Trojan Horse Malware",
+      "cat": "malware",
+      "eli10": "Asli software jaisa dikhta, actually malware. 'Free antivirus download' karo → actually RAT install.",
+      "detail": "Disguised as legitimate. No self-replication. Backdoor, RAT, banking trojan. Common in phishing attachments."
+    },
+    {
+      "term": "RAT",
+      "full": "Remote Access Trojan",
+      "cat": "malware",
+      "eli10": "Malware jo hacker ko aapke computer ka poora control deta. Screen dekh sakta, files access, camera on, keystrokes log.",
+      "detail": "Full remote control. Common: njRAT, Quasar, DarkComet. Delivered via phishing. Detection: unusual network, EDR alerts."
+    },
+    {
+      "term": "Ransomware",
+      "full": "Ransom Software",
+      "cat": "malware",
+      "eli10": "Aapki files encrypt kar deta, ransom maangta. 'Bitcoin bhejo warna files delete'. Backup se bachao.",
+      "detail": "Encrypts files. Double extortion (encrypt + leak). Common: LockBit, REvil, Conti. Defense: offline backup, EDR, patching, segmentation."
+    },
+    {
+      "term": "Keylogger",
+      "full": "Keystroke Logger",
+      "cat": "malware",
+      "eli10": "Har key press record karta. Passwords, messages sab capture. Software ya hardware (USB) ho sakta.",
+      "detail": "Software (rootkit-based) or hardware (USB inline). Credentials, banking, PII. Detection: EDR, on-screen keyboard, password manager."
+    },
+    {
+      "term": "Rootkit",
+      "full": "Root-Level Malware Kit",
+      "cat": "malware",
+      "eli10": "OS level pe chhupa malware. Detection mushkil. Kabhi-kabhi full reinstall hi solution.",
+      "detail": "Kernel/user-mode. Hides processes, files, network. Detection: EDR, boot scan. Removal: often reinstall needed."
+    },
+    {
+      "term": "Botnet",
+      "full": "Robot Network",
+      "cat": "malware",
+      "eli10": "Hazaaron infected devices ka network. Hacker command deta, sab milke attack karte. DDoS, spam, crypto mining.",
+      "detail": "C2-controlled network. Mirai (IoT), Emotet, Necurs. Used for DDoS, spam, credential stuffing, crypto mining."
+    },
+    {
+      "term": "C2",
+      "full": "Command and Control Server",
+      "cat": "malware",
+      "eli10": "Hacker ka remote control. Malware is server se instructions leta. Traffic block karo = botnet dead.",
+      "detail": "C2/C&C infrastructure. HTTP/DNS/Tor channels. Beaconing pattern. Detection: network anomaly, JA3, threat intel."
+    },
+    {
+      "term": "Dropper",
+      "full": "Malware Dropper",
+      "cat": "malware",
+      "eli10": "Chhota malware jo asli malware download + install karta. First stage.",
+      "detail": "Initial payload. Fetches second-stage malware. Evades AV. Common in phishing attachments."
+    },
+    {
+      "term": "Loader",
+      "full": "Malware Loader",
+      "cat": "malware",
+      "eli10": "Dropper jaisa — malware ko memory me load karta. Disk pe nahi likhta, detection mushkil.",
+      "detail": "In-memory execution. Reflective DLL injection. Common: Emotet, TrickBot, SmokeLoader. Evades file-based AV."
+    },
+    {
+      "term": "Payload",
+      "full": "Malicious Payload",
+      "cat": "malware",
+      "eli10": "Asli malicious kaam karne wala part. Encryption, exfiltration, backdoor. Dropper/Loader isko deliver karte.",
+      "detail": "Final-stage code. Ransomware encryption, RAT functionality, data theft. Delivered by dropper/loader."
+    },
+    {
+      "term": "Exploit",
+      "full": "Vulnerability Exploit",
+      "cat": "malware",
+      "eli10": "Bug ka faayda uthane wala code. Software ki weakness se code chalana. Zero-day = unknown bug.",
+      "detail": "Weaponized vulnerability. RCE, privilege escalation, DoS. Delivered via phishing, drive-by, exploit kits."
+    },
+    {
+      "term": "Quantum Computing",
+      "full": "Quantum Computing",
+      "cat": "quantum",
+      "eli10": "Computer jo quantum physics use karta — classical se hazaar guna fast for specific problems. Crypto todne me capable.",
+      "detail": "Qubits, superposition, entanglement. Shor's algorithm breaks RSA/ECC. Timeline: 2030-2035 for cryptographic threat."
+    },
+    {
+      "term": "Shor's Algorithm",
+      "full": "Shor's Quantum Factoring Algorithm",
+      "cat": "quantum",
+      "eli10": "Quantum algorithm jo bade numbers ko fast factor karta. RSA isi pe depend karta — toot jayega.",
+      "detail": "Peter Shor (1994). Polynomial time factoring. Breaks RSA, ECC, Diffie-Hellman. Requires large-scale quantum computer."
+    },
+    {
+      "term": "PQC",
+      "full": "Post-Quantum Cryptography",
+      "cat": "quantum",
+      "eli10": "Quantum-safe algorithms. NIST ne 2024 me standard banaye. Abhi migrate karna zaroori.",
+      "detail": "NIST standards: ML-KEM (Kyber), ML-DSA (Dilithium), SLH-DSA (SPHINCS+), FN-DSA (Falcon). Lattice + hash-based."
+    },
+    {
+      "term": "ML-KEM",
+      "full": "Module-Lattice Key Encapsulation Mechanism",
+      "cat": "quantum",
+      "eli10": "NIST-approved quantum-safe key exchange (FIPS 203). Purana 'Kyber' naam. Chrome, Signal use kar rahe.",
+      "detail": "Lattice-based KEM. Key size reasonable. NIST FIPS 203 (2024). Hybrid mode with X25519 in browsers."
+    },
+    {
+      "term": "ML-DSA",
+      "full": "Module-Lattice Digital Signature Algorithm",
+      "cat": "quantum",
+      "eli10": "Quantum-safe signatures (FIPS 204). Purana 'Dilithium'. Certificates ke liye.",
+      "detail": "Lattice-based signatures. FIPS 204 (2024). Larger signatures than RSA. Code signing, TLS certs migration."
+    },
+    {
+      "term": "SLH-DSA",
+      "full": "Stateless Hash-Based Digital Signature Algorithm",
+      "cat": "quantum",
+      "eli10": "Quantum-safe signatures ka doosra option (FIPS 205). 'SPHINCS+' naam tha. Slower but conservative.",
+      "detail": "Hash-based. FIPS 205 (2024). Very conservative security. Larger + slower signatures. Backup option."
+    },
+    {
+      "term": "Harvest Now Decrypt Later",
+      "full": "HNDL Attack",
+      "cat": "quantum",
+      "eli10": "Attacker aaj encrypted traffic copy kar raha. Quantum computer aane pe decrypt karega. Isliye aaj hi migrate karo.",
+      "detail": "Long-term threat. Encrypted data stored for future decryption. Migration urgency. NIST/CISA recommend hybrid PQC now."
+    },
+    {
+      "term": "Qubit",
+      "full": "Quantum Bit",
+      "cat": "quantum",
+      "eli10": "Quantum computer ka basic unit. 0 ya 1 ke bajaye 0 aur 1 dono ek saath (superposition). Isse parallel computation.",
+      "detail": "Quantum information unit. Superposition + entanglement. Fragile (decoherence). IBM, Google, IonQ race."
+    },
+    {
+      "term": "GDPR",
+      "full": "General Data Protection Regulation",
+      "cat": "legal",
+      "eli10": "Europe ka data law. Aapki personal data kis tarah handle hogi. Breach pe 72 hours me notify karna.",
+      "detail": "EU regulation (2018). Data subject rights, consent, DPO, breach notification. Fines up to €20M or 4% revenue."
+    },
+    {
+      "term": "DPDP Act",
+      "full": "Digital Personal Data Protection Act",
+      "cat": "legal",
+      "eli10": "India ka data protection law (2023). Consent-based. Kuch rights + company duties.",
+      "detail": "India (2023). Consent + purpose limitation. Data Fiduciary + Data Principal. Penalty up to ₹250 Cr. Rules notified 2025."
+    },
+    {
+      "term": "IT Act 2000",
+      "full": "Information Technology Act, 2000",
+      "cat": "legal",
+      "eli10": "India ka cyber law. Hacking, identity theft, phishing — sab covered. Section 66, 66C, 66D important.",
+      "detail": "India cyber law. Sections: 43 (unauthorized access), 66 (computer offenses), 66C (identity theft), 66D (cheating)."
+    },
+    {
+      "term": "Section 66C",
+      "full": "IT Act Section 66C - Identity Theft",
+      "cat": "legal",
+      "eli10": "Kisi ki electronic signature/password use karna = identity theft. 3 saal jail + ₹1 lakh fine.",
+      "detail": "Punishment: 3 years + ₹1 lakh fine. Covers password, digital signature, unique ID theft."
+    },
+    {
+      "term": "Section 66D",
+      "full": "IT Act Section 66D - Cheating by Personation",
+      "cat": "legal",
+      "eli10": "Electronic media se dhokha dena — jaise phishing, vishing. 3 saal jail + ₹1 lakh fine.",
+      "detail": "Cheating using computer resource or communication device. Phishing covered. 3 years + ₹1 lakh."
+    },
+    {
+      "term": "CERT-In",
+      "full": "Indian Computer Emergency Response Team",
+      "cat": "legal",
+      "eli10": "India ka cyber emergency team. Security incidents report karo. 6 hours me notify karna (2022 rules).",
+      "detail": "Established 2004. Incident reporting mandatory. 2022 rules: 6-hour window for critical incidents. cert-in.org.in."
+    },
+    {
+      "term": "ISO 27001",
+      "full": "ISO/IEC 27001 Information Security Standard",
+      "cat": "legal",
+      "eli10": "International security standard. Company certify karwati — batati ki security serious hai. Global recognition.",
+      "detail": "ISMS framework. Risk-based controls. Certification audit (BSI, TÜV). Common requirement in enterprise sales."
+    },
+    {
+      "term": "SOC 2",
+      "full": "System and Organization Controls 2",
+      "cat": "legal",
+      "eli10": "US standard SaaS companies ke liye. 5 trust principles — security, availability, confidentiality, privacy, integrity.",
+      "detail": "AICPA framework. Type I (point-in-time) or Type II (period). Required by US enterprise customers."
+    },
+    {
+      "term": "Zero-Day",
+      "full": "Zero-Day Vulnerability",
+      "cat": "general",
+      "eli10": "Software me bug jo developer ko nahi pata. Patch nahi hai. Attacker use kar sakta — defense mushkil.",
+      "detail": "Unknown vulnerability. Sold for $100k-$2.5M on gray market. Defended by EDR + behavior analysis + patching fast."
+    },
+    {
+      "term": "CVE",
+      "full": "Common Vulnerabilities and Exposures",
+      "cat": "general",
+      "eli10": "Har vulnerability ka unique ID (jaise CVE-2024-12345). Global database. Patch level track karta.",
+      "detail": "MITRE-managed. Unique identifier. Public disclosure. cve.mitre.org. Basis for CVSS scoring."
+    },
+    {
+      "term": "CVSS",
+      "full": "Common Vulnerability Scoring System",
+      "cat": "general",
+      "eli10": "Vulnerability kitni serious hai — 0 to 10. 9+ critical, 7+ high. Priority set karne me help.",
+      "detail": "Score: 0.0-10.0. Vector: attack complexity, privileges, user interaction. CVSS 4.0 (2023) latest."
+    },
+    {
+      "term": "IOC",
+      "full": "Indicator of Compromise",
+      "cat": "general",
+      "eli10": "Compromise ke signs — malicious IP, domain, file hash. Threat intel me share karte. Defense me use.",
+      "detail": "Technical artifacts: IP, domain, URL, hash, registry key. Fast to detect, fast to change by attacker. Combine with TTP."
+    },
+    {
+      "term": "IOA",
+      "full": "Indicator of Attack",
+      "cat": "general",
+      "eli10": "Behavior based sign — attacker ka pattern. IOC se zyada durable. Prevention me better.",
+      "detail": "Focus on intent + behavior (not artifacts). Harder for attacker to change. Used in EDR, XDR."
+    },
+    {
+      "term": "Attack Surface",
+      "full": "Attack Surface",
+      "cat": "general",
+      "eli10": "Sab jagah jahan se attacker aa sakta — websites, apps, employees, servers. Zyada surface = zyada risk.",
+      "detail": "External (websites, APIs) + internal (users, apps). Reducing surface = better security. Attack Surface Management (ASM) tools."
+    },
+    {
+      "term": "Lateral Movement",
+      "full": "Lateral Movement",
+      "cat": "general",
+      "eli10": "Attacker ek system se doosre pe jaata. Initial access ke baad andar failta. Zero Trust isse rokta.",
+      "detail": "Post-exploitation phase. Credential reuse, RDP, SMB, PsExec. Detected by UEBA, segmentation, EDR."
+    },
+    {
+      "term": "Privilege Escalation",
+      "full": "Privilege Escalation",
+      "cat": "general",
+      "eli10": "Attacker normal user se admin ban jaata. Zyada control mil jaata. Kernels bugs, misconfigs use karta.",
+      "detail": "Vertical (user→admin) or horizontal (user→user). Exploits: kernel bugs, SUID binaries, misconfigured services."
+    },
+    {
+      "term": "Exfiltration",
+      "full": "Data Exfiltration",
+      "cat": "general",
+      "eli10": "Attacker data chupke bahar bhejta. DNS, HTTPS, cloud storage me. Detect karna mushkil.",
+      "detail": "Data theft egress. Covert channels (DNS tunneling, steganography). DLP + egress monitoring defense."
+    },
+    {
+      "term": "Persistence",
+      "full": "Attacker Persistence",
+      "cat": "general",
+      "eli10": "Attacker system pe rehne ka tareeka — reboot pe bhi. Registry, scheduled task, cron job.",
+      "detail": "Maintain access. Registry Run keys, services, scheduled tasks, WMI, startup folder. Detection: Autoruns, EDR."
+    },
+    {
+      "term": "Beaconing",
+      "full": "C2 Beaconing",
+      "cat": "general",
+      "eli10": "Malware regular interval pe C2 server ko call karta. 'Aap kaam kya karne ka' poochta. Traffic pattern se detect.",
+      "detail": "Periodic C2 check-in. Jitter to evade detection. Analysis: network flow, JA3, DNS queries."
+    },
+    {
+      "term": "Red Team",
+      "full": "Offensive Security Team",
+      "cat": "general",
+      "eli10": "Ethical hackers jo company ko attack karke test karte. Real attacker jaisa. Findings se defense improve.",
+      "detail": "Offensive simulation. Full-scope adversarial. Compare to blue team (defense). Purple = collaboration."
+    },
+    {
+      "term": "Blue Team",
+      "full": "Defensive Security Team",
+      "cat": "general",
+      "eli10": "Defenders — SOC analysts, incident responders. Attack detect karke rok dete.",
+      "detail": "Defense: monitoring, detection, response, hardening. Tools: SIEM, EDR, XDR, SOAR."
+    },
+    {
+      "term": "Bug Bounty",
+      "full": "Vulnerability Disclosure Program",
+      "cat": "general",
+      "eli10": "Company reward deti ethical hackers ko — bug dhoondo, report karo, paisa lo. HackerOne, Bugcrowd platforms.",
+      "detail": "Crowdsourced security testing. Ranges: $50-$1M+ per bug. Google, Apple, Microsoft programs."
+    },
+    {
+      "term": "Responsible Disclosure",
+      "full": "Coordinated Vulnerability Disclosure",
+      "cat": "general",
+      "eli10": "Bug mila to company ko pehle batao (private). Fix hone ke baad public. 90 days common window.",
+      "detail": "CVD process. Researcher → vendor → fix → public. Google Project Zero 90-day policy."
+    }
+  ]
+}

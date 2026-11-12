@@ -1,0 +1,701 @@
+{
+  "title": "Cybersecurity Fundamentals",
+  "subtitle": "Zero se Hero tak — complete beginner to advanced roadmap",
+  "icon": "🎓",
+  "duration": "12 weeks · 60 lessons",
+  "level": "Beginner → Advanced",
+  "description": "Practical cybersecurity course jo aapko phishing, network security, cryptography, ethical hacking, aur modern AI-era defense sikhaata hai. Har lesson me theory + hands-on + real-world examples.",
+  "stats": {
+    "modules": 8,
+    "lessons": 48,
+    "hours": 120,
+    "projects": 8
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "num": 1,
+      "icon": "🧭",
+      "title": "Introduction to Cybersecurity",
+      "duration": "1 week",
+      "level": "Beginner",
+      "desc": "Cybersecurity kya hai, threat landscape, career paths, ethical boundaries.",
+      "lessons": [
+        {
+          "id": "m1l1",
+          "title": "What is Cybersecurity?",
+          "duration": "45 min",
+          "desc": "CIA triad (Confidentiality, Integrity, Availability), security vs privacy, why it matters.",
+          "topics": [
+            "CIA Triad",
+            "Threat actors",
+            "Attack surface",
+            "Defense in depth"
+          ],
+          "outcome": "Cybersecurity ke basic concepts samjhoge aur threat landscape visualize kar paoge."
+        },
+        {
+          "id": "m1l2",
+          "title": "Threat Landscape 2026",
+          "duration": "60 min",
+          "desc": "Modern attack types — phishing, ransomware, supply chain, AI-driven attacks. Stats + real cases.",
+          "topics": [
+            "Attack vectors",
+            "Threat actors",
+            "APT groups",
+            "Cyber kill chain"
+          ],
+          "outcome": "Aaj ke top threats identify kar paoge aur unke against defend kar paoge."
+        },
+        {
+          "id": "m1l3",
+          "title": "Cyber Laws & Ethics",
+          "duration": "50 min",
+          "desc": "IT Act 2000, DPDP Act 2023, GDPR, ethical hacking rules, white hat vs black hat.",
+          "topics": [
+            "IT Act sections",
+            "DPDP",
+            "GDPR",
+            "Responsible disclosure"
+          ],
+          "outcome": "Legal boundaries jaange aur ethical hacking ka framework samjhoge."
+        },
+        {
+          "id": "m1l4",
+          "title": "Career Paths in Security",
+          "duration": "40 min",
+          "desc": "SOC analyst, pentester, security engineer, CISO — kya karte hain, kaise bane.",
+          "topics": [
+            "Job roles",
+            "Certifications",
+            "Skills matrix",
+            "Salary ranges"
+          ],
+          "outcome": "Apna career path choose kar paoge with roadmap."
+        },
+        {
+          "id": "m1l5",
+          "title": "Setting Up Your Lab",
+          "duration": "75 min",
+          "desc": "Virtual machines, Kali Linux, metasploitable, isolated lab environment setup.",
+          "topics": [
+            "VMware/VirtualBox",
+            "Kali Linux",
+            "Isolated network",
+            "Snapshots"
+          ],
+          "outcome": "Apna personal hacking lab bana paoge safely."
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "num": 2,
+      "icon": "🔐",
+      "title": "Authentication & Access Control",
+      "duration": "2 weeks",
+      "level": "Beginner",
+      "desc": "Passwords, 2FA, MFA, passkeys, OAuth, SSO, session management.",
+      "lessons": [
+        {
+          "id": "m2l1",
+          "title": "Password Security Deep Dive",
+          "duration": "60 min",
+          "desc": "Password hashing (bcrypt, argon2), salting, common attacks, breach detection.",
+          "topics": [
+            "Hashing algorithms",
+            "Rainbow tables",
+            "Credential stuffing",
+            "Password managers"
+          ],
+          "outcome": "Password storage secure kar paoge aur attacks se bach paoge."
+        },
+        {
+          "id": "m2l2",
+          "title": "2FA / MFA Explained",
+          "duration": "50 min",
+          "desc": "TOTP, HOTP, push notifications, hardware keys (YubiKey), MFA fatigue attacks.",
+          "topics": [
+            "TOTP",
+            "FIDO2",
+            "WebAuthn",
+            "Number matching"
+          ],
+          "outcome": "Right MFA type choose kar paoge aur bypass attacks detect kar paoge."
+        },
+        {
+          "id": "m2l3",
+          "title": "Passkeys & Passwordless",
+          "duration": "55 min",
+          "desc": "FIDO2 standard, passkey implementation, migration strategy, phishing immunity.",
+          "topics": [
+            "FIDO2",
+            "WebAuthn",
+            "Public-key crypto",
+            "Passkey sync"
+          ],
+          "outcome": "Passkeys implement kar paoge aur users ko migrate karwa paoge."
+        },
+        {
+          "id": "m2l4",
+          "title": "OAuth 2.0 & OIDC",
+          "duration": "70 min",
+          "desc": "Authorization flows, tokens, consent phishing, third-party apps security.",
+          "topics": [
+            "OAuth flows",
+            "JWT",
+            "Refresh tokens",
+            "Consent phishing"
+          ],
+          "outcome": "OAuth securely implement kar paoge aur consent attacks rok paoge."
+        },
+        {
+          "id": "m2l5",
+          "title": "SSO & SAML",
+          "duration": "60 min",
+          "desc": "Enterprise SSO, SAML assertions, IDP/SP model, common misconfigurations.",
+          "topics": [
+            "SAML",
+            "IDP",
+            "Service Provider",
+            "XML signature"
+          ],
+          "outcome": "Enterprise SSO design kar paoge securely."
+        },
+        {
+          "id": "m2l6",
+          "title": "Session Management",
+          "duration": "45 min",
+          "desc": "Cookies, session IDs, HttpOnly, Secure, SameSite flags, session hijacking.",
+          "topics": [
+            "Session tokens",
+            "Cookie flags",
+            "CSRF",
+            "Session fixation"
+          ],
+          "outcome": "Session security strong kar paoge aur hijacking rok paoge."
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "num": 3,
+      "icon": "🎣",
+      "title": "Phishing & Social Engineering",
+      "duration": "2 weeks",
+      "level": "Intermediate",
+      "desc": "Sab types of phishing, social engineering techniques, defense strategies.",
+      "lessons": [
+        {
+          "id": "m3l1",
+          "title": "Anatomy of Phishing Attack",
+          "duration": "60 min",
+          "desc": "Email structure, sender spoofing, link manipulation, credential harvesting pages.",
+          "topics": [
+            "Email headers",
+            "SPF/DKIM/DMARC",
+            "URL tricks",
+            "Cloning"
+          ],
+          "outcome": "Phishing email identify kar paoge aur report kar paoge."
+        },
+        {
+          "id": "m3l2",
+          "title": "Advanced Spear & Whaling",
+          "duration": "55 min",
+          "desc": "OSINT for targeting, pretexting, BEC attacks, wire fraud.",
+          "topics": [
+            "OSINT",
+            "Pretexting",
+            "BEC",
+            "Legal pretexts"
+          ],
+          "outcome": "Targeted attacks recognize kar paoge."
+        },
+        {
+          "id": "m3l3",
+          "title": "Deepfakes & AI Phishing",
+          "duration": "70 min",
+          "desc": "AI-generated phishing, voice cloning, deepfake video, detection techniques.",
+          "topics": [
+            "Voice cloning",
+            "Video deepfake",
+            "Prompt injection",
+            "Detection tools"
+          ],
+          "outcome": "AI-era attacks identify kar paoge."
+        },
+        {
+          "id": "m3l4",
+          "title": "Multi-Channel Attacks",
+          "duration": "50 min",
+          "desc": "Vishing, smishing, QR phishing, social media, calendar invites.",
+          "topics": [
+            "Vishing",
+            "Smishing",
+            "Quishing",
+            "Angler phishing"
+          ],
+          "outcome": "Har channel pe attack identify kar paoge."
+        },
+        {
+          "id": "m3l5",
+          "title": "Building Anti-Phishing Program",
+          "duration": "75 min",
+          "desc": "Email gateway, user training, simulations, incident response, metrics.",
+          "topics": [
+            "Email security stack",
+            "Simulations",
+            "Training",
+            "KPIs"
+          ],
+          "outcome": "Enterprise anti-phishing program design kar paoge."
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "num": 4,
+      "icon": "🌐",
+      "title": "Network Security",
+      "duration": "2 weeks",
+      "level": "Intermediate",
+      "desc": "TCP/IP, firewalls, IDS/IPS, VPN, WiFi security, network attacks.",
+      "lessons": [
+        {
+          "id": "m4l1",
+          "title": "Network Fundamentals",
+          "duration": "75 min",
+          "desc": "OSI model, TCP/IP stack, ports, protocols, packet analysis with Wireshark.",
+          "topics": [
+            "OSI model",
+            "TCP handshake",
+            "Wireshark",
+            "Common ports"
+          ],
+          "outcome": "Network traffic analyze kar paoge."
+        },
+        {
+          "id": "m4l2",
+          "title": "Firewalls & IPS",
+          "duration": "60 min",
+          "desc": "Packet filtering, stateful inspection, NGFW, IPS rules, bypass techniques.",
+          "topics": [
+            "Rule sets",
+            "NAT",
+            "NGFW",
+            "Evasion"
+          ],
+          "outcome": "Firewall rules configure kar paoge."
+        },
+        {
+          "id": "m4l3",
+          "title": "VPN & Secure Tunneling",
+          "duration": "55 min",
+          "desc": "IPsec, WireGuard, OpenVPN, TLS tunnels, VPN misconfigurations.",
+          "topics": [
+            "IPsec",
+            "WireGuard",
+            "Split tunneling",
+            "Kill switch"
+          ],
+          "outcome": "Secure VPN setup kar paoge."
+        },
+        {
+          "id": "m4l4",
+          "title": "WiFi Security",
+          "duration": "60 min",
+          "desc": "WPA2/WPA3, evil twin, deauth attacks, captive portals, public WiFi risks.",
+          "topics": [
+            "WPA3",
+            "Evil twin",
+            "Deauth",
+            "WPS"
+          ],
+          "outcome": "WiFi network secure kar paoge."
+        },
+        {
+          "id": "m4l5",
+          "title": "Network Attacks & Defense",
+          "duration": "70 min",
+          "desc": "MITM, ARP spoofing, DNS poisoning, DDoS, detection and mitigation.",
+          "topics": [
+            "MITM",
+            "ARP spoof",
+            "DNS poisoning",
+            "DDoS"
+          ],
+          "outcome": "Network attacks detect aur defend kar paoge."
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "num": 5,
+      "icon": "🔒",
+      "title": "Cryptography",
+      "duration": "2 weeks",
+      "level": "Advanced",
+      "desc": "Symmetric/asymmetric encryption, hashing, PKI, TLS, digital signatures.",
+      "lessons": [
+        {
+          "id": "m5l1",
+          "title": "Crypto Fundamentals",
+          "duration": "70 min",
+          "desc": "Symmetric vs asymmetric, block vs stream ciphers, AES, modes of operation.",
+          "topics": [
+            "AES",
+            "ChaCha20",
+            "Block modes",
+            "IV/nonce"
+          ],
+          "outcome": "Symmetric crypto samjhoge aur use kar paoge."
+        },
+        {
+          "id": "m5l2",
+          "title": "Asymmetric Cryptography",
+          "duration": "65 min",
+          "desc": "RSA, ECC, Diffie-Hellman, key exchange, forward secrecy.",
+          "topics": [
+            "RSA",
+            "ECC",
+            "ECDH",
+            "Forward secrecy"
+          ],
+          "outcome": "Public-key crypto implement kar paoge."
+        },
+        {
+          "id": "m5l3",
+          "title": "Hashing & Integrity",
+          "duration": "45 min",
+          "desc": "SHA-2/3, HMAC, Merkle trees, collision attacks, rainbow tables.",
+          "topics": [
+            "SHA family",
+            "HMAC",
+            "Birthday attack",
+            "Salt"
+          ],
+          "outcome": "Data integrity verify kar paoge."
+        },
+        {
+          "id": "m5l4",
+          "title": "PKI & Certificates",
+          "duration": "60 min",
+          "desc": "X.509, CAs, certificate chains, CT logs, certificate pinning.",
+          "topics": [
+            "X.509",
+            "CA hierarchy",
+            "CT logs",
+            "Pinning"
+          ],
+          "outcome": "Certificates manage kar paoge."
+        },
+        {
+          "id": "m5l5",
+          "title": "TLS/SSL Deep Dive",
+          "duration": "75 min",
+          "desc": "TLS 1.3, handshake, cipher suites, HSTS, common misconfigurations.",
+          "topics": [
+            "TLS 1.3",
+            "Handshake",
+            "Cipher suites",
+            "HSTS"
+          ],
+          "outcome": "TLS implement aur debug kar paoge."
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "num": 6,
+      "icon": "🛡️",
+      "title": "Web Application Security",
+      "duration": "2 weeks",
+      "level": "Intermediate",
+      "desc": "OWASP Top 10, XSS, SQLi, CSRF, SSRF, API security.",
+      "lessons": [
+        {
+          "id": "m6l1",
+          "title": "OWASP Top 10",
+          "duration": "80 min",
+          "desc": "2021/2025 list, real-world examples, defenses for each.",
+          "topics": [
+            "Broken auth",
+            "Injection",
+            "Misconfig",
+            "SSRF"
+          ],
+          "outcome": "Web app vulnerabilities identify kar paoge."
+        },
+        {
+          "id": "m6l2",
+          "title": "Injection Attacks",
+          "duration": "70 min",
+          "desc": "SQL injection, NoSQL, command injection, XXE, prevention techniques.",
+          "topics": [
+            "SQLi",
+            "NoSQL",
+            "Command injection",
+            "XXE"
+          ],
+          "outcome": "Injection attacks exploit aur defend kar paoge (legally)."
+        },
+        {
+          "id": "m6l3",
+          "title": "XSS & Client-Side",
+          "duration": "65 min",
+          "desc": "Stored, reflected, DOM-based XSS, CSP, sanitization.",
+          "topics": [
+            "Stored XSS",
+            "CSP",
+            "DOMPurify",
+            "Sink/source"
+          ],
+          "outcome": "XSS vulnerabilities detect aur fix kar paoge."
+        },
+        {
+          "id": "m6l4",
+          "title": "CSRF, SSRF, Clickjacking",
+          "duration": "55 min",
+          "desc": "Request forgery attacks, defenses (tokens, SameSite, headers).",
+          "topics": [
+            "CSRF tokens",
+            "SSRF",
+            "X-Frame-Options",
+            "SameSite"
+          ],
+          "outcome": "Forgery attacks defend kar paoge."
+        },
+        {
+          "id": "m6l5",
+          "title": "API Security",
+          "duration": "65 min",
+          "desc": "REST/GraphQL security, rate limiting, auth, input validation.",
+          "topics": [
+            "REST",
+            "GraphQL",
+            "Rate limits",
+            "JWT"
+          ],
+          "outcome": "APIs secure kar paoge."
+        }
+      ]
+    },
+    {
+      "id": "m7",
+      "num": 7,
+      "icon": "🕵️",
+      "title": "Ethical Hacking & Pentesting",
+      "duration": "2 weeks",
+      "level": "Advanced",
+      "desc": "Reconnaissance, scanning, exploitation, post-exploitation, reporting.",
+      "lessons": [
+        {
+          "id": "m7l1",
+          "title": "Reconnaissance",
+          "duration": "70 min",
+          "desc": "Passive and active recon, OSINT tools, footprinting, information gathering.",
+          "topics": [
+            "Whois",
+            "Shodan",
+            "DNS enum",
+            "Subdomain discovery"
+          ],
+          "outcome": "Target reconnaissance kar paoge."
+        },
+        {
+          "id": "m7l2",
+          "title": "Vulnerability Scanning",
+          "duration": "60 min",
+          "desc": "Nmap, Nessus, OpenVAS, scanning strategies, false positives.",
+          "topics": [
+            "Nmap",
+            "Nessus",
+            "OpenVAS",
+            "CVE lookup"
+          ],
+          "outcome": "Vulnerabilities scan aur prioritize kar paoge."
+        },
+        {
+          "id": "m7l3",
+          "title": "Exploitation Basics",
+          "duration": "80 min",
+          "desc": "Metasploit, exploits, payloads, shells, post-exploitation.",
+          "topics": [
+            "Metasploit",
+            "Payloads",
+            "Reverse shells",
+            "Priv esc"
+          ],
+          "outcome": "Safe lab me exploitation practice kar paoge."
+        },
+        {
+          "id": "m7l4",
+          "title": "Reporting & Remediation",
+          "duration": "55 min",
+          "desc": "Professional report writing, risk scoring (CVSS), remediation advice.",
+          "topics": [
+            "CVSS",
+            "Report structure",
+            "Executive summary",
+            "Remediation"
+          ],
+          "outcome": "Professional pentest reports likh paoge."
+        }
+      ]
+    },
+    {
+      "id": "m8",
+      "num": 8,
+      "icon": "🤖",
+      "title": "AI & Modern Threats",
+      "duration": "1 week",
+      "level": "Advanced",
+      "desc": "AI-powered attacks, prompt injection, deepfake defense, quantum-safe migration.",
+      "lessons": [
+        {
+          "id": "m8l1",
+          "title": "AI-Powered Attacks",
+          "duration": "60 min",
+          "desc": "LLM-based phishing, voice cloning, agentic AI attacks, mitigation.",
+          "topics": [
+            "LLM abuse",
+            "Voice clone",
+            "Agentic AI",
+            "Detection"
+          ],
+          "outcome": "AI attacks identify aur defend kar paoge."
+        },
+        {
+          "id": "m8l2",
+          "title": "Prompt Injection & LLM Security",
+          "duration": "65 min",
+          "desc": "Direct/indirect prompt injection, OWASP LLM Top 10, sandboxing.",
+          "topics": [
+            "Prompt injection",
+            "OWASP LLM",
+            "Sandbox",
+            "Output filters"
+          ],
+          "outcome": "LLM apps secure kar paoge."
+        },
+        {
+          "id": "m8l3",
+          "title": "Deepfake Detection",
+          "duration": "55 min",
+          "desc": "AI vs AI, biological signals, liveness check, real-time detection.",
+          "topics": [
+            "Facial artifacts",
+            "rPPG",
+            "Liveness",
+            "Tooling"
+          ],
+          "outcome": "Deepfakes detect kar paoge."
+        },
+        {
+          "id": "m8l4",
+          "title": "Quantum-Safe Migration",
+          "duration": "70 min",
+          "desc": "Quantum threat, PQC standards (Kyber, Dilithium), hybrid migration.",
+          "topics": [
+            "Quantum threat",
+            "NIST PQC",
+            "Hybrid TLS",
+            "Migration"
+          ],
+          "outcome": "Quantum-safe systems plan kar paoge."
+        },
+        {
+          "id": "m8l5",
+          "title": "Zero Trust Architecture",
+          "duration": "60 min",
+          "desc": "Zero Trust principles, implementation, identity-first security.",
+          "topics": [
+            "Never trust",
+            "Micro-segmentation",
+            "ZTNA",
+            "IAM"
+          ],
+          "outcome": "Zero Trust architecture design kar paoge."
+        }
+      ]
+    }
+  ],
+  "learning_path": [
+    {
+      "phase": "Foundation",
+      "weeks": "1-4",
+      "modules": [
+        "m1",
+        "m2"
+      ],
+      "goal": "Basics + Authentication"
+    },
+    {
+      "phase": "Core Skills",
+      "weeks": "5-8",
+      "modules": [
+        "m3",
+        "m4"
+      ],
+      "goal": "Phishing + Network"
+    },
+    {
+      "phase": "Advanced",
+      "weeks": "9-11",
+      "modules": [
+        "m5",
+        "m6"
+      ],
+      "goal": "Crypto + Web Security"
+    },
+    {
+      "phase": "Specialization",
+      "weeks": "12",
+      "modules": [
+        "m7",
+        "m8"
+      ],
+      "goal": "Pentesting + AI"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CompTIA Security+",
+      "level": "Entry",
+      "duration": "3 months"
+    },
+    {
+      "name": "CEH (Certified Ethical Hacker)",
+      "level": "Intermediate",
+      "duration": "6 months"
+    },
+    {
+      "name": "OSCP (Offensive Security)",
+      "level": "Advanced",
+      "duration": "12 months"
+    },
+    {
+      "name": "CISSP",
+      "level": "Expert",
+      "duration": "24 months"
+    }
+  ],
+  "tools_covered": [
+    "Wireshark",
+    "Nmap",
+    "Metasploit",
+    "Burp Suite",
+    "Kali Linux",
+    "Hashcat",
+    "John the Ripper",
+    "Ghidra",
+    "Wireshark",
+    "Snort",
+    "YubiKey",
+    "VeraCrypt",
+    "WireGuard",
+    "MITRE ATT&CK",
+    "VirusTotal"
+  ]
+}

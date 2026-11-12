@@ -1,0 +1,716 @@
+{
+  "events": [
+    {
+      "year": "1995",
+      "date": "AOL Era",
+      "title": "First Documented Phishing Attack",
+      "category": "Origin",
+      "severity": "info",
+      "event": "AOL (America Online) users ko 'AOL Billing' naam se fake messages mile. Password aur credit card maanga gaya. Hacker 'Da Chronic' ne AOL ka algorithm reverse engineer kiya aur auto-generate fake accounts banaye.",
+      "impact": "Pehla documented phishing. Term 'phishing' yahin se popular hua (fishing analogy se).",
+      "lesson": "Trust + urgency ka combo = universal phishing recipe. Ye aaj tak kaam karta hai.",
+      "tags": [
+        "AOL",
+        "First",
+        "Password Theft"
+      ]
+    },
+    {
+      "year": "1996",
+      "date": "AOL Wave",
+      "title": "Phishing Term Popularized",
+      "category": "Origin",
+      "severity": "info",
+      "event": "AOL chat rooms me 'fishing' term use hone laga. Hacker groups (AOHell tool) se mass phishing easy ho gayi. Credit card + password combos 'carding' forums pe bikne lage.",
+      "impact": "Organized phishing economy shuru. Underground forums me credentials currency ban gayi.",
+      "lesson": "Attackers har naye communication medium ko target karte hain — chat rooms, emails, SMS, social media.",
+      "tags": [
+        "AOHell",
+        "Chat Rooms",
+        "Underground"
+      ]
+    },
+    {
+      "year": "1999",
+      "date": "Early Commercial",
+      "title": "First Reported Phishing of Banks",
+      "category": "Banking",
+      "severity": "medium",
+      "event": "Online banking shuru hui. Attackers ne fake bank pages banaye jo asli jaisi dikhti. Customers credentials daalte — accounts drain. E-gold (digital currency) bhi target hua.",
+      "impact": "Financial sector me phishing ka pehla serious wave.",
+      "lesson": "Jab bhi paisa online aata hai, attackers ready hote hain.",
+      "tags": [
+        "Banking",
+        "E-gold",
+        "Finance"
+      ]
+    },
+    {
+      "year": "2003",
+      "date": "eBay/PayPal",
+      "title": "eBay + PayPal Mass Phishing Wave",
+      "category": "Brand",
+      "severity": "high",
+      "event": "Massive phishing emails eBay aur PayPal users ko gaye. 'Account suspended' ka darr, 'verify now' link. Hazaaron accounts compromise. Attackers Russia + Eastern Europe se operate kar rahe the.",
+      "impact": "Pehla widespread brand impersonation. Anti-Phishing Working Group (APWG) 2003 me form hui.",
+      "lesson": "Brand trust sabse zyada valuable hai — attackers usko copy karte hain.",
+      "tags": [
+        "eBay",
+        "PayPal",
+        "APWG"
+      ]
+    },
+    {
+      "year": "2004",
+      "date": "Rise of Phishing",
+      "title": "Phishing Kit Industry Born",
+      "category": "Economy",
+      "severity": "high",
+      "event": "Rock Phish gang ne 'phishing kits' bechi — ready-to-use fake websites + email templates. Non-technical log bhi phishing kar sakte. Kits $50-$500 me available thi. Fast-Flux DNS se hosting hide karti.",
+      "impact": "Phishing barrier-to-entry collapse. Attackers exponentially badhe.",
+      "lesson": "As-a-Service model cybercrime ko democratize karta hai.",
+      "tags": [
+        "Rock Phish",
+        "Kits",
+        "Fast-Flux"
+      ]
+    },
+    {
+      "year": "2005",
+      "date": "FFIEC Guidance",
+      "title": "US Banks Warned About Phishing",
+      "category": "Regulation",
+      "severity": "info",
+      "event": "Federal Financial Institutions Examination Council (FFIEC) ne banks ko warning issue ki — phishing ke against 2FA implement karo. Result: banks ne SMS OTP, hardware tokens shuru kiye.",
+      "impact": "2FA mainstream hua banking me. Attackers ne social engineering se 2FA bypass karna shuru kiya.",
+      "lesson": "Regulation + tech = arms race. Har defense ke against attacker naya tareeka dhundta hai.",
+      "tags": [
+        "FFIEC",
+        "2FA",
+        "Regulation"
+      ]
+    },
+    {
+      "year": "2007",
+      "date": "Banca de los Andes",
+      "title": "First Major DNS Hijacking (Pharming)",
+      "category": "Advanced",
+      "severity": "critical",
+      "event": "Mexican bank Banca de los Andes ka DNS server hack hua. Customers 'banco.com' type karte the, URL bilkul sahi dikhta tha — par nakli site khulti thi. Attacker ne credentials capture kiye. Loss: $100k+.",
+      "impact": "Pharming (DNS + Phishing) ka pehla documented case. Companies ne DNSSEC implement karna shuru kiya.",
+      "lesson": "URL dekhna kaafi nahi — DNS-level attacks URL ko bhi bharosa nahi karne dete.",
+      "tags": [
+        "DNS",
+        "Pharming",
+        "Mexico"
+      ]
+    },
+    {
+      "year": "2008",
+      "date": "SMS OTP Era",
+      "title": "Mobile Phishing Starts",
+      "category": "Mobile",
+      "severity": "medium",
+      "event": "Mobile phones common hue. First SMS phishing attacks aaye (later 'Smishing' term aaya). Fake bank alerts, lottery, delivery messages. Mobile browsers me URL verify karna mushkil tha.",
+      "impact": "New attack channel. Mobile me security awareness kam thi.",
+      "lesson": "Naya channel = naya attack vector. Attackers sab jagah adapt karte.",
+      "tags": [
+        "SMS",
+        "Mobile",
+        "Smishing"
+      ]
+    },
+    {
+      "year": "2009",
+      "date": "Social Media",
+      "title": "First Major Social Media Phishing",
+      "category": "Social",
+      "severity": "high",
+      "event": "Facebook, Twitter, MySpace pe fake login pages. 'Your friend tagged you', 'See who viewed your profile' bait. Worms social graph pe spread hote — Jaise Koobface.",
+      "impact": "Social media phishing mainstream. Trust graph exploit.",
+      "lesson": "Social proof (friends) = high trust = easy phishing.",
+      "tags": [
+        "Facebook",
+        "Twitter",
+        "Koobface"
+      ]
+    },
+    {
+      "year": "2010",
+      "date": "Tabnabbing",
+      "title": "Aza Raskin's Tabnabbing Attack",
+      "category": "Research",
+      "severity": "medium",
+      "event": "Mozilla's Aza Raskin ne Tabnabbing demonstrate kiya — inactive tab ka content change ho jaata, fake 'session expired' page dikhta. Firefox ne patched kiya. Ye bhi attack pattern naya tha.",
+      "impact": "Browser-level phishing awareness aayi. Modern 'tab-jacking' attacks ka base.",
+      "lesson": "Aapke inactive tabs bhi attack surface hain. Use karke close karo.",
+      "tags": [
+        "Tabnabbing",
+        "Mozilla",
+        "Browser"
+      ]
+    },
+    {
+      "year": "2011",
+      "date": "Spear Phishing Era",
+      "title": "APT Attacks Use Spear Phishing",
+      "category": "APT",
+      "severity": "critical",
+      "event": "APT28 (Fancy Bear), APT29 (Cozy Bear), APT1 (China) ne mass espionage me spear phishing use karna shuru kiya. Targets: government, defense, think tanks. RSA SecurID breach (2011) spear phishing se hua — 40M+ tokens compromised.",
+      "impact": "State-sponsored actors ne phishing ko espionage weapon banaya.",
+      "lesson": "Nation-state actors ke liye spear phishing #1 entry vector hai.",
+      "tags": [
+        "APT",
+        "RSA",
+        "Espionage"
+      ]
+    },
+    {
+      "year": "2013",
+      "date": "Cryptolocker",
+      "title": "Ransomware via Phishing",
+      "category": "Malware",
+      "severity": "critical",
+      "event": "Cryptolocker ransomware phishing attachments se spread hua. Files encrypt + Bitcoin ransom. $3M+ extorted in first months. Bitcoin ne ransomware economically viable banaya.",
+      "impact": "Ransomware-phishing combo dangerous. Healthcare, finance, government target.",
+      "lesson": "Bitcoin ne cybercrime ko monetize karna easy bana diya.",
+      "tags": [
+        "Ransomware",
+        "Bitcoin",
+        "Cryptolocker"
+      ]
+    },
+    {
+      "year": "2014",
+      "date": "World Cup Brazil",
+      "title": "Evil Twin WiFi at World Cup",
+      "category": "Network",
+      "severity": "high",
+      "event": "FIFA World Cup ke dauraan attackers ne fake WiFi hotspots setup kiye — 'FIFA_Free_WiFi', 'Stadium_Free'. Hazaaron tourists connect hue. Credentials, cards, social media sab capture.",
+      "impact": "Public WiFi risk mainstream highlight. VPN adoption badhi.",
+      "lesson": "Public WiFi = attacker ka favorite. VPN + HTTPS mandatory.",
+      "tags": [
+        "Evil Twin",
+        "WiFi",
+        "World Cup"
+      ]
+    },
+    {
+      "year": "2014",
+      "date": "Home Depot",
+      "title": "Home Depot Data Breach",
+      "category": "Retail",
+      "severity": "critical",
+      "event": "Home Depot ke POS system compromise. Vendor email se spear phishing → credentials → lateral movement. 56 million credit cards stolen. $134 million cleanup cost.",
+      "impact": "Supply chain + phishing combo. Retail sector me security investment boost.",
+      "lesson": "Vendor compromise = your compromise. Third-party risk management critical.",
+      "tags": [
+        "Home Depot",
+        "POS",
+        "Supply Chain"
+      ]
+    },
+    {
+      "year": "2015",
+      "date": "Ubiquiti",
+      "title": "Pretexting $46.7M Loss",
+      "category": "BEC",
+      "severity": "critical",
+      "event": "Ubiquiti Networks ke finance team ko fake CEO + lawyer pretexting email aaye. Attacker ne khud ko legal counsel + finance head bola. 4 wire transfers Hong Kong bank me. Total $46.7M. FBI ne $8.5M recover kiye.",
+      "impact": "BEC attacks ka sabse bada documented case. Companies ne wire transfer policy update ki.",
+      "lesson": "Seniority claim bhi verify karo. Out-of-band callback gold standard hai.",
+      "tags": [
+        "Ubiquiti",
+        "BEC",
+        "Pretexting"
+      ]
+    },
+    {
+      "year": "2016",
+      "date": "Google + Facebook",
+      "title": "$100M BEC Attack",
+      "category": "BEC",
+      "severity": "critical",
+      "event": "Lithuanian hacker Evaldas Rimasauskas ne fake 'Quanta Computer' company banai. Fake invoices, letterheads, tax docs. Google aur Facebook ne total $100M wire kiye (2 saal me). Bank accounts Cyprus, Latvia, Hungary me.",
+      "impact": "BEC ka sabse bada documented case. 2019 me Rimasauskas ne guilty plead kiya — 5 saal jail.",
+      "lesson": "Vendor verification process critical. Wire changes ke liye phone confirmation mandatory.",
+      "tags": [
+        "Google",
+        "Facebook",
+        "$100M",
+        "Quanta"
+      ]
+    },
+    {
+      "year": "2017",
+      "date": "WannaCry",
+      "title": "WannaCry Ransomware Global Attack",
+      "category": "Ransomware",
+      "severity": "critical",
+      "event": "NSA exploit (EternalBlue) leak hua. WannaCry worm ne 150 countries me 200k+ computers encrypt kiye. UK NHS hospitals affected. Phishing + unpatched SMB = combo. $4-8 billion damage.",
+      "impact": "Global ransomware awareness. Nations ne cyber defense me invest karna shuru kiya.",
+      "lesson": "Patching delay = disaster. Legacy systems (Windows XP) especially targeted.",
+      "tags": [
+        "WannaCry",
+        "EternalBlue",
+        "NHS"
+      ]
+    },
+    {
+      "year": "2017",
+      "date": "Forbes Watering Hole",
+      "title": "Forbes.com Compromise",
+      "category": "Watering Hole",
+      "severity": "high",
+      "event": "Attackers ne Forbes.com ke 'Thought of the Day' feature compromise kiya. Visitors ko fake 'Flash update' dikhaya. US financial industry + defense sector targeted. Drive-by downloads.",
+      "impact": "High-profile media site watering hole attack. Reputation trusted sites ka bhi risk.",
+      "lesson": "Trusted sites bhi compromised ho sakte. Script blockers + browser isolation help.",
+      "tags": [
+        "Forbes",
+        "Watering Hole",
+        "Drive-by"
+      ]
+    },
+    {
+      "year": "2018",
+      "date": "Business Email Compromise Wave",
+      "title": "BEC Losses Hit $12 Billion",
+      "category": "BEC",
+      "severity": "critical",
+      "event": "FBI ne reported: BEC losses $12 billion (2013-2018). Average $120k per incident. Variants: CEO fraud, attorney impersonation, vendor invoice, W-2 theft, data theft. Organizations worldwide affected.",
+      "impact": "BEC became #1 cyber threat for businesses. Insurance companies ne BEC-specific policies shuru ki.",
+      "lesson": "BEC me technology nahi — processes + training critical hain.",
+      "tags": [
+        "FBI",
+        "BEC",
+        "$12B"
+      ]
+    },
+    {
+      "year": "2018",
+      "date": "Passkeys Origin",
+      "title": "FIDO2 Standard Released",
+      "category": "Defense",
+      "severity": "info",
+      "event": "FIDO Alliance + W3C ne FIDO2 standard release kiya. WebAuthn browser API + CTAP2 device protocol. Passwordless authentication ka foundation. Phishing-proof MFA possible.",
+      "impact": "Passwordless future ka start. Apple, Google, Microsoft ne adopt kiya.",
+      "lesson": "Standards-based solutions industry-wide adoption enable karte.",
+      "tags": [
+        "FIDO2",
+        "WebAuthn",
+        "Passwordless"
+      ]
+    },
+    {
+      "year": "2019",
+      "date": "Multiple Breaches",
+      "title": "Year of Massive Data Breaches",
+      "category": "Breach",
+      "severity": "critical",
+      "event": "2019 me: Capital One (100M records), First American (885M records), Facebook (540M), Zynga (172M), Canva (137M). Phishing + misconfiguration mix. Credential stuffing attacks increased 300%.",
+      "impact": "Data breach fatigue. Users ko password change karna normal ho gaya.",
+      "lesson": "Breach inevitable hai — assume karo aur respond karo. Breach detection + response critical.",
+      "tags": [
+        "Capital One",
+        "Breach",
+        "Data"
+      ]
+    },
+    {
+      "year": "2019",
+      "date": "OAuth Phishing",
+      "title": "OAuth Consent Phishing Emerges",
+      "category": "OAuth",
+      "severity": "critical",
+      "event": "Attackers ne fake OAuth apps register kiye (jaise 'Google Docs' extension). Users ne 'Allow' kiya — full mailbox access mil gaya. 2019 me Google Docs phishing viral hua.",
+      "impact": "New attack vector — password nahi chahiye, permission chahiye.",
+      "lesson": "OAuth consent screen padho. Permissions review karo. Third-party apps audit.",
+      "tags": [
+        "OAuth",
+        "Google Docs",
+        "Consent"
+      ]
+    },
+    {
+      "year": "2020",
+      "date": "COVID Phishing",
+      "title": "COVID-19 Themed Phishing Surge",
+      "category": "Pandemic",
+      "severity": "critical",
+      "event": "Pandemic ke dauraan phishing 600%+ badhi. 'COVID relief', 'vaccine appointment', 'WHO update', 'work from home policy' — sab themes. Remote work se corporate defense kamzor hui. Attackers ne panic + curiosity exploit kiya.",
+      "impact": "Phishing volumes peak. Remote workforce = bigger attack surface.",
+      "lesson": "Crisis events attackers ke liye opportunity hote hain. Awareness + skepticism essential.",
+      "tags": [
+        "COVID",
+        "Remote Work",
+        "Pandemic"
+      ]
+    },
+    {
+      "year": "2020",
+      "date": "Twitter Hack",
+      "title": "Twitter 130+ Accounts Hacked",
+      "category": "Social",
+      "severity": "critical",
+      "event": "Teen hackers (17-22 saal) ne Twitter employees ko spear-phish kiya (phone call + fake VPN page). Internal tools access mile. Obama, Musk, Apple, Bill Gates ke accounts se Bitcoin scam tweets. $118k Bitcoin collected. Employees ko target kiya.",
+      "impact": "Social media platforms ki internal security question hui. MFA mandatory hui internal tools pe.",
+      "lesson": "Employees sabse weak link. Social engineering = technical controls bypass.",
+      "tags": [
+        "Twitter",
+        "Spear",
+        "Bitcoin"
+      ]
+    },
+    {
+      "year": "2020",
+      "date": "SolarWinds",
+      "title": "SolarWinds Supply Chain Attack",
+      "category": "Supply Chain",
+      "severity": "critical",
+      "event": "APT29 (Russian SVR) ne SolarWinds Orion software ke build process compromise kiya. 'SUNBURST' backdoor inject kiya. Automatic updates se 18,000+ organizations affected — US Treasury, DHS, Fortune 500. Attackers 9+ months undetected.",
+      "impact": "Sabse sophisticated supply chain attack. Software build pipeline security critical. SBOM concept.",
+      "lesson": "Trusted software updates bhi verify karo. Zero Trust everywhere.",
+      "tags": [
+        "SolarWinds",
+        "APT29",
+        "SUNBURST"
+      ]
+    },
+    {
+      "year": "2021",
+      "date": "Colonial Pipeline",
+      "title": "Colonial Pipeline Ransomware",
+      "category": "Ransomware",
+      "severity": "critical",
+      "event": "Compromised VPN password (reused) se DarkSide ransomware. 5,500-mile fuel pipeline US East Coast band. 45% fuel supply affected. $4.4M Bitcoin ransom. 6 days disruption. Fuel panic buying.",
+      "impact": "Critical infrastructure ransomware impact. US Executive Order on Cybersecurity.",
+      "lesson": "Password reuse = catastrophic. Critical infrastructure targeted.",
+      "tags": [
+        "Colonial Pipeline",
+        "DarkSide",
+        "Infrastructure"
+      ]
+    },
+    {
+      "year": "2021",
+      "date": "Microsoft Exchange",
+      "title": "ProxyLogon & ProxyShell Exploits",
+      "category": "Zero-Day",
+      "severity": "critical",
+      "event": "Microsoft Exchange Server me 4 zero-day vulnerabilities (ProxyLogon). 250,000+ servers worldwide compromised. HAFNIUM (China) ne backdoors install kiye. Attackers ne emails read + persistence establish.",
+      "impact": "On-prem Exchange installations risky. Cloud migration accelerated.",
+      "lesson": "On-premises systems ko patch karna critical. Emergency patching process zaroori.",
+      "tags": [
+        "Exchange",
+        "ProxyLogon",
+        "HAFNIUM"
+      ]
+    },
+    {
+      "year": "2022",
+      "date": "MFA Fatigue",
+      "title": "Uber + Cisco MFA Fatigue Attacks",
+      "category": "MFA",
+      "severity": "critical",
+      "event": "Uber: contractor ko MFA fatigue attack. 100+ push notifications raat 2 baje. Victim ne 'Approve' daba diya. Internal Slack, HackerOne, dashboards access. Cisco: similar attack, VPN access. Both companies confirmed breach.",
+      "impact": "MFA fatigue mainstream attention. Number matching adoption accelerated.",
+      "lesson": "MFA alone kaafi nahi — number matching + push limits + password monitoring chahiye.",
+      "tags": [
+        "Uber",
+        "Cisco",
+        "MFA Fatigue"
+      ]
+    },
+    {
+      "year": "2022",
+      "date": "Lapsus$",
+      "title": "Lapsus$ Teenage Hacking Group",
+      "category": "Group",
+      "severity": "critical",
+      "event": "Lapsus$ group (teen hackers) ne Microsoft, NVIDIA, Samsung, Ubisoft, Okta, T-Mobile compromise kiye. Social engineering + SIM swap + bribing employees. MFA bypass, source code theft. 2023 me group leader convicted.",
+      "impact": "Teenagers bhi state-level damage kar sakte. Social engineering ki devastating power.",
+      "lesson": "Youth + access to tools + intent = dangerous. Insider threat awareness.",
+      "tags": [
+        "Lapsus$",
+        "Microsoft",
+        "NVIDIA"
+      ]
+    },
+    {
+      "year": "2022",
+      "date": "Reddit Breach",
+      "title": "Reddit Employee Phishing Breach",
+      "category": "Social",
+      "severity": "high",
+      "event": "Reddit employee ko targeted phishing link (fake intranet page). Employee credentials + 2FA code daala. Attacker internal systems me ghusa — 2022 me 80GB data (source code, internal docs) chori. 2007-2022 ka user data compromised.",
+      "impact": "Even tech-savvy companies vulnerable. Employee training essential.",
+      "lesson": "Technical sophistication ≠ phishing immunity. Awareness ongoing process hai.",
+      "tags": [
+        "Reddit",
+        "Internal",
+        "2FA"
+      ]
+    },
+    {
+      "year": "2023",
+      "date": "OAuth BEC Wave",
+      "title": "Fake OAuth Apps BEC",
+      "category": "OAuth",
+      "severity": "critical",
+      "event": "Attackers ne 'Adobe', 'DocuSign' jaise fake OAuth apps banaye. Microsoft/Google environments me deploy. Employees ne 'Allow' kiya. Full mailbox access mila. Password change bhi kaam nahi aaya — refresh token valid tha. Wide campaigns mid-2023.",
+      "impact": "OAuth consent phishing systematic attack bani. Microsoft ne 'verified publisher' introduce kiya.",
+      "lesson": "Password change kaafi nahi — OAuth tokens bhi revoke karo.",
+      "tags": [
+        "OAuth",
+        "BEC",
+        "Microsoft"
+      ]
+    },
+    {
+      "year": "2023",
+      "date": "3CX Supply Chain",
+      "title": "3CX Desktop App Trojan",
+      "category": "Supply Chain",
+      "severity": "critical",
+      "event": "3CX VoIP software (600,000+ companies) Windows + Mac builds me malware. North Korean APT (Lazarus) ne supply chain compromise. Attackers ne 3CX customers se aage target kiya — crypto companies, BPOs. Two-stage supply chain attack.",
+      "impact": "Enterprise VoIP software compromise. Code signing protection weaknesses.",
+      "lesson": "Build pipeline security critical. Code signing ≠ malware-free.",
+      "tags": [
+        "3CX",
+        "Lazarus",
+        "VoIP"
+      ]
+    },
+    {
+      "year": "2023",
+      "date": "MOVEit",
+      "title": "MOVEit Transfer Mass Exploitation",
+      "category": "Zero-Day",
+      "severity": "critical",
+      "event": "MOVEit Transfer file-sharing software me SQL injection zero-day. Cl0p ransomware group ne mass exploitation. 2,600+ organizations affected, 90M+ individuals' data. Banks, government, healthcare sab hit. Ransom demanded without encryption — pure extortion.",
+      "impact": "File transfer software attack vector. Data theft only (no encryption) new tactic.",
+      "lesson": "Third-party software assessment critical. Data retention = liability.",
+      "tags": [
+        "MOVEit",
+        "Cl0p",
+        "Extortion"
+      ]
+    },
+    {
+      "year": "2023",
+      "date": "QR Parking Scam",
+      "title": "US Parking Meter QR Scam",
+      "category": "QR",
+      "severity": "high",
+      "event": "Multiple US cities (Austin, San Antonio, Houston) me parking meters pe fake QR stickers. Scan karo → fake payment page → card details chori. Hazaaron victims. Similar attacks restaurants, weddings, airports me.",
+      "impact": "QR phishing mainstream. Public places me awareness badhi.",
+      "lesson": "QR code blindly scan mat karo. URL preview dekho.",
+      "tags": [
+        "QR",
+        "Parking",
+        "Payment"
+      ]
+    },
+    {
+      "year": "2024",
+      "date": "Arup $25M",
+      "title": "Arup Deepfake Video Heist",
+      "category": "Deepfake",
+      "severity": "critical",
+      "event": "Hong Kong engineering firm Arup ke employee ko multi-person deepfake video conference call. 'CFO' + 3 'colleagues' (AI-generated). Urgent wire transfer — confidential deal. Employee ne 15 transactions me $25M transfer kiye. Baad me real CFO ne deny kiya.",
+      "impact": "Pehla documented large-scale AI-deepfake heist. Companies ne video call verification protocol update kiye.",
+      "lesson": "Video call bhi trustworthy nahi. Code word + out-of-band callback mandatory.",
+      "tags": [
+        "Arup",
+        "Deepfake",
+        "$25M"
+      ]
+    },
+    {
+      "year": "2024",
+      "date": "AI Phishing Era",
+      "title": "LLM-Powered Phishing Mainstream",
+      "category": "AI",
+      "severity": "critical",
+      "event": "ChatGPT, Claude, Gemini se phishing emails perfect grammar ke saath. Purane 'spelling mistakes' wala tell gone. AI ne translation, personalization, context-awareness perfect ki. Phishing detection accuracy drop hui. Voice cloning mainstream.",
+      "impact": "Traditional detection methods obsoleted. AI-powered defense necessary.",
+      "lesson": "AI ne attack quality step-change kar di. Defense bhi AI se.",
+      "tags": [
+        "AI",
+        "LLM",
+        "ChatGPT"
+      ]
+    },
+    {
+      "year": "2024",
+      "date": "Morris II Worm",
+      "title": "First AI Prompt Worm Demonstrated",
+      "category": "AI Research",
+      "severity": "high",
+      "event": "Cornell Tech researchers ne 'Morris II' prompt worm demonstrate kiya. AI assistants (ChatGPT, Gemini, Claude) me spread hota — email + messages via prompt injection. Self-replicating. Named after 1988 Morris worm.",
+      "impact": "AI ecosystem me worm attack possible. AI platforms ne prompt sanitization improve ki.",
+      "lesson": "AI agents = new attack surface. Zero trust AI mandatory.",
+      "tags": [
+        "Morris II",
+        "Worm",
+        "Prompt"
+      ]
+    },
+    {
+      "year": "2024",
+      "date": "AI Browser Agents",
+      "title": "AI Browser Hijacking Demonstrated",
+      "category": "AI Research",
+      "severity": "high",
+      "event": "Researchers ne ChatGPT Operator, Claude Computer Use, Google Mariner ko hijack kiya — malicious page se. AI ne unauthorized purchases, data sharing ki. Production cases abhi nahi par threat imminent. AI agent safety critical research area.",
+      "impact": "AI agents production me aane se pehle safety framework zaroori.",
+      "lesson": "Autonomous AI = approval mode mandatory for sensitive actions.",
+      "tags": [
+        "AI Browser",
+        "Operator",
+        "Mariner"
+      ]
+    },
+    {
+      "year": "2025",
+      "date": "Agentic AI Attacks",
+      "title": "Agentic AI Threats Emerge",
+      "category": "AI",
+      "severity": "critical",
+      "event": "Attackers ne AI agents deploy karna shuru kiya — recon, phishing emails, replies, wire fraud. AI-to-AI attacks. Autonomous BEC campaigns. Human attackers sirf oversight. Research me confirmed. Defensive AI SOC mainstream.",
+      "impact": "AI vs AI security era shuru. SOC analyst role change.",
+      "lesson": "AI ko AI se defend karo. Human judgment + strategic oversight.",
+      "tags": [
+        "Agentic",
+        "AI",
+        "Autonomous"
+      ]
+    },
+    {
+      "year": "2025",
+      "date": "Passkeys Mainstream",
+      "title": "Passkeys Industry-Wide Adoption",
+      "category": "Defense",
+      "severity": "info",
+      "event": "Google, Apple, Microsoft, Amazon, PayPal, GitHub, WhatsApp ne passkeys default kiya. 90% major sites passkey-ready. SMS OTP legacy tech ban gayi. FIDO2 + WebAuthn standard worldwide. Phishing fundamentally broken for passkey accounts.",
+      "impact": "Passwordless era mainstream. Phishing effectiveness drop for enabled accounts.",
+      "lesson": "Standards-based defense industry-wide change la sakte.",
+      "tags": [
+        "Passkeys",
+        "FIDO2",
+        "Passwordless"
+      ]
+    },
+    {
+      "year": "2026",
+      "date": "PQC Migration",
+      "title": "Post-Quantum Crypto Adoption",
+      "category": "Quantum",
+      "severity": "high",
+      "event": "NIST PQC standards (ML-KEM, ML-DSA, SLH-DSA) mainstream adoption. Banks, governments, browsers hybrid mode me migrate. Chrome, iOS, Signal already PQC-ready. 'Harvest now, decrypt later' concerns board-level. Migration timeline 2026-2030.",
+      "impact": "Quantum-safe crypto migration begins. Legacy RSA/ECC phased out.",
+      "lesson": "Aaj ka encrypted data kal quantum se decrypt ho sakta. Migrate now.",
+      "tags": [
+        "PQC",
+        "NIST",
+        "Quantum"
+      ]
+    },
+    {
+      "year": "2026",
+      "date": "Prompt Injection Top Risk",
+      "title": "Prompt Injection #1 LLM Risk",
+      "category": "AI",
+      "severity": "critical",
+      "event": "OWASP LLM Top 10 me prompt injection #1 risk. Enterprise LLM deployments me massive issue. AI email assistants, customer support bots, coding agents sab vulnerable. Indirect prompt injection via emails, webpages, PDFs. Attacks mainstream.",
+      "impact": "Every company jo AI deploy karegi, prompt injection face karegi.",
+      "lesson": "AI inputs ko untrusted maano. Sanitize + isolate + human review.",
+      "tags": [
+        "Prompt Injection",
+        "OWASP",
+        "LLM"
+      ]
+    },
+    {
+      "year": "2027",
+      "date": "Quantum-Ready Enterprise",
+      "title": "Full PQC Migration Deadline",
+      "category": "Quantum",
+      "severity": "high",
+      "event": "NSA/CISA recommended deadline for critical systems. Enterprises full PQC migration target. Quantum computers progress — 1000+ logical qubits expected. Cryptographically relevant quantum computer (CRQC) 2030-2035 estimated.",
+      "impact": "Migration complete karna critical. Legacy systems forced upgrade.",
+      "lesson": "Planning + early migration = smooth transition.",
+      "tags": [
+        "PQC",
+        "Migration",
+        "CRQC"
+      ]
+    },
+    {
+      "year": "2027",
+      "date": "AI-Native Defense",
+      "title": "AI-First Security Standard",
+      "category": "Defense",
+      "severity": "info",
+      "event": "Security operations AI-first ho gaye. AI SOC standard, human judgment strategic. Behavioral biometrics, continuous authentication, deepfake detection real-time. AI-vs-AI arms race standard. 'AI Security Engineer' top job role.",
+      "impact": "Security industry transformation complete. Traditional SOC analyst role evolved.",
+      "lesson": "AI ko weapon aur shield dono ki tarah use karo. Human judgment strategic.",
+      "tags": [
+        "AI SOC",
+        "Continuous Auth",
+        "Future"
+      ]
+    },
+    {
+      "year": "2027",
+      "date": "Deepfake Detection Standard",
+      "title": "Certified Deepfake Detection",
+      "category": "AI",
+      "severity": "high",
+      "event": "Regulation ne certified deepfake detection mandatory banaya. Banks, governments, media me standard. Video KYC rearchitected. Multi-modal biometric (face + voice + behavior + device) standard. Continuous authentication mainstream.",
+      "impact": "Deepfake detection industry $5B+. Regulation-driven adoption.",
+      "lesson": "Technology + regulation combo me change aata hai.",
+      "tags": [
+        "Deepfake",
+        "Regulation",
+        "Biometric"
+      ]
+    }
+  ],
+  "stats": {
+    "total": 45,
+    "start": "1995",
+    "end": "2027",
+    "categories": [
+      "AI",
+      "AI Research",
+      "APT",
+      "Advanced",
+      "BEC",
+      "Banking",
+      "Brand",
+      "Breach",
+      "Deepfake",
+      "Defense",
+      "Economy",
+      "Group",
+      "MFA",
+      "Malware",
+      "Mobile",
+      "Network",
+      "OAuth",
+      "Origin",
+      "Pandemic",
+      "QR",
+      "Quantum",
+      "Ransomware",
+      "Regulation",
+      "Research",
+      "Retail",
+      "Social",
+      "Supply Chain",
+      "Watering Hole",
+      "Zero-Day"
+    ]
+  }
+}

@@ -19,10 +19,14 @@
       <button class="nav-item" data-view="stats"><span class="ic">&#128202;</span> Stats</button>
       <button class="nav-item" data-view="timeline"><span class="ic"><button class="nav-item" data-view="timeline"><span class="ic">&#9203;</span> Timeline</button>#9203;</span> Timeline (40+)</button>
       <div class="nav-group-label">Learn</div>
+      <button class="nav-item" data-view="course"><span class="ic">&#127891;</span> Cyber Course</button>
       <button class="nav-item" data-view="types"><span class="ic">&#128218;</span> Phishing Types</button>
       <button class="nav-item" data-view="flashcards"><span class="ic">&#127924;</span> Flashcards (180)</button>
       <button class="nav-item" data-view="future"><span class="ic">&#128302;</span> Future 2026</button>
       <button class="nav-item" data-view="detector"><span class="ic">&#128269;</span> URL Detector</button>
+      <button class="nav-item" data-view="password"><span class="ic">&#128273;</span> Password Tools</button>
+      <button class="nav-item" data-view="email-analyzer"><span class="ic">&#128231;</span> Email Analyzer</button>
+      <button class="nav-item" data-view="checklist"><span class="ic">&#9989;</span> Safety Checklist</button>
       <button class="nav-item" data-view="quiz"><span class="ic">&#127919;</span> Quiz (250)</button>
       <div class="nav-group-label">Reference</div>
       <button class="nav-item" data-view="notes"><span class="ic">&#128221;</span> Notes</button>
@@ -144,6 +148,12 @@
         <div id="timeline-list" class="timeline-container"></div>
       </div>
 
+      <div class="view" id="view-course">
+        <h1 class="h1">🎓 Cybersecurity Course</h1>
+        <p class="lead">Complete roadmap — beginner se advanced tak. Har module clickable, har lesson detail ke saath.</p>
+        <div id="course-content"></div>
+      </div>
+
       <div class="view" id="view-types">
         <h1 class="h1">25 Phishing Types</h1>
         <p class="lead">Kisi bhi card pe click karo &mdash; full detail khulega.</p>
@@ -189,7 +199,6 @@
         <h1 class="h1">Quiz <h1 class="h1">Quiz &mdash; 50 Questions</h1>mdash; 250 Questions</h1>
         <p class="lead">Har jawab ke baad explanation.</p>
         <div id="quiz-container"></div>
-        <div class="quiz-score" id="quiz-score" style="display:none"><span>Your Score</span><span><span class="num" id="score-num">0</span> / <span class="num" id="score-total">50</span></span></div>
       </div>
 
       <div class="view" id="view-notes">
@@ -647,6 +656,141 @@ CHECK ORDER (right to left):
           </p>
         </div>
 
+        <div class="section-h">📵 DND Guide — Spam Calls/SMS Band Karo</div>
+        <div class="box good">
+          <b style="color:var(--green);font-size:14px">✅ DND Ke Fayde</b>
+          <ul class="ul check" style="margin-top:10px">
+            <li>Telemarketers ke spam calls/SMS <b>rok sakte ho</b></li>
+            <li>Bank/insurance/loan ke unsolicited offers stop</li>
+            <li>Fraud calls ka risk kam — <b>scammers reach nahi kar sakte</b></li>
+            <li>Free hai, koi charge nahi</li>
+            <li>Category-wise control — sirf jo chahte ho wo allow karo</li>
+            <li>Complaint pe telemarketer <b>disconnect + 2-year blacklist</b></li>
+          </ul>
+        </div>
+
+        <div class="section-h">🎯 DND Kaise Enable Karo — 3 Tareeke</div>
+
+        <div class="dnd-method">
+          <div class="dnd-method-num">1</div>
+          <div class="dnd-method-body">
+            <div class="dnd-method-title">📞 Phone Call Se (Aasan)</div>
+            <div class="dnd-method-steps">
+              <div><b>Step 1:</b> Apne phone se <b>1909</b> dial karo</div>
+              <div><b>Step 2:</b> IVR guide karega — language choose karo</div>
+              <div><b>Step 3:</b> "Fully Block" ya "Partially Block" choose karo</div>
+              <div><b>Step 4:</b> Confirmation aayega — DND active ✓</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dnd-method">
+          <div class="dnd-method-num">2</div>
+          <div class="dnd-method-body">
+            <div class="dnd-method-title">💬 SMS Se</div>
+            <div class="dnd-method-steps">
+              <div><b>Step 1:</b> SMS bhejo <b>1909</b> pe</div>
+              <div><b>Step 2:</b> Type karo: <code>START 0</code> (All block)</div>
+              <div><b>Step 3:</b> Ya category-wise: <code>START 1</code> se <code>START 7</code></div>
+              <div><b>Step 4:</b> Confirmation SMS milega</div>
+            </div>
+            <div class="box info" style="margin-top:12px;font-size:12.5px">
+              <b>7 Categories:</b><br>
+              <code>1</code> Banking/Insurance/Financial &nbsp; <code>2</code> Real Estate &nbsp; <code>3</code> Education<br>
+              <code>4</code> Health &nbsp; <code>5</code> Consumer Goods & Automobiles<br>
+              <code>6</code> Communication/Broadcasting/IT &nbsp; <code>7</code> Tourism & Leisure
+            </div>
+          </div>
+        </div>
+
+        <div class="dnd-method">
+          <div class="dnd-method-num">3</div>
+          <div class="dnd-method-body">
+            <div class="dnd-method-title">📱 TRAI DND 2.0 App (Best)</div>
+            <div class="dnd-method-steps">
+              <div><b>Step 1:</b> Download <b>TRAI DND 2.0</b> app</div>
+              <div style="padding-left:20px;margin-top:6px">
+                <a href="https://play.google.com/store/apps/details?id=com.trai.dnd" target="_blank" rel="noopener" class="dnd-app-link">
+                  ▶ Google Play Store
+                </a>
+                <a href="https://apps.apple.com/in/app/trai-dnd-2-0/id6445934631" target="_blank" rel="noopener" class="dnd-app-link">
+                  🍎 Apple App Store
+                </a>
+              </div>
+              <div style="margin-top:10px"><b>Step 2:</b> Mobile number verify karo (OTP)</div>
+              <div><b>Step 3:</b> "Manage DND" → Fully/Partially block choose karo</div>
+              <div><b>Step 4:</b> Categories select karo (chaho to sab block karo)</div>
+              <div><b>Step 5:</b> Save — 7 din me active ho jayega</div>
+            </div>
+            <div class="box good" style="margin-top:12px;font-size:12.5px">
+              <b>App ke extra features:</b><br>
+              • Spam caller ID lookup (kaun phone kar raha hai)<br>
+              • Complaint register (UCC report)<br>
+              • Past complaints track<br>
+              • Chakshu integration (suspicious report)
+            </div>
+          </div>
+        </div>
+
+        <div class="section-h">🚫 DND Kaise Band Karo</div>
+        <div class="box warn">
+          <div class="dnd-method-steps">
+            <div><b>Option 1 — Call:</b> <b>1909</b> dial karo → IVR se disable karo</div>
+            <div><b>Option 2 — SMS:</b> <b>1909</b> pe SMS bhejo: <code>STOP 0</code> (fully remove)</div>
+            <div><b>Option 3 — App:</b> TRAI DND 2.0 app → Manage DND → Deactivate</div>
+          </div>
+          <div class="box danger" style="margin-top:12px;font-size:12.5px">
+            ⚠️ <b>DND band karne se spam wapas aayenge</b> — recommend nahi karte. Agar aapko koi legit service ka SMS nahi mil raha, to specific category allow karo (sab band mat karo).
+          </div>
+        </div>
+
+        <div class="section-h">📨 Spam Complaint Kaise Karo</div>
+        <div class="box danger">
+          <b style="color:var(--red);font-size:13.5px">Agar DND active hone ke baad bhi spam aaye:</b>
+          <ol style="list-style:decimal;padding-left:22px;color:var(--text-dim);font-size:13.5px;line-height:1.9;margin-top:10px">
+            <li><b>3 din ke andar</b> complaint karo (window)</li>
+            <li><b>1909</b> pe SMS bhejo is format me:</li>
+          </ol>
+          <div class="code-mock" style="margin-top:10px;text-align:center;font-size:13px">
+            UCC, &lt;spam-number&gt;, dd/mm/yy
+          </div>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px">Example:</p>
+          <div class="code-mock" style="text-align:center;font-size:13px">
+            UCC, 9876543210, 11/10/26
+          </div>
+          <div style="margin-top:14px;font-size:13px;color:var(--text-dim);line-height:1.8">
+            <b>Result:</b><br>
+            • Telemarketer ki line <b>disconnect</b> ho jayegi<br>
+            • <b>2 saal</b> ke liye blacklist<br>
+            • Aapko confirmation SMS milega
+          </div>
+        </div>
+
+        <div class="section-h">🕵️ Chakshu Se Fraud Report Karo (NEW)</div>
+        <div class="box info">
+          <b style="color:var(--accent-deep);font-size:13.5px">Agar paisa nahi khoya par suspicious lagta hai:</b>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px;line-height:1.7">
+            <b>Chakshu</b> ek naya TRAI platform hai jaha aap suspicious calls/SMS/links report kar sakte ho — even if you haven't lost money. Ye <b>policing</b> ke liye help karta hai — fraud ko early stage me rok sakte ho.
+          </p>
+          <div class="box good" style="margin-top:12px;font-size:12.5px">
+            <b>Kya report kar sakte ho:</b><br>
+            • Suspicious calls ya SMS<br>
+            • Impersonation scams (bank/police/government banta hai)<br>
+            • KYC ya payment scams<br>
+            • Fake customer care numbers<br>
+            • Job, lottery, loan scams<br>
+            • Malicious links ya messages
+          </div>
+          <div style="margin-top:14px">
+            <a href="https://chakshu.trai.gov.in" target="_blank" rel="noopener" class="dnd-app-link" style="background:linear-gradient(135deg,var(--accent-deep),var(--accent));color:#fff;padding:10px 20px;font-weight:700;display:inline-block">
+              🚀 Report to Chakshu
+            </a>
+          </div>
+          <p style="margin-top:12px;color:var(--text-mute);font-size:12px">
+            <b>Note:</b> Chakshu financial loss cases handle nahi karta — uske liye 1930 call karo.
+          </p>
+        </div>
+
         <div class="section-h">Cyber Law (India)</div>
         <div class="box">
           <b>IT Act 2000 — Key Sections:</b>
@@ -674,7 +818,74 @@ CHECK ORDER (right to left):
           </ul>
         </div>
 
-        <div class="section-h">Report Karo</div>
+        <div class="section-h">📢 Support Cybercrime Reporting</div>
+        <div class="box info">
+          <b style="color:var(--accent-deep);font-size:14px">🇮🇳 India — Official Reporting Channels</b>
+          <div style="display:grid;gap:10px;margin-top:14px">
+            <div style="padding:12px 14px;background:var(--glass-hi);border-radius:var(--radius-sm);border-left:3px solid var(--red)">
+              <b>📞 1930 — Cyber Financial Fraud</b><br>
+              <span style="font-size:12.5px;color:var(--text-dim)">Ministry of Home Affairs · 24×7 helpline</span><br>
+              <span style="font-size:12px;color:var(--text-mute)">💰 Money fraud hua to turant call karo (72 hr golden window)</span>
+            </div>
+            <div style="padding:12px 14px;background:var(--glass-hi);border-radius:var(--radius-sm);border-left:3px solid var(--yellow)">
+              <b>🕵️ Chakshu — Report Suspicious (No Money Lost)</b><br>
+              <span style="font-size:12.5px;color:var(--text-dim)">TRAI ka naya platform — fraud prevent karo before victims</span><br>
+              <span style="font-size:12px;color:var(--text-mute)">Report karo: suspicious calls, SMS, KYC scams, fake customer care, job/lottery scams, malicious links</span><br>
+              <span style="font-size:12px;color:var(--accent);font-weight:600">🌐 chakshu.trai.gov.in · Ya Sanchar Saathi app me</span>
+            </div>
+            <div style="padding:12px 14px;background:var(--glass-hi);border-radius:var(--radius-sm);border-left:3px solid var(--accent)">
+              <b>🚨 112 — National Emergency</b> · <b>👩 181</b> Women · <b>👶 1098</b> Child
+            </div>
+          </div>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">🌐 Official Websites</b>
+          <ul class="ul" style="margin-top:10px">
+            <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">cybercrime.gov.in</a> — National cyber crime portal</li>
+            <li><a href="https://chakshu.trai.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">chakshu.trai.gov.in</a> — Report suspected fraud (TRAI)</li>
+            <li><a href="https://sancharsaathi.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">sancharsaathi.gov.in</a> — Sanchar Saathi portal (TRAI)</li>
+            <li><a href="https://www.cert-in.org.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">cert-in.org.in</a> — Computer emergency response</li>
+            <li><a href="https://www.trai.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">trai.gov.in</a> — Telecom regulatory</li>
+            <li><a href="https://www.rbi.org.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">rbi.org.in</a> — Banking fraud complaint</li>
+          </ul>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">🌐 Global Reporting</b>
+          <ul class="ul" style="margin-top:10px">
+            <li><a href="https://safebrowsing.google.com/safebrowsing/report_phish/" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Google Safe Browsing</a> — Report phishing URL</li>
+            <li><a href="https://apwg.org" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">APWG</a> — Anti-Phishing Working Group</li>
+          </ul>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">📱 In-App Reporting</b>
+          <ul class="ul" style="margin-top:10px">
+            <li><b>WhatsApp:</b> Chat → 3-dot → Report</li>
+            <li><b>Gmail:</b> Email → 3-dot → Report phishing</li>
+            <li><b>Instagram:</b> Profile → 3-dot → Report → Scam</li>
+            <li><b>Chrome:</b> Menu → Help → Report an issue</li>
+          </ul>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">⚠️ Beware of Fake Helplines</b>
+          <div class="box danger" style="margin-top:10px;font-size:13px">
+            Government helplines <b>short codes</b> hote hain (3-4 digits) — jaise <b>1930, 1909, 112, 181, 1098</b>.<br>
+            Agar koi "helpline" <b>10-digit mobile number</b> de raha hai → <b>99% scam hai</b>. Kabhi call mat karo.
+          </div>
+        </div>
+
+        <div class="section-h">TRAI DND Guide</div>
+        <div class="box warn">
+          <b style="color:var(--yellow)">📵 Spam Calls/SMS Band Karo</b>
+          <ol style="list-style:decimal;padding-left:22px;color:var(--text-dim);font-size:13.5px;line-height:1.9;margin-top:10px">
+            <li><b>1909 pe dial</b> karo ya SMS bhejo</li>
+            <li><b>DND option</b> choose karo</li>
+            <li><b>All block</b> ya category-wise block (7 categories)</li>
+            <li><b>7 din wait</b> karo activation ke liye</li>
+            <li>Agar phir bhi spam aaye → <b>1909 pe complaint</b> (3 din ke andar)</li>
+          </ol>
+          <p style="margin-top:12px;color:var(--text-dim);font-size:13px"><b>Complaint format:</b></p>
+          <div class="code-mock" style="margin-top:6px">UCC, 9876543210, 11/10/26</div>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px">Ye SMS bhejo <b>1909</b> pe. Telemarketer ki line <b>disconnect</b> ho jayegi aur <b>2 saal ka blacklist</b> ho jayega.</p>
+          <p style="margin-top:12px;color:var(--text-mute);font-size:12.5px"><b>App:</b> TRAI DND 2.0 (Google Play / App Store se download karo)</p>
+        </div>
+
+        
         <div class="box good">
           <b>🇮🇳 India:</b>
           <ul class="ul" style="margin-top:8px">
@@ -731,6 +942,60 @@ CHECK ORDER (right to left):
         <p class="lead">Emerging threats, AI defense, passkeys, quantum safety, aur predictions.</p>
         <div class="cat-tabs" id="future-tabs"></div>
         <div id="future-content"></div>
+      </div>
+
+      <div class="view" id="view-password">
+        <h1 class="h1">Password Tools</h1>
+        <p class="lead">Password strength check karo aur strong random password generate karo.</p>
+
+        <div class="section-h">Strength Checker</div>
+        <div class="detector-input">
+          <input id="pwd-input" type="text" placeholder="Type password to check..." oninput="checkPassword()" autocomplete="off" spellcheck="false">
+          <button onclick="togglePwdView()" id="pwd-toggle-btn">Show</button>
+        </div>
+        <div id="pwd-result"></div>
+
+        <div class="section-h">Password Generator</div>
+        <div class="box">
+          <div class="pwd-gen-options">
+            <label><input type="checkbox" id="gen-lower" checked> Lowercase (a-z)</label>
+            <label><input type="checkbox" id="gen-upper" checked> Uppercase (A-Z)</label>
+            <label><input type="checkbox" id="gen-digit" checked> Digits (0-9)</label>
+            <label><input type="checkbox" id="gen-symbol" checked> Symbols (!@#$)</label>
+          </div>
+          <div style="display:flex;gap:10px;margin:14px 0;align-items:center;flex-wrap:wrap">
+            <label style="font-size:13px;color:var(--text-dim);font-weight:600">Length:</label>
+            <input type="range" id="gen-length" min="8" max="64" value="20" style="flex:1;max-width:280px" oninput="document.getElementById('gen-len-val').textContent=this.value">
+            <span id="gen-len-val" style="font-family:monospace;font-weight:800;color:var(--accent);min-width:32px">20</span>
+          </div>
+          <button class="back-btn" style="background:linear-gradient(135deg,var(--accent-deep),var(--accent));color:#fff;border:0;padding:11px 22px;font-weight:700" onclick="generatePassword()">Generate Strong Password</button>
+          <div id="gen-output" style="margin-top:16px"></div>
+        </div>
+      </div>
+
+      <div class="view" id="view-email-analyzer">
+        <h1 class="h1">Email Analyzer</h1>
+        <p class="lead">Suspicious email ka text paste karo — pattern analysis se phishing indicators detect karega.</p>
+        <div class="box" style="font-size:12.5px;color:var(--text-mute);margin-bottom:18px">
+          <b style="color:var(--text-dim)">Kaise use karo:</b> Email ka full text (sender, subject, body) paste karo.
+        </div>
+        <textarea id="email-input" placeholder="Paste email text here..." style="width:100%;min-height:220px;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:16px;color:var(--text);font-family:monospace;font-size:12.5px;line-height:1.6;resize:vertical"></textarea>
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <button class="back-btn" style="background:linear-gradient(135deg,var(--accent-deep),var(--accent));color:#fff;border:0;padding:11px 22px;font-weight:700" onclick="analyzeEmailText()">Analyze Email</button>
+          <button class="back-btn" onclick="loadSampleEmail()">Load Sample</button>
+          <button class="back-btn" onclick="clearEmail()">Clear</button>
+        </div>
+        <div id="email-result" style="margin-top:20px"></div>
+      </div>
+
+      <div class="view" id="view-checklist">
+        <h1 class="h1">Interactive Safety Checklist</h1>
+        <p class="lead">Apni digital safety check karo. Progress auto-save hoti hai browser me.</p>
+        <div id="checklist-progress"></div>
+        <div id="checklist-content"></div>
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="back-btn" onclick="resetChecklist()">Reset All</button>
+        </div>
       </div>
 
       <div class="view" id="view-about">
@@ -834,9 +1099,16 @@ CHECK ORDER (right to left):
         <div class="section-h">Support Cybercrime Reporting</div>
         <div class="box warn">
           <div style="font-size:13.5px;line-height:1.8">
-            🇮🇳 <b>India:</b> <a href="https://cybercrime.gov.in" style="color:var(--accent)">cybercrime.gov.in</a> · Helpline <b>1930</b><br>
-            🌐 <b>Global:</b> Report phishing to <a href="https://safebrowsing.google.com/safebrowsing/report_phish/" style="color:var(--accent)">Google Safe Browsing</a><br>
-            📧 <b>Fake WhatsApp:</b> Forward to <b>91-9643203000</b>
+            🇮🇳 <b>India Cyber Crime Portal:</b> <a href="https://cybercrime.gov.in" target="_blank" rel="noopener" style="color:var(--accent)">cybercrime.gov.in</a><br>
+            📞 <b>Cyber Fraud Helpline:</b> <b>1930</b> (24×7, MHA official)<br>
+            🚨 <b>Emergency:</b> <b>112</b> · <b>Women:</b> 181 · <b>Child:</b> 1098<br>
+            📧 <b>Spam Calls/SMS Report (TRAI):</b> Dial or SMS to <b>1909</b><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12px;color:var(--text-mute)">Format: <code>UCC, &lt;spam-number&gt;, dd/mm/yy</code></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12px;color:var(--text-mute)">App: <b>TRAI DND 2.0</b> (Google Play / App Store)</span><br>
+            🌐 <b>Global — Report phishing URL:</b> <a href="https://safebrowsing.google.com/safebrowsing/report_phish/" target="_blank" rel="noopener" style="color:var(--accent)">Google Safe Browsing</a><br>
+            🛡️ <b>Report to CERT-In:</b> <a href="https://www.cert-in.org.in" target="_blank" rel="noopener" style="color:var(--accent)">cert-in.org.in</a><br>
+            💬 <b>WhatsApp Fake Message Report:</b> Use in-app "Report" button (chat → 3-dot → Report)<br>
+            📧 <b>Gmail Phishing Report:</b> In-app "Report phishing" (email → 3-dot → Report phishing)
           </div>
         </div>
 

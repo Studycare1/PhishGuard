@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PhishGuard v3.1</title>
+<link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo"><div class="brand-icon">&#128737;</div><div>PhishGuard</div></div>
+      <div class="brand-sub">v3.1</div>
+    </div>
+    <nav class="nav">
+      <div class="nav-group-label">Overview</div>
+      <button class="nav-item active" data-view="home"><span class="ic">&#127968;</span> Home</button>
+      <button class="nav-item" data-view="stats"><span class="ic">&#128202;</span> Stats</button>
+      <button class="nav-item" data-view="timeline"><span class="ic"><button class="nav-item" data-view="timeline"><span class="ic">&#9203;</span> Timeline</button>#9203;</span> Timeline (40+)</button>
+      <div class="nav-group-label">Learn</div>
+      <button class="nav-item" data-view="course"><span class="ic">&#127891;</span> Cyber Course</button>
+      <button class="nav-item" data-view="types"><span class="ic">&#128218;</span> Phishing Types</button>
+      <button class="nav-item" data-view="flashcards"><span class="ic">&#127924;</span> Flashcards (180)</button>
+      <button class="nav-item" data-view="future"><span class="ic">&#128302;</span> Future 2026</button>
+      <button class="nav-item" data-view="detector"><span class="ic">&#128269;</span> URL Detector</button>
+      <button class="nav-item" data-view="password"><span class="ic">&#128273;</span> Password Tools</button>
+      <button class="nav-item" data-view="email-analyzer"><span class="ic">&#128231;</span> Email Analyzer</button>
+      <button class="nav-item" data-view="checklist"><span class="ic">&#9989;</span> Safety Checklist</button>
+      <button class="nav-item" data-view="quiz"><span class="ic">&#127919;</span> Quiz (250)</button>
+      <div class="nav-group-label">Reference</div>
+      <button class="nav-item" data-view="notes"><span class="ic">&#128221;</span> Notes</button>
+      <button class="nav-item" data-view="glossary"><span class="ic">&#128214;</span> Glossary (190+)</button>
+      <button class="nav-item" data-view="cases"><span class="ic">&#128193;</span> Case Studies</button>
+      <button class="nav-item" data-view="warnings"><span class="ic">&#9888;</span> Warnings</button>
+      <button class="nav-item" data-view="about"><span class="ic">&#8505;</span> About</button>
+    </nav>
+    <div class="sidebar-footer">
+      <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-mute);margin-bottom:4px">Built by</div>
+      <div style="font-size:14px;font-weight:800;background:linear-gradient(135deg,#9333ea,#c084fc,#e879f9);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.3px">StudyCare</div>
+      <div style="font-size:10px;color:var(--text-mute);margin-top:4px">Educational &middot; No real phishing</div>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="topbar">
+      <button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+      <button class="back-nav" id="back-nav" onclick="goBack()" title="Back">&#8592; Back</button>
+      <h2><span class="dot"></span><span id="view-title">Home</span></h2>
+      <div class="status"><span id="clock"></span></div>
+    </div>
+
+    <div class="content" id="content">
+      <div class="view active" id="view-home">
+        <h1 class="h1">PhishGuard v3.1</h1>
+        <p class="lead">25 phishing types, 45-check URL detector, 50-question quiz, flashcards, glossary, timeline, aur case studies.</p>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">25</div><div class="stat-lbl">Phishing Types</div></div>
+          <div class="stat"><div class="stat-num">75+</div><div class="stat-lbl">Examples</div></div>
+          <div class="stat"><div class="stat-num">45</div><div class="stat-lbl">Detector Checks</div></div>
+          <div class="stat"><div class="stat-num">250</div><div class="stat-lbl">Quiz Questions</div></div>
+        </div>
+        <div class="section-h">Quick Start</div>
+        <div class="grid">
+          <div class="card" onclick="go('types')"><div class="card-icon">&#128218;</div><div class="card-title">25 Phishing Types</div><div class="card-desc">Classic + Modern. Har ek me 3 real examples.</div></div>
+          <div class="card" onclick="go('detector')"><div class="card-icon">&#128269;</div><div class="card-title">URL Detector</div><div class="card-desc">45 checks &mdash; typosquat, homograph, punycode, double extension.</div></div>
+          <div class="card" onclick="go('quiz')"><div class="card-icon">&#127919;</div><div class="card-title">250-Q Quiz</div><div class="card-desc">Live score + explanations.</div></div>
+          <div class="card" onclick="go('flashcards')"><div class="card-icon">&#127924;</div><div class="card-title">Flashcards</div><div class="card-desc">Flip karo, yaad karo.</div></div>
+        </div>
+        <div class="section-h">Aaj ka Red Flag</div>
+        <div class="box warn">
+          <b style="color:var(--yellow)">&#9888; AI ne phishing badal diya</b>
+          <p style="margin-top:8px;color:var(--text-dim);font-size:13.5px">Purane phishing me spelling mistakes hoti thi &mdash; ab wo tell nahi hai. AI se perfect grammar. Deepfake se voice clone. <b>Verify karo, believe mat karo.</b></p>
+        </div>
+      </div>
+
+      <div class="view" id="view-stats">
+        <h1 class="h1">Cyber Crime Stats 2026</h1>
+        <p class="lead">Phishing duniya ka #1 cyber attack hai. Ye numbers dekho.</p>
+
+        <div class="section-h">Global Impact</div>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">3.4B</div><div class="stat-lbl">Phishing Emails/Day</div></div>
+          <div class="stat"><div class="stat-num">$17K</div><div class="stat-lbl">Loss/Minute</div></div>
+          <div class="stat"><div class="stat-num">90%</div><div class="stat-lbl">Breaches via Phishing</div></div>
+          <div class="stat"><div class="stat-num">$50B+</div><div class="stat-lbl">BEC Losses (FBI)</div></div>
+          <div class="stat"><div class="stat-num">$1B+</div><div class="stat-lbl">Crypto Phishing/Yr</div></div>
+          <div class="stat"><div class="stat-num">$25M</div><div class="stat-lbl">Largest Deepfake Heist</div></div>
+          <div class="stat"><div class="stat-num">1.5B</div><div class="stat-lbl">Compromised Accounts</div></div>
+          <div class="stat"><div class="stat-num">60%</div><div class="stat-lbl">SMBs Close After Attack</div></div>
+        </div>
+
+        <div class="section-h">India Snapshot</div>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">₹1,750 Cr</div><div class="stat-lbl">Annual Fraud Loss</div></div>
+          <div class="stat"><div class="stat-num">7.4 L</div><div class="stat-lbl">Complaints/Year</div></div>
+          <div class="stat"><div class="stat-num">1 in 3</div><div class="stat-lbl">Adults Targeted</div></div>
+          <div class="stat"><div class="stat-num">72 hrs</div><div class="stat-lbl">Money Report Window</div></div>
+          <div class="stat"><div class="stat-num">1930</div><div class="stat-lbl">Cyber Helpline</div></div>
+          <div class="stat"><div class="stat-num">₹250 Cr</div><div class="stat-lbl">Max DPDP Penalty</div></div>
+        </div>
+
+        <div class="section-h">Attack Vectors</div>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">96%</div><div class="stat-lbl">Via Email</div></div>
+          <div class="stat"><div class="stat-num">3%</div><div class="stat-lbl">Via Phone</div></div>
+          <div class="stat"><div class="stat-num">1%</div><div class="stat-lbl">Via SMS/Other</div></div>
+          <div class="stat"><div class="stat-num">70%</div><div class="stat-lbl">Spear Success Rate</div></div>
+        </div>
+
+        <div class="section-h">Common Targets</div>
+        <div class="box info">
+          <ul class="ul">
+            <li><b>Bank customers</b> — KYC, OTP, refund scams</li>
+            <li><b>Senior citizens</b> — Tech support, lottery scams</li>
+            <li><b>Job seekers</b> — Fake HR interviews, registration fees</li>
+            <li><b>Online shoppers</b> — Parcel delivery, order issues</li>
+            <li><b>Businesses</b> — Vendor invoice, wire transfer fraud</li>
+            <li><b>Social media users</b> — Fake support, account recovery</li>
+            <li><b>Crypto traders</b> — Wallet drainers, fake airdrops</li>
+            <li><b>Executives</b> — Whaling, deepfake, M&A fraud</li>
+          </ul>
+        </div>
+
+        <div class="section-h">Time to Compromise</div>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">82 sec</div><div class="stat-lbl">First Click</div></div>
+          <div class="stat"><div class="stat-num">28 min</div><div class="stat-lbl">First Malware</div></div>
+          <div class="stat"><div class="stat-num">4 hrs</div><div class="stat-lbl">Lateral Movement</div></div>
+          <div class="stat"><div class="stat-num">204 days</div><div class="stat-lbl">Avg Detection Time</div></div>
+        </div>
+
+        <div class="section-h">Loss by Attack Type</div>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">$2.9B</div><div class="stat-lbl">BEC</div></div>
+          <div class="stat"><div class="stat-num">$1.3B</div><div class="stat-lbl">Investment Fraud</div></div>
+          <div class="stat"><div class="stat-num">$800M</div><div class="stat-lbl">Crypto Fraud</div></div>
+          <div class="stat"><div class="stat-num">$400M</div><div class="stat-lbl">Romance Scams</div></div>
+        </div>
+      </div>
+
+      <div class="view" id="view-timeline">
+        <h1 class="h1">Phishing Timeline</h1>
+        <p class="lead">1995 se 2027 tak — 40+ major events, har event me full context, impact, aur lesson.</p>
+        <div class="stat-grid" id="timeline-stats"></div>
+        <div class="cat-tabs" id="timeline-cats"></div>
+        <div class="search-wrap"><input id="timeline-search" type="text" placeholder="🔍 Search events... (SolarWinds, Arup, deepfake, quantum)" oninput="renderTimeline()"></div>
+        <div id="timeline-list" class="timeline-container"></div>
+      </div>
+
+      <div class="view" id="view-course">
+        <h1 class="h1">🎓 Cybersecurity Course</h1>
+        <p class="lead">Complete roadmap — beginner se advanced tak. Har module clickable, har lesson detail ke saath.</p>
+        <div id="course-content"></div>
+      </div>
+
+      <div class="view" id="view-types">
+        <h1 class="h1">25 Phishing Types</h1>
+        <p class="lead">Kisi bhi card pe click karo &mdash; full detail khulega.</p>
+        <div class="grid" id="types-grid"></div>
+        <div id="type-detail"></div>
+      </div>
+
+      <div class="view" id="view-flashcards">
+        <h1 class="h1">Flashcards</h1>
+        <p class="lead">Type ka naam dekho, answer socho, flip karo.</p>
+        <div class="flashcard" id="flashcard" onclick="this.classList.toggle('flipped')">
+          <div class="flashcard-inner">
+            <div class="flashcard-face">
+              <div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Concept</div>
+              <div id="fc-front" style="font-size:22px;font-weight:600;line-height:1.4"></div>
+              <div style="font-size:12px;color:var(--text-mute);margin-top:22px">Click to flip</div>
+            </div>
+            <div class="flashcard-face flashcard-back">
+              <div style="font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Answer</div>
+              <div id="fc-back" style="font-size:15px;line-height:1.6;color:var(--text-dim)"></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;justify-content:center;margin-top:16px">
+          <button class="back-btn" onclick="prevCard()">&#8592; Prev</button>
+          <button class="back-btn" style="background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:0" onclick="nextCard()">Next &#8594;</button>
+        </div>
+        <div style="text-align:center;margin-top:12px;color:var(--text-mute);font-size:12px" id="fc-counter"></div>
+      </div>
+
+      <div class="view" id="view-detector">
+        <h1 class="h1">URL Detector</h1>
+        <p class="lead">45 checks. Chips pe click karo ya URL paste karo.</p>
+        <div class="detector-input">
+          <input id="url-input" type="text" placeholder="https://example.com/login" onkeydown="if(event.key==='Enter')detect()">
+          <button id="detect-btn" onclick="detect()">Analyze</button>
+        </div>
+        <div class="chips" id="example-chips"></div>
+        <div id="detect-result"></div>
+      </div>
+
+      <div class="view" id="view-quiz">
+        <h1 class="h1">Quiz <h1 class="h1">Quiz &mdash; 50 Questions</h1>mdash; 250 Questions</h1>
+        <p class="lead">Har jawab ke baad explanation.</p>
+        <div id="quiz-container"></div>
+      </div>
+
+      <div class="view" id="view-notes">
+        <h1 class="h1">Learning Notes</h1>
+        <p class="lead">12 essential sections — 5 minute me padho, hamesha ke liye yaad rakho.</p>
+
+        <div class="toc">
+          <div class="toc-item" onclick="document.getElementById('notes-1').scrollIntoView({behavior:'smooth'})">1. 5 Golden Rules</div>
+          <div class="toc-item" onclick="document.getElementById('notes-2').scrollIntoView({behavior:'smooth'})">2. URL Anatomy</div>
+          <div class="toc-item" onclick="document.getElementById('notes-3').scrollIntoView({behavior:'smooth'})">3. Red Flag Checklist</div>
+          <div class="toc-item" onclick="document.getElementById('notes-4').scrollIntoView({behavior:'smooth'})">4. If You Get Phished</div>
+          <div class="toc-item" onclick="document.getElementById('notes-5').scrollIntoView({behavior:'smooth'})">5. Password Security</div>
+          <div class="toc-item" onclick="document.getElementById('notes-6').scrollIntoView({behavior:'smooth'})">6. 2FA Guide</div>
+          <div class="toc-item" onclick="document.getElementById('notes-7').scrollIntoView({behavior:'smooth'})">7. Email Headers</div>
+          <div class="toc-item" onclick="document.getElementById('notes-8').scrollIntoView({behavior:'smooth'})">8. Mobile Safety</div>
+          <div class="toc-item" onclick="document.getElementById('notes-9').scrollIntoView({behavior:'smooth'})">9. Public WiFi</div>
+          <div class="toc-item" onclick="document.getElementById('notes-10').scrollIntoView({behavior:'smooth'})">10. Banking Safety</div>
+          <div class="toc-item" onclick="document.getElementById('notes-11').scrollIntoView({behavior:'smooth'})">11. AI-Era Defense</div>
+          <div class="toc-item" onclick="document.getElementById('notes-12').scrollIntoView({behavior:'smooth'})">12. Incident Response</div>
+        </div>
+
+        <div id="notes-1" class="section-h">1. The 5 Golden Rules</div>
+        <div class="box good">
+          <ol style="list-style:decimal;padding-left:22px;color:var(--text-dim);font-size:13.5px;line-height:1.8">
+            <li><b>Har account ka alag password</b> — Password manager use karo (Bitwarden free hai)</li>
+            <li><b>2FA on karo</b> — Authenticator app (SMS nahi). Best: hardware key (YubiKey)</li>
+            <li><b>URL check karo</b> — Lock icon nahi, actual domain dekho</li>
+            <li><b>OTP kabhi kisi ko mat batao</b> — Bank, police, CEO koi bhi ho</li>
+            <li><b>Public WiFi pe VPN</b> — Ya cellular data use karo</li>
+          </ol>
+        </div>
+
+        <div id="notes-2" class="section-h">2. URL Anatomy</div>
+        <div class="code-mock">https://  sub . domain . tld  /path ?query #fragment
+
+ASLI DOMAIN = aakhri 2 parts (ya 3 for .co.in, .gov.in)
+────────────────────────────────────────────────
+www.instagram.com          OK  asli = instagram.com
+instagram.secure-login.xyz BAD asli = secure-login.xyz
+login.paypal.com           OK  asli = paypal.com
+paypal-verify.tk           BAD .tk = free phishing TLD
+google.com@evil.com        BAD opens evil.com
+
+CHECK ORDER (right to left):
+1. TLD (.com, .gov.in, .tk?)
+2. Registered domain (paypal vs paypa1)
+3. Subdomains (brand as subdomain?)
+4. Path (login? verify? secure?)
+5. Query (?redirect=http://evil.com)</div>
+
+        <div id="notes-3" class="section-h">3. Red Flag Checklist</div>
+        <div class="box warn">
+          <ul class="ul x">
+            <li><b>Urgency</b> — "24 hours", "immediate action", "act now"</li>
+            <li><b>Threat</b> — "account blocked", "legal action", "arrest"</li>
+            <li><b>Generic greeting</b> — "Dear Customer" (naam nahi)</li>
+            <li><b>Sender domain</b> — thoda alag (amaz0n, paypa1, bank-secure)</li>
+            <li><b>Link mismatch</b> — text different from actual URL</li>
+            <li><b>OTP/password/PIN request</b> — never share</li>
+            <li><b>Unexpected attachment</b> — .exe, .zip, .scr, .pdf.exe</li>
+            <li><b>Reply-To different</b> — from display name</li>
+            <li><b>Too-good-to-be-true</b> — free iPhone, ₹5000/day</li>
+            <li><b>Emotional appeal</b> — fear, love, excitement, greed</li>
+            <li><b>Grammar/spelling</b> — ab AI era me nahi (perfect grammar bhi red flag)</li>
+            <li><b>Login through email</b> — company app use karo, email link nahi</li>
+          </ul>
+        </div>
+
+        <div id="notes-4" class="section-h">4. If You Get Phished</div>
+        <div class="box danger">
+          <ol style="list-style:decimal;padding-left:22px;color:var(--text-dim);font-size:13.5px;line-height:1.8">
+            <li><b>Turant password change</b> — compromised account ka</li>
+            <li><b>2FA enable</b> — pehle nahi tha to ab karo</li>
+            <li><b>Bank ko call</b> — agar financial info diya (24 hrs critical)</li>
+            <li><b>Report karo</b> — cybercrime.gov.in, helpline 1930 (India)</li>
+            <li><b>Friends ko alert</b> — account se spam mat jaye</li>
+            <li><b>Have I Been Pwned</b> — haveibeenpwned.com check karo</li>
+            <li><b>Sessions revoke</b> — Google/Microsoft security settings me</li>
+            <li><b>Bank/credit card freeze</b> — agar card details gaye</li>
+            <li><b>Evidence preserve</b> — screenshots, email headers save karo</li>
+            <li><b>Monitor karo</b> — next 30 days unusual activity check</li>
+          </ol>
+        </div>
+
+        <div id="notes-5" class="section-h">5. Password Security</div>
+        <div class="box">
+          <b>Strong Password Rules:</b>
+          <ul class="ul check" style="margin-top:8px">
+            <li>12+ characters (16+ for critical accounts)</li>
+            <li>Passphrase better — 4 random words</li>
+            <li>Har account ka alag</li>
+            <li>Kabhi dictionary word based nahi</li>
+            <li>Kabhi personal info (DOB, name) nahi</li>
+          </ul>
+          <b style="margin-top:14px;display:block">NEVER:</b>
+          <ul class="ul x" style="margin-top:8px">
+            <li>123456, password, qwerty, admin</li>
+            <li>P@ssw0rd type simple substitutions</li>
+            <li>Same password multiple sites pe</li>
+            <li>Browser me save (less secure than manager)</li>
+            <li>Email/notes me plain text</li>
+          </ul>
+        </div>
+
+        <div id="notes-6" class="section-h">6. 2FA Guide</div>
+        <div class="box good">
+          <b>2FA Types (safest to weakest):</b>
+          <ol style="list-style:decimal;padding-left:22px;color:var(--text-dim);font-size:13.5px;line-height:1.8;margin-top:8px">
+            <li><b>Hardware key</b> (YubiKey) — phishing-proof, domain-bound. Best.</li>
+            <li><b>Passkey</b> (FIDO2) — biometric + crypto. Phishing-proof.</li>
+            <li><b>Authenticator app</b> (Google Auth, Authy, Aegis) — very good</li>
+            <li><b>Push notification</b> — good but MFA fatigue risk</li>
+            <li><b>SMS OTP</b> — weak (SIM swap vulnerable)</li>
+            <li><b>Email OTP</b> — weakest</li>
+          </ol>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px"><b>Recommendation:</b> Hardware key + backup key. Ya authenticator app + backup codes. SMS sirf fallback.</p>
+        </div>
+
+        <div id="notes-7" class="section-h">7. Email Headers</div>
+        <div class="box info">
+          <b>Important Headers:</b>
+          <ul class="ul" style="margin-top:8px">
+            <li><b>From:</b> Display name ≠ actual address (spoofable)</li>
+            <li><b>Reply-To:</b> Alag ho sakta — check karo</li>
+            <li><b>Return-Path:</b> Real envelope sender</li>
+            <li><b>Received:</b> Path trace (top-down read karo)</li>
+            <li><b>SPF:</b> Pass/Fail/SoftFail</li>
+            <li><b>DKIM:</b> Signature valid?</li>
+            <li><b>DMARC:</b> Policy applied?</li>
+            <li><b>Message-ID:</b> Unique per email</li>
+          </ul>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px">Gmail: 3-dot menu → "Show original". Outlook: File → Properties.</p>
+        </div>
+
+        <div id="notes-8" class="section-h">8. Mobile Safety</div>
+        <div class="box warn">
+          <ul class="ul x">
+            <li>Unknown SMS links pe click mat karo</li>
+            <li>Bank app use karo — SMS se login nahi</li>
+            <li>App permissions audit (contacts, SMS, camera)</li>
+            <li>Play Store/App Store ke bahar se APK install mat karo</li>
+            <li>Public charging — USB data lines se malware (juice jacking)</li>
+            <li>Screen lock on (PIN + biometric)</li>
+            <li>Find My Device enable</li>
+            <li>Public WiFi pe VPN</li>
+            <li>Auto-update on rakho (OS + apps)</li>
+          </ul>
+        </div>
+
+        <div id="notes-9" class="section-h">9. Public WiFi Safety</div>
+        <div class="box danger">
+          <ul class="ul x">
+            <li><b>Never</b> banking on public WiFi (VPN ke bina)</li>
+            <li>HTTPS-only browsing</li>
+            <li>VPN pehle connect karo, phir kaam</li>
+            <li>File sharing off karo</li>
+            <li>Auto-connect disable</li>
+            <li>Network forget karo use ke baad</li>
+            <li>Starbucks/airport official WiFi naam confirm karo</li>
+            <li>Evil twin se bachne ke liye login page skip karo</li>
+          </ul>
+        </div>
+
+        <div id="notes-10" class="section-h">10. Banking Safety</div>
+        <div class="box good">
+          <ul class="ul check">
+            <li>Bank app use karo (SMS/web se better)</li>
+            <li>Transaction alerts enable karo</li>
+            <li>Card ke liye separate low-limit account</li>
+            <li>UPI PIN kabhi share mat karo</li>
+            <li>Virtual card numbers (one-time) use karo</li>
+            <li>Bank ka official number save karo</li>
+            <li>Regular statement check karo</li>
+            <li>KYC sirf bank branch/app me</li>
+            <li>Account nominee add karo</li>
+          </ul>
+        </div>
+
+        <div id="notes-11" class="section-h">11. AI-Era Defense</div>
+        <div class="box info">
+          <ul class="ul">
+            <li><b>Family code word</b> banao — AI voice clone se bachne ke liye</li>
+            <li><b>Out-of-band verification</b> — sensitive requests pe callback</li>
+            <li><b>Video call me challenge</b> — random question poochho</li>
+            <li><b>Reverse video call</b> — unko call karo (deepfake nahi hoga)</li>
+            <li><b>AI agents ke permissions</b> — least privilege</li>
+            <li><b>Passkeys use karo</b> — passwordless phishing-proof</li>
+            <li><b>AI content skeptically</b> — perfect grammar ≠ real</li>
+            <li><b>Hardware wallet</b> — crypto ke liye</li>
+            <li><b>Multimodal verify</b> — multiple channels confirm karo</li>
+          </ul>
+        </div>
+
+        <div id="notes-12" class="section-h">12. Incident Response</div>
+        <div class="box danger">
+          <b>IMMEDIATE (0-1 hr):</b>
+          <ul class="ul x" style="margin-top:8px">
+            <li>Account password change</li>
+            <li>2FA enable</li>
+            <li>Bank call (financial info)</li>
+            <li>Card freeze</li>
+          </ul>
+          <b style="margin-top:14px;display:block">SHORT-TERM (1-24 hr):</b>
+          <ul class="ul" style="margin-top:8px">
+            <li>Report cybercrime.gov.in / 1930</li>
+            <li>Friends/family alert</li>
+            <li>Sessions revoke all devices</li>
+            <li>Bank transactions monitor</li>
+          </ul>
+          <b style="margin-top:14px;display:block">LONG-TERM (1-30 days):</b>
+          <ul class="ul" style="margin-top:8px">
+            <li>Credit report check (CIBIL)</li>
+            <li>Password reset all accounts</li>
+            <li>Bank account statement review</li>
+            <li>Identity theft monitoring</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="view" id="view-glossary">
+        <h1 class="h1">Glossary</h1>
+        <p class="lead">190+ terms — full forms + ELI10 simple explanations + technical details. Category pe click karo, term pe click karke expand karo.</p>
+        <div class="search-wrap"><input id="gloss-search" type="text" placeholder="🔍 Search terms... (BEC, deepfake, passkey, quantum)" oninput="renderGlossary()"></div>
+        <div class="cat-tabs" id="gloss-cats"></div>
+        <div id="gloss-list"></div>
+      </div>
+
+      <div class="view" id="view-cases">
+        <h1 class="h1">Real Case Studies</h1>
+        <p class="lead">12 real-world attacks — kya hua, kaunsa lesson, aur kya seekhna chahiye.</p>
+
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">$25M</div><div class="stat-lbl">Largest Deepfake Loss</div></div>
+          <div class="stat"><div class="stat-num">18K+</div><div class="stat-lbl">Supply Chain Victims</div></div>
+          <div class="stat"><div class="stat-num">$100M</div><div class="stat-lbl">Largest BEC Case</div></div>
+          <div class="stat"><div class="stat-num">90M+</div><div class="stat-lbl">Data Breach Records</div></div>
+        </div>
+
+        <div class="case-card case-critical">
+          <div class="case-head">
+            <div class="case-year">2024</div>
+            <div class="case-title">Arup Deepfake Video Heist</div>
+            <div class="case-tag">$25M Loss · Hong Kong</div>
+          </div>
+          <div class="case-body">
+            <p>Hong Kong engineering firm Arup ke employee ko multi-person Zoom call aayi. 'CFO' aur 3 'colleagues' real dikhe — actually sab AI deepfake the. Meeting me urgent confidential wire transfer bola. Employee ne 15 transactions me $25M (~₹200 crore) transfer kiye. Baad me real CFO ne call karke deny kiya.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Multi-person deepfake video + social engineering</div>
+              <div><b>💥 Impact:</b> $25M irrecoverable. First documented large-scale AI heist.</div>
+              <div><b>🎓 Lesson:</b> Video calls bhi trustworthy nahi. Code word + out-of-band callback mandatory.</div>
+              <div><b>🏷️ Tags:</b> #Deepfake #AI #BEC #Zoom</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-critical">
+          <div class="case-head">
+            <div class="case-year">2020</div>
+            <div class="case-title">SolarWinds Supply Chain Attack</div>
+            <div class="case-tag">18K+ Orgs · APT29</div>
+          </div>
+          <div class="case-body">
+            <p>Russian APT29 (SVR) ne SolarWinds Orion software ke build process compromise kiya. 'SUNBURST' backdoor inject kiya — digitally signed update me. Automatic update se 18,000+ organizations affected — US Treasury, DHS, Fortune 500, cybersecurity firms. Attackers 9+ months undetected the. Attack chain: build → distribute → activate → move laterally.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Build pipeline compromise + signed malicious update</div>
+              <div><b>💥 Impact:</b> 18K+ orgs, US government agencies, 9+ months dwell time</div>
+              <div><b>🎓 Lesson:</b> Trusted updates verify karo. Software supply chain critical infrastructure hai.</div>
+              <div><b>🏷️ Tags:</b> #SupplyChain #APT29 #SUNBURST</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-critical">
+          <div class="case-head">
+            <div class="case-year">2020</div>
+            <div class="case-title">Twitter Internal Hack</div>
+            <div class="case-tag">130+ Accounts · $118K Bitcoin</div>
+          </div>
+          <div class="case-body">
+            <p>Teen hackers (17-22 saal) ne Twitter employees ko spear-phish kiya — phone call + fake VPN page. Employees ne credentials daale. Internal tools access mile — jisse wo arbitrary accounts compromise kar sakte the. Obama, Musk, Apple, Bill Gates ke accounts se Bitcoin scam tweets bheje. $118,000 Bitcoin collected. FBI investigation me mastermind Graham Ivan Clark arrested.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Spear phishing + phone call + fake VPN page</div>
+              <div><b>💥 Impact:</b> 130+ high-profile accounts, trust damage, SEC investigation</div>
+              <div><b>🎓 Lesson:</b> Internal tools pe MFA mandatory. Employees = biggest vulnerability.</div>
+              <div><b>🏷️ Tags:</b> #Twitter #SpearPhishing #Bitcoin</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-high">
+          <div class="case-head">
+            <div class="case-year">2016</div>
+            <div class="case-title">Google + Facebook $100M BEC</div>
+            <div class="case-tag">$100M Loss · Global</div>
+          </div>
+          <div class="case-body">
+            <p>Lithuanian hacker Evaldas Rimasauskas ne fake 'Quanta Computer' company banai — Taiwan me actually exist karti hai. Fake invoices, letterheads, tax documents sab banaye. Google + Facebook ko $100M ke fake invoices bheje (2 saal me). Bank accounts Cyprus, Latvia, Hungary me. 2019 me Rimasauskas ne guilty plead kiya — 5 saal jail + $49.7M forfeiture.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Vendor impersonation + fake invoices + bank account hopping</div>
+              <div><b>💥 Impact:</b> $100M transfer, 2-year ongoing campaign</div>
+              <div><b>🎓 Lesson:</b> Vendor verification process critical. Bank changes pe callback mandatory.</div>
+              <div><b>🏷️ Tags:</b> #BEC #Vendor #Invoice #Quanta</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-high">
+          <div class="case-head">
+            <div class="case-year">2015</div>
+            <div class="case-title">Ubiquiti Networks Pretexting</div>
+            <div class="case-tag">$46.7M Loss · Pretexting</div>
+          </div>
+          <div class="case-body">
+            <p>Ubiquiti Networks ke finance team ko fake CEO + lawyer pretexting emails aaye. Attacker ne khud ko legal counsel + finance head bola — believable story ke saath. 4 wire transfers Hong Kong bank accounts me. Total $46.7M. FBI ne $8.5M recover kiye. Case ne corporate wire transfer protocols industry-wide change kiye.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Pretexting + executive impersonation + wire transfer</div>
+              <div><b>💥 Impact:</b> $46.7M loss, only $8.5M recovered</div>
+              <div><b>🎓 Lesson:</b> Seniority claim verify karo. Wire transfers pe dual approval mandatory.</div>
+              <div><b>🏷️ Tags:</b> #Pretexting #BEC #WireFraud</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-high">
+          <div class="case-head">
+            <div class="case-year">2022</div>
+            <div class="case-title">Uber MFA Fatigue Attack</div>
+            <div class="case-tag">Full Breach · Social Engineering</div>
+          </div>
+          <div class="case-body">
+            <p>Lapsus$ teenager group ne Uber contractor ko MFA fatigue attack. 100+ push notifications raat 2 baje. Victim ne eventually 'Approve' daba diya. Attacker ne internal systems access kiye — Slack, HackerOne, financial dashboards, email. Screenshots leak kiye. Similar attack Cisco pe bhi hua. Both companies ne MFA improvements announce kiye.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> MFA push bombing + WhatsApp social engineering</div>
+              <div><b>💥 Impact:</b> Full internal access, sensitive data exposure</div>
+              <div><b>🎓 Lesson:</b> Number matching MFA zaroori. Push limits + password change on flood.</div>
+              <div><b>🏷️ Tags:</b> #MFAFatigue #Uber #Lapsus</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-high">
+          <div class="case-head">
+            <div class="case-year">2023</div>
+            <div class="case-title">MOVEit Mass Exploitation</div>
+            <div class="case-tag">90M+ Records · Cl0p</div>
+          </div>
+          <div class="case-body">
+            <p>MOVEit Transfer (file-sharing software) me SQL injection zero-day. Cl0p ransomware group ne mass exploitation ki. 2,600+ organizations affected — banks, government agencies, healthcare, education. 90M+ individuals' data stolen. Ransom demanded but no encryption — pure data extortion. BBC, British Airways, Shell, US Dept of Energy sab affected.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Zero-day SQLi + mass automated exploitation</div>
+              <div><b>💥 Impact:</b> 2,600+ orgs, 90M+ records, ongoing extortion</div>
+              <div><b>🎓 Lesson:</b> Third-party software assessment. Data retention = liability.</div>
+              <div><b>🏷️ Tags:</b> #MOVEit #Cl0p #ZeroDay</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-high">
+          <div class="case-head">
+            <div class="case-year">2023</div>
+            <div class="case-title">3CX Supply Chain Trojan</div>
+            <div class="case-tag">600K+ Companies · Lazarus</div>
+          </div>
+          <div class="case-body">
+            <p>3CX VoIP software (600,000+ companies use karti) ke Windows + Mac builds me malware inject hua. North Korean APT Lazarus ne supply chain compromise kiya. Malicious update deploy hui. Attackers ne 3CX customers se aage 'Trading Technologies' (another vendor) ko bhi target kiya. Double supply chain attack — crypto companies aur BPOs primarily affected.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Two-stage supply chain, code signing abuse</div>
+              <div><b>💥 Impact:</b> 600K+ companies potentially exposed</div>
+              <div><b>🎓 Lesson:</b> Build pipeline security. Code signing ≠ malware-free.</div>
+              <div><b>🏷️ Tags:</b> #3CX #Lazarus #SupplyChain</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-high">
+          <div class="case-head">
+            <div class="case-year">2023</div>
+            <div class="case-title">OAuth Consent BEC Wave</div>
+            <div class="case-tag">Enterprise-wide · Microsoft/Google</div>
+          </div>
+          <div class="case-body">
+            <p>Attackers ne 'Adobe Sign', 'DocuSign', 'Zoom' jaise fake OAuth apps banaye. Microsoft 365 aur Google Workspace environments me deploy kiye. Employees ne 'Allow' kiya. Full mailbox access mila — password nahi chahiye. Password change bhi kaam nahi aaya — refresh token valid tha. Attackers ne internal emails padhke wire transfers convince kiye. Microsoft ne 'verified publisher' introduce kiya.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> OAuth consent phishing + refresh token abuse</div>
+              <div><b>💥 Impact:</b> Widespread enterprise BEC, password reset ineffective</div>
+              <div><b>🎓 Lesson:</b> OAuth permissions review. Token revocation bhi karo.</div>
+              <div><b>🏷️ Tags:</b> #OAuth #BEC #Microsoft365</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-medium">
+          <div class="case-head">
+            <div class="case-year">2014</div>
+            <div class="case-title">World Cup Brazil Evil Twin WiFi</div>
+            <div class="case-tag">Thousands Affected · Brazil</div>
+          </div>
+          <div class="case-body">
+            <p>FIFA World Cup ke dauraan attackers ne fake WiFi hotspots setup kiye. 'FIFA_Free_WiFi', 'Stadium_Official', 'WorldCup_2024' jaise naam. Hazaaron international tourists ne connect kiye. Attackers ne traffic sniff kiya — credentials, credit cards, social media sab capture. Similar attacks Olympics, conferences, airports me hote hain.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> Evil twin WiFi + traffic interception</div>
+              <div><b>💥 Impact:</b> Thousands of tourists, mass credential theft</div>
+              <div><b>🎓 Lesson:</b> Public WiFi pe VPN mandatory. Sensitive kaam avoid.</div>
+              <div><b>🏷️ Tags:</b> #EvilTwin #WiFi #WorldCup</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-medium">
+          <div class="case-head">
+            <div class="case-year">2007</div>
+            <div class="case-title">Banca de los Andes DNS Hijack</div>
+            <div class="case-tag">First Pharming · Mexico</div>
+          </div>
+          <div class="case-body">
+            <p>Mexican bank Banca de los Andes ka DNS infrastructure compromise hua. Customers 'banca.com' type karte the — URL bilkul sahi dikhta tha — par nakli site khulti thi. Attacker ne credentials capture kiye. Loss $100k+. Ye pehla documented large-scale pharming attack tha. Case ne industry-wide DNSSEC adoption accelerate kiya.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> DNS hijacking + URL spoofing</div>
+              <div><b>💥 Impact:</b> $100k+ loss, no URL forensics possible</div>
+              <div><b>🎓 Lesson:</b> DNSSEC deployment. Certificate warnings never ignore.</div>
+              <div><b>🏷️ Tags:</b> #Pharming #DNS #Mexico</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-medium">
+          <div class="case-head">
+            <div class="case-year">2024</div>
+            <div class="case-title">Cornell Morris II Prompt Worm</div>
+            <div class="case-tag">AI Research · Proactive</div>
+          </div>
+          <div class="case-body">
+            <p>Cornell Tech researchers ne 'Morris II' prompt worm demonstrate kiya — 1988 ke Morris worm ka AI version. Malicious prompt jo AI assistants (ChatGPT, Gemini, Claude) ke beech self-replicate karta. Email + messages via indirect prompt injection. Test environment me successful. AI ecosystem me worm attack possible ka proof. Named as 'first generative AI worm'.</p>
+            <div class="case-details">
+              <div><b>🎯 Attack:</b> AI-to-AI worm via prompt injection</div>
+              <div><b>💥 Impact:</b> Research demonstration, no production attack yet</div>
+              <div><b>🎓 Lesson:</b> AI agents = new attack surface. Zero trust AI mandatory.</div>
+              <div><b>🏷️ Tags:</b> #AIWorm #PromptInjection #Research</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="view" id="view-warnings">
+        <h1 class="h1">Warnings & Legal</h1>
+        <p class="lead">Educational use only. India cyber law. Ethics.</p>
+
+        <div class="box danger">
+          <b style="color:var(--red);font-size:16px">🚨 Important Notice</b>
+          <p style="margin-top:12px;color:var(--text-dim);font-size:14px;line-height:1.75">
+            <b>PhishGuard</b> ek <b>educational platform</b> hai jo phishing awareness ke liye banaya gaya. Ye koi attack tool, credential harvester, ya phishing page generator <b>NAHI</b> hai.
+            <br><br>
+            Sab URL analysis <b>pure text/pattern-based</b> hai. Server koi external request nahi karta. Koi real credentials capture nahi karta. Sab content defensive knowledge ke liye.
+          </p>
+        </div>
+
+        <div class="section-h">📵 DND Guide — Spam Calls/SMS Band Karo</div>
+        <div class="box good">
+          <b style="color:var(--green);font-size:14px">✅ DND Ke Fayde</b>
+          <ul class="ul check" style="margin-top:10px">
+            <li>Telemarketers ke spam calls/SMS <b>rok sakte ho</b></li>
+            <li>Bank/insurance/loan ke unsolicited offers stop</li>
+            <li>Fraud calls ka risk kam — <b>scammers reach nahi kar sakte</b></li>
+            <li>Free hai, koi charge nahi</li>
+            <li>Category-wise control — sirf jo chahte ho wo allow karo</li>
+            <li>Complaint pe telemarketer <b>disconnect + 2-year blacklist</b></li>
+          </ul>
+        </div>
+
+        <div class="section-h">🎯 DND Kaise Enable Karo — 3 Tareeke</div>
+
+        <div class="dnd-method">
+          <div class="dnd-method-num">1</div>
+          <div class="dnd-method-body">
+            <div class="dnd-method-title">📞 Phone Call Se (Aasan)</div>
+            <div class="dnd-method-steps">
+              <div><b>Step 1:</b> Apne phone se <b>1909</b> dial karo</div>
+              <div><b>Step 2:</b> IVR guide karega — language choose karo</div>
+              <div><b>Step 3:</b> "Fully Block" ya "Partially Block" choose karo</div>
+              <div><b>Step 4:</b> Confirmation aayega — DND active ✓</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dnd-method">
+          <div class="dnd-method-num">2</div>
+          <div class="dnd-method-body">
+            <div class="dnd-method-title">💬 SMS Se</div>
+            <div class="dnd-method-steps">
+              <div><b>Step 1:</b> SMS bhejo <b>1909</b> pe</div>
+              <div><b>Step 2:</b> Type karo: <code>START 0</code> (All block)</div>
+              <div><b>Step 3:</b> Ya category-wise: <code>START 1</code> se <code>START 7</code></div>
+              <div><b>Step 4:</b> Confirmation SMS milega</div>
+            </div>
+            <div class="box info" style="margin-top:12px;font-size:12.5px">
+              <b>7 Categories:</b><br>
+              <code>1</code> Banking/Insurance/Financial &nbsp; <code>2</code> Real Estate &nbsp; <code>3</code> Education<br>
+              <code>4</code> Health &nbsp; <code>5</code> Consumer Goods & Automobiles<br>
+              <code>6</code> Communication/Broadcasting/IT &nbsp; <code>7</code> Tourism & Leisure
+            </div>
+          </div>
+        </div>
+
+        <div class="dnd-method">
+          <div class="dnd-method-num">3</div>
+          <div class="dnd-method-body">
+            <div class="dnd-method-title">📱 TRAI DND 2.0 App (Best)</div>
+            <div class="dnd-method-steps">
+              <div><b>Step 1:</b> Download <b>TRAI DND 2.0</b> app</div>
+              <div style="padding-left:20px;margin-top:6px">
+                <a href="https://play.google.com/store/apps/details?id=com.trai.dnd" target="_blank" rel="noopener" class="dnd-app-link">
+                  ▶ Google Play Store
+                </a>
+                <a href="https://apps.apple.com/in/app/trai-dnd-2-0/id6445934631" target="_blank" rel="noopener" class="dnd-app-link">
+                  🍎 Apple App Store
+                </a>
+              </div>
+              <div style="margin-top:10px"><b>Step 2:</b> Mobile number verify karo (OTP)</div>
+              <div><b>Step 3:</b> "Manage DND" → Fully/Partially block choose karo</div>
+              <div><b>Step 4:</b> Categories select karo (chaho to sab block karo)</div>
+              <div><b>Step 5:</b> Save — 7 din me active ho jayega</div>
+            </div>
+            <div class="box good" style="margin-top:12px;font-size:12.5px">
+              <b>App ke extra features:</b><br>
+              • Spam caller ID lookup (kaun phone kar raha hai)<br>
+              • Complaint register (UCC report)<br>
+              • Past complaints track<br>
+              • Chakshu integration (suspicious report)
+            </div>
+          </div>
+        </div>
+
+        <div class="section-h">🚫 DND Kaise Band Karo</div>
+        <div class="box warn">
+          <div class="dnd-method-steps">
+            <div><b>Option 1 — Call:</b> <b>1909</b> dial karo → IVR se disable karo</div>
+            <div><b>Option 2 — SMS:</b> <b>1909</b> pe SMS bhejo: <code>STOP 0</code> (fully remove)</div>
+            <div><b>Option 3 — App:</b> TRAI DND 2.0 app → Manage DND → Deactivate</div>
+          </div>
+          <div class="box danger" style="margin-top:12px;font-size:12.5px">
+            ⚠️ <b>DND band karne se spam wapas aayenge</b> — recommend nahi karte. Agar aapko koi legit service ka SMS nahi mil raha, to specific category allow karo (sab band mat karo).
+          </div>
+        </div>
+
+        <div class="section-h">📨 Spam Complaint Kaise Karo</div>
+        <div class="box danger">
+          <b style="color:var(--red);font-size:13.5px">Agar DND active hone ke baad bhi spam aaye:</b>
+          <ol style="list-style:decimal;padding-left:22px;color:var(--text-dim);font-size:13.5px;line-height:1.9;margin-top:10px">
+            <li><b>3 din ke andar</b> complaint karo (window)</li>
+            <li><b>1909</b> pe SMS bhejo is format me:</li>
+          </ol>
+          <div class="code-mock" style="margin-top:10px;text-align:center;font-size:13px">
+            UCC, &lt;spam-number&gt;, dd/mm/yy
+          </div>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px">Example:</p>
+          <div class="code-mock" style="text-align:center;font-size:13px">
+            UCC, 9876543210, 11/10/26
+          </div>
+          <div style="margin-top:14px;font-size:13px;color:var(--text-dim);line-height:1.8">
+            <b>Result:</b><br>
+            • Telemarketer ki line <b>disconnect</b> ho jayegi<br>
+            • <b>2 saal</b> ke liye blacklist<br>
+            • Aapko confirmation SMS milega
+          </div>
+        </div>
+
+        <div class="section-h">🕵️ Chakshu Se Fraud Report Karo (NEW)</div>
+        <div class="box info">
+          <b style="color:var(--accent-deep);font-size:13.5px">Agar paisa nahi khoya par suspicious lagta hai:</b>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px;line-height:1.7">
+            <b>Chakshu</b> ek naya TRAI platform hai jaha aap suspicious calls/SMS/links report kar sakte ho — even if you haven't lost money. Ye <b>policing</b> ke liye help karta hai — fraud ko early stage me rok sakte ho.
+          </p>
+          <div class="box good" style="margin-top:12px;font-size:12.5px">
+            <b>Kya report kar sakte ho:</b><br>
+            • Suspicious calls ya SMS<br>
+            • Impersonation scams (bank/police/government banta hai)<br>
+            • KYC ya payment scams<br>
+            • Fake customer care numbers<br>
+            • Job, lottery, loan scams<br>
+            • Malicious links ya messages
+          </div>
+          <div style="margin-top:14px">
+            <a href="https://chakshu.trai.gov.in" target="_blank" rel="noopener" class="dnd-app-link" style="background:linear-gradient(135deg,var(--accent-deep),var(--accent));color:#fff;padding:10px 20px;font-weight:700;display:inline-block">
+              🚀 Report to Chakshu
+            </a>
+          </div>
+          <p style="margin-top:12px;color:var(--text-mute);font-size:12px">
+            <b>Note:</b> Chakshu financial loss cases handle nahi karta — uske liye 1930 call karo.
+          </p>
+        </div>
+
+        <div class="section-h">Cyber Law (India)</div>
+        <div class="box">
+          <b>IT Act 2000 — Key Sections:</b>
+          <ul class="ul" style="margin-top:10px">
+            <li><b>Section 43</b> — Unauthorized access: civil liability, compensation</li>
+            <li><b>Section 66</b> — Computer-related offences: 3 saal jail + ₹5 lakh fine</li>
+            <li><b>Section 66B</b> — Stolen computer resource: 3 saal + ₹1 lakh</li>
+            <li><b>Section 66C</b> — Identity theft: 3 saal + ₹1 lakh fine</li>
+            <li><b>Section 66D</b> — Cheating by personation: 3 saal + ₹1 lakh fine</li>
+            <li><b>Section 66E</b> — Privacy violation: 3 saal + ₹2 lakh fine</li>
+            <li><b>Section 67</b> — Obscene content: 5 saal + ₹10 lakh fine</li>
+            <li><b>Section 72</b> — Confidentiality breach: 2 saal + ₹1 lakh fine</li>
+          </ul>
+        </div>
+
+        <div class="section-h">DPDP Act 2023 (India)</div>
+        <div class="box info">
+          <ul class="ul">
+            <li>Consent-based data processing</li>
+            <li>Data Fiduciary + Data Principal model</li>
+            <li>Penalty up to ₹250 crore for violations</li>
+            <li>Children's data special protection</li>
+            <li>Data breach notification mandatory</li>
+            <li>Data Protection Board enforcement</li>
+          </ul>
+        </div>
+
+        <div class="section-h">📢 Support Cybercrime Reporting</div>
+        <div class="box info">
+          <b style="color:var(--accent-deep);font-size:14px">🇮🇳 India — Official Reporting Channels</b>
+          <div style="display:grid;gap:10px;margin-top:14px">
+            <div style="padding:12px 14px;background:var(--glass-hi);border-radius:var(--radius-sm);border-left:3px solid var(--red)">
+              <b>📞 1930 — Cyber Financial Fraud</b><br>
+              <span style="font-size:12.5px;color:var(--text-dim)">Ministry of Home Affairs · 24×7 helpline</span><br>
+              <span style="font-size:12px;color:var(--text-mute)">💰 Money fraud hua to turant call karo (72 hr golden window)</span>
+            </div>
+            <div style="padding:12px 14px;background:var(--glass-hi);border-radius:var(--radius-sm);border-left:3px solid var(--yellow)">
+              <b>🕵️ Chakshu — Report Suspicious (No Money Lost)</b><br>
+              <span style="font-size:12.5px;color:var(--text-dim)">TRAI ka naya platform — fraud prevent karo before victims</span><br>
+              <span style="font-size:12px;color:var(--text-mute)">Report karo: suspicious calls, SMS, KYC scams, fake customer care, job/lottery scams, malicious links</span><br>
+              <span style="font-size:12px;color:var(--accent);font-weight:600">🌐 chakshu.trai.gov.in · Ya Sanchar Saathi app me</span>
+            </div>
+            <div style="padding:12px 14px;background:var(--glass-hi);border-radius:var(--radius-sm);border-left:3px solid var(--accent)">
+              <b>🚨 112 — National Emergency</b> · <b>👩 181</b> Women · <b>👶 1098</b> Child
+            </div>
+          </div>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">🌐 Official Websites</b>
+          <ul class="ul" style="margin-top:10px">
+            <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">cybercrime.gov.in</a> — National cyber crime portal</li>
+            <li><a href="https://chakshu.trai.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">chakshu.trai.gov.in</a> — Report suspected fraud (TRAI)</li>
+            <li><a href="https://sancharsaathi.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">sancharsaathi.gov.in</a> — Sanchar Saathi portal (TRAI)</li>
+            <li><a href="https://www.cert-in.org.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">cert-in.org.in</a> — Computer emergency response</li>
+            <li><a href="https://www.trai.gov.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">trai.gov.in</a> — Telecom regulatory</li>
+            <li><a href="https://www.rbi.org.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">rbi.org.in</a> — Banking fraud complaint</li>
+          </ul>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">🌐 Global Reporting</b>
+          <ul class="ul" style="margin-top:10px">
+            <li><a href="https://safebrowsing.google.com/safebrowsing/report_phish/" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Google Safe Browsing</a> — Report phishing URL</li>
+            <li><a href="https://apwg.org" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">APWG</a> — Anti-Phishing Working Group</li>
+          </ul>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">📱 In-App Reporting</b>
+          <ul class="ul" style="margin-top:10px">
+            <li><b>WhatsApp:</b> Chat → 3-dot → Report</li>
+            <li><b>Gmail:</b> Email → 3-dot → Report phishing</li>
+            <li><b>Instagram:</b> Profile → 3-dot → Report → Scam</li>
+            <li><b>Chrome:</b> Menu → Help → Report an issue</li>
+          </ul>
+
+          <b style="color:var(--accent-deep);font-size:14px;display:block;margin-top:20px">⚠️ Beware of Fake Helplines</b>
+          <div class="box danger" style="margin-top:10px;font-size:13px">
+            Government helplines <b>short codes</b> hote hain (3-4 digits) — jaise <b>1930, 1909, 112, 181, 1098</b>.<br>
+            Agar koi "helpline" <b>10-digit mobile number</b> de raha hai → <b>99% scam hai</b>. Kabhi call mat karo.
+          </div>
+        </div>
+
+        <div class="section-h">TRAI DND Guide</div>
+        <div class="box warn">
+          <b style="color:var(--yellow)">📵 Spam Calls/SMS Band Karo</b>
+          <ol style="list-style:decimal;padding-left:22px;color:var(--text-dim);font-size:13.5px;line-height:1.9;margin-top:10px">
+            <li><b>1909 pe dial</b> karo ya SMS bhejo</li>
+            <li><b>DND option</b> choose karo</li>
+            <li><b>All block</b> ya category-wise block (7 categories)</li>
+            <li><b>7 din wait</b> karo activation ke liye</li>
+            <li>Agar phir bhi spam aaye → <b>1909 pe complaint</b> (3 din ke andar)</li>
+          </ol>
+          <p style="margin-top:12px;color:var(--text-dim);font-size:13px"><b>Complaint format:</b></p>
+          <div class="code-mock" style="margin-top:6px">UCC, 9876543210, 11/10/26</div>
+          <p style="margin-top:10px;color:var(--text-dim);font-size:13px">Ye SMS bhejo <b>1909</b> pe. Telemarketer ki line <b>disconnect</b> ho jayegi aur <b>2 saal ka blacklist</b> ho jayega.</p>
+          <p style="margin-top:12px;color:var(--text-mute);font-size:12.5px"><b>App:</b> TRAI DND 2.0 (Google Play / App Store se download karo)</p>
+        </div>
+
+        
+        <div class="box good">
+          <b>🇮🇳 India:</b>
+          <ul class="ul" style="margin-top:8px">
+            <li><b>cybercrime.gov.in</b> — National Cyber Crime portal</li>
+            <li><b>Helpline 1930</b> — Financial fraud (24x7)</li>
+            <li><b>Fake WhatsApp:</b> forward to 91-9643203000</li>
+            <li><b>CERT-In:</b> cert-in.org.in — incident reporting</li>
+            <li><b>Bank helpline:</b> Official number only</li>
+          </ul>
+          <b style="margin-top:14px;display:block">🌐 Global:</b>
+          <ul class="ul" style="margin-top:8px">
+            <li><b>Google Safe Browsing:</b> report phishing site</li>
+            <li><b>APWG:</b> Anti-Phishing Working Group</li>
+            <li><b>FTC:</b> reportfraud.ftc.gov (US)</li>
+            <li><b>NCSC:</b> ncsc.gov.uk (UK)</li>
+          </ul>
+        </div>
+
+        <div class="section-h">Ethical Use</div>
+        <div class="box warn">
+          <b>DO ✅</b>
+          <ul class="ul check" style="margin-top:8px">
+            <li>Apne knowledge ke liye padho</li>
+            <li>Family/friends ko teach karo</li>
+            <li>Company me awareness session do</li>
+            <li>Security researchers se seekho</li>
+            <li>Legitimate certifications karo (CEH, OSCP)</li>
+          </ul>
+          <b style="margin-top:14px;display:block">DON'T ❌</b>
+          <ul class="ul x" style="margin-top:8px">
+            <li>Kisi ka account hack karna</li>
+            <li>Fake phishing page banana</li>
+            <li>Credentials chori karna</li>
+            <li>Kisi ko trap karna</li>
+            <li>Company ki security test bina permission</li>
+            <li>Data breach me involve hona</li>
+          </ul>
+        </div>
+
+        <div class="section-h">StudyCare Disclaimer</div>
+        <div class="box info">
+          <p style="color:var(--text-dim);font-size:13.5px;line-height:1.75">
+            <b>StudyCare</b> is educational platform ko "as-is" provide karta hai. Users ko khud verify karna hai koi bhi link, email, ya site genuine hai ya nahi. StudyCare kisi bhi misuse ke liye liable nahi hai.
+            <br><br>
+            Agar aapko phishing ka shikaar banaya gaya — <b>cybercrime.gov.in</b> ya <b>1930</b> pe turant report karo. 72 hours ke andar report karne se bank transaction reversal possible hai.
+            <br><br>
+            <b>Version:</b> 3.3.0 · <b>Made in India</b> · © 2026 StudyCare
+          </p>
+        </div>
+      </div>
+
+      <div class="view" id="view-future">
+        <h1 class="h1">Future Modules 2026-2027</h1>
+        <p class="lead">Emerging threats, AI defense, passkeys, quantum safety, aur predictions.</p>
+        <div class="cat-tabs" id="future-tabs"></div>
+        <div id="future-content"></div>
+      </div>
+
+      <div class="view" id="view-password">
+        <h1 class="h1">Password Tools</h1>
+        <p class="lead">Password strength check karo aur strong random password generate karo.</p>
+
+        <div class="section-h">Strength Checker</div>
+        <div class="detector-input">
+          <input id="pwd-input" type="text" placeholder="Type password to check..." oninput="checkPassword()" autocomplete="off" spellcheck="false">
+          <button onclick="togglePwdView()" id="pwd-toggle-btn">Show</button>
+        </div>
+        <div id="pwd-result"></div>
+
+        <div class="section-h">Password Generator</div>
+        <div class="box">
+          <div class="pwd-gen-options">
+            <label><input type="checkbox" id="gen-lower" checked> Lowercase (a-z)</label>
+            <label><input type="checkbox" id="gen-upper" checked> Uppercase (A-Z)</label>
+            <label><input type="checkbox" id="gen-digit" checked> Digits (0-9)</label>
+            <label><input type="checkbox" id="gen-symbol" checked> Symbols (!@#$)</label>
+          </div>
+          <div style="display:flex;gap:10px;margin:14px 0;align-items:center;flex-wrap:wrap">
+            <label style="font-size:13px;color:var(--text-dim);font-weight:600">Length:</label>
+            <input type="range" id="gen-length" min="8" max="64" value="20" style="flex:1;max-width:280px" oninput="document.getElementById('gen-len-val').textContent=this.value">
+            <span id="gen-len-val" style="font-family:monospace;font-weight:800;color:var(--accent);min-width:32px">20</span>
+          </div>
+          <button class="back-btn" style="background:linear-gradient(135deg,var(--accent-deep),var(--accent));color:#fff;border:0;padding:11px 22px;font-weight:700" onclick="generatePassword()">Generate Strong Password</button>
+          <div id="gen-output" style="margin-top:16px"></div>
+        </div>
+      </div>
+
+      <div class="view" id="view-email-analyzer">
+        <h1 class="h1">Email Analyzer</h1>
+        <p class="lead">Suspicious email ka text paste karo — pattern analysis se phishing indicators detect karega.</p>
+        <div class="box" style="font-size:12.5px;color:var(--text-mute);margin-bottom:18px">
+          <b style="color:var(--text-dim)">Kaise use karo:</b> Email ka full text (sender, subject, body) paste karo.
+        </div>
+        <textarea id="email-input" placeholder="Paste email text here..." style="width:100%;min-height:220px;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:16px;color:var(--text);font-family:monospace;font-size:12.5px;line-height:1.6;resize:vertical"></textarea>
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <button class="back-btn" style="background:linear-gradient(135deg,var(--accent-deep),var(--accent));color:#fff;border:0;padding:11px 22px;font-weight:700" onclick="analyzeEmailText()">Analyze Email</button>
+          <button class="back-btn" onclick="loadSampleEmail()">Load Sample</button>
+          <button class="back-btn" onclick="clearEmail()">Clear</button>
+        </div>
+        <div id="email-result" style="margin-top:20px"></div>
+      </div>
+
+      <div class="view" id="view-checklist">
+        <h1 class="h1">Interactive Safety Checklist</h1>
+        <p class="lead">Apni digital safety check karo. Progress auto-save hoti hai browser me.</p>
+        <div id="checklist-progress"></div>
+        <div id="checklist-content"></div>
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="back-btn" onclick="resetChecklist()">Reset All</button>
+        </div>
+      </div>
+
+      <div class="view" id="view-about">
+        <div class="about-hero">
+          <div class="about-brand-wrap">
+            <div class="about-brand-3d">
+              <span class="brand-letter" style="--i:0">S</span>
+              <span class="brand-letter" style="--i:1">t</span>
+              <span class="brand-letter" style="--i:2">u</span>
+              <span class="brand-letter" style="--i:3">d</span>
+              <span class="brand-letter" style="--i:4">y</span>
+              <span class="brand-letter" style="--i:5">C</span>
+              <span class="brand-letter" style="--i:6">a</span>
+              <span class="brand-letter" style="--i:7">r</span>
+              <span class="brand-letter" style="--i:8">e</span>
+            </div>
+            <div class="about-brand-sub">Presents · PhishGuard v3.3</div>
+          </div>
+          <p class="about-tagline">Modern Phishing Education Platform</p>
+          <div class="about-badges">
+            <span class="about-badge">🎓 StudyCare</span>
+            <span class="about-badge">🛡️ PhishGuard</span>
+            <span class="about-badge">💜 Made in India</span>
+          </div>
+        </div>
+
+        <div class="section-h">About This Project</div>
+        <div class="box info">
+          <p style="margin-bottom:10px"><b>PhishGuard v3.3</b> — Ek complete phishing education platform jo cybersecurity awareness ko accessible banata hai. Chahe aap student ho, IT professional, ya business owner — ye platform aapko real-world attacks se bachata hai.</p>
+          <p style="color:var(--text-dim);font-size:13.5px">StudyCare ne is project ko education aur awareness ke liye banaya hai. Sab content <b>defensive</b> hai — koi real phishing tool, credential harvester, ya attack toolkit nahi.</p>
+        </div>
+
+        <div class="section-h">What's Inside</div>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-num">25</div><div class="stat-lbl">Phishing Types</div></div>
+          <div class="stat"><div class="stat-num">75+</div><div class="stat-lbl">Real Examples</div></div>
+          <div class="stat"><div class="stat-num">45</div><div class="stat-lbl">URL Checks</div></div>
+          <div class="stat"><div class="stat-num">250</div><div class="stat-lbl">Quiz Questions</div></div>
+          <div class="stat"><div class="stat-num">180</div><div class="stat-lbl">Flashcards</div></div>
+          <div class="stat"><div class="stat-num">190+</div><div class="stat-lbl">Glossary Terms</div></div>
+          <div class="stat"><div class="stat-num">40+</div><div class="stat-lbl">Timeline Events</div></div>
+          <div class="stat"><div class="stat-num">6</div><div class="stat-lbl">Future Modules</div></div>
+        </div>
+
+        <div class="section-h">Learn Modules</div>
+        <div class="box good">
+          <ul class="ul check">
+            <li><b>Phishing Types</b> — 25 types with 3 real examples each</li>
+            <li><b>URL Detector</b> — 45 pattern checks with risk scoring</li>
+            <li><b>Quiz</b> — 250 questions with live scoring</li>
+            <li><b>Flashcards</b> — 180 cards for revision</li>
+            <li><b>Glossary</b> — 190+ terms with ELI10 + technical</li>
+            <li><b>Timeline</b> — 40+ events from 1995 to 2027</li>
+            <li><b>Case Studies</b> — 10 real-world attacks analyzed</li>
+            <li><b>Future 2026</b> — AI threats, passkeys, quantum, predictions</li>
+          </ul>
+        </div>
+
+        <div class="section-h">Tech Stack</div>
+        <div class="box">
+          <ul class="ul">
+            <li><b>Backend</b> — Pure Python 3 stdlib (no pip install)</li>
+            <li><b>Frontend</b> — Vanilla HTML/CSS/JS</li>
+            <li><b>Design</b> — Glassmorphism + Neumorphism + Purple theme</li>
+            <li><b>Data</b> — Modular Python files</li>
+            <li><b>Hosting</b> — Local server on port 8080</li>
+            <li><b>Privacy</b> — Zero external requests, all client-side analysis</li>
+          </ul>
+        </div>
+
+        <div class="section-h">What This Is NOT</div>
+        <div class="box danger">
+          <ul class="ul x">
+            <li>Real phishing page generator</li>
+            <li>Credential harvester</li>
+            <li>Attack toolkit</li>
+            <li>Live attack tool</li>
+            <li>Anything illegal</li>
+          </ul>
+        </div>
+
+        <div class="home-credit">
+          <span class="home-credit-text">Crafted by</span>
+          <span class="home-credit-brand">StudyCare</span>
+        </div>
+
+        <div class="section-h">Keyboard Shortcuts</div>
+        <div class="box info">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;font-size:13.5px">
+            <div><span class="kbd">/</span> — URL Detector</div>
+            <div><span class="kbd">g</span> + <span class="kbd">t</span> — Types</div>
+            <div><span class="kbd">g</span> + <span class="kbd">q</span> — Quiz</div>
+            <div><span class="kbd">g</span> + <span class="kbd">f</span> — Flashcards</div>
+            <div><span class="kbd">g</span> + <span class="kbd">d</span> — Detector</div>
+            <div><span class="kbd">g</span> + <span class="kbd">h</span> — Home</div>
+            <div><span class="kbd">←</span> <span class="kbd">→</span> — Flashcards</div>
+            <div><span class="kbd">Esc</span> — Close sidebar</div>
+          </div>
+        </div>
+
+        <div class="section-h">Support Cybercrime Reporting</div>
+        <div class="box warn">
+          <div style="font-size:13.5px;line-height:1.8">
+            🇮🇳 <b>India Cyber Crime Portal:</b> <a href="https://cybercrime.gov.in" target="_blank" rel="noopener" style="color:var(--accent)">cybercrime.gov.in</a><br>
+            📞 <b>Cyber Fraud Helpline:</b> <b>1930</b> (24×7, MHA official)<br>
+            🚨 <b>Emergency:</b> <b>112</b> · <b>Women:</b> 181 · <b>Child:</b> 1098<br>
+            📧 <b>Spam Calls/SMS Report (TRAI):</b> Dial or SMS to <b>1909</b><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12px;color:var(--text-mute)">Format: <code>UCC, &lt;spam-number&gt;, dd/mm/yy</code></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12px;color:var(--text-mute)">App: <b>TRAI DND 2.0</b> (Google Play / App Store)</span><br>
+            🌐 <b>Global — Report phishing URL:</b> <a href="https://safebrowsing.google.com/safebrowsing/report_phish/" target="_blank" rel="noopener" style="color:var(--accent)">Google Safe Browsing</a><br>
+            🛡️ <b>Report to CERT-In:</b> <a href="https://www.cert-in.org.in" target="_blank" rel="noopener" style="color:var(--accent)">cert-in.org.in</a><br>
+            💬 <b>WhatsApp Fake Message Report:</b> Use in-app "Report" button (chat → 3-dot → Report)<br>
+            📧 <b>Gmail Phishing Report:</b> In-app "Report phishing" (email → 3-dot → Report phishing)
+          </div>
+        </div>
+
+        <div class="about-footer">
+          <div class="about-heart">Made with <span class="heart">❤</span> by</div>
+          <div class="about-author-3d">
+            <span class="author-letter" style="--i:0">S</span>
+            <span class="author-letter" style="--i:1">t</span>
+            <span class="author-letter" style="--i:2">u</span>
+            <span class="author-letter" style="--i:3">d</span>
+            <span class="author-letter" style="--i:4">y</span>
+            <span class="author-letter" style="--i:5">C</span>
+            <span class="author-letter" style="--i:6">a</span>
+            <span class="author-letter" style="--i:7">r</span>
+            <span class="author-letter" style="--i:8">e</span>
+          </div>
+          <div class="about-copyright">© 2026 StudyCare · Educational Use Only · v3.3.0</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="./static/js/detector.js"></script>
+<script src="./static/js/app.js"></script>
+</body>
+</html>

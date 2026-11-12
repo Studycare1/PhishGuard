@@ -1,0 +1,2752 @@
+[
+  {
+    "q": "Aapko email: '24 ghante me account band, verify karo.' Ye kis type ka attack hai?",
+    "options": [
+      "Vishing",
+      "Email Phishing",
+      "Pharming",
+      "Tabnabbing"
+    ],
+    "answer": 1,
+    "explain": "Classic email phishing — mass email + urgency + verify link."
+  },
+  {
+    "q": "Bank se bol ke OTP maangta hai phone pe. Aap kya karo?",
+    "options": [
+      "OTP bata do",
+      "OTP mat batao, official number pe callback karo",
+      "Aadha batao",
+      "SMS kar do"
+    ],
+    "answer": 1,
+    "explain": "Bank kabhi OTP nahi maangta."
+  },
+  {
+    "q": "URL me lock icon aur HTTPS hai. Matlab?",
+    "options": [
+      "Site safe hai",
+      "Connection encrypted hai, site asli hai ye nahi",
+      "Govt site hai",
+      "Kuch nahi"
+    ],
+    "answer": 1,
+    "explain": "HTTPS sirf encryption. Free certs se hackers bhi laga sakte."
+  },
+  {
+    "q": "http://instagram-login-secure.xyz — asli domain kaunsa?",
+    "options": [
+      "instagram.com",
+      "login-secure.xyz",
+      "secure.xyz",
+      "instagram-login.com"
+    ],
+    "answer": 2,
+    "explain": "Asli domain aakhri 2 parts — 'secure.xyz'."
+  },
+  {
+    "q": "WiFi list me 2 same naam wale networks. Kaunsa suspicious?",
+    "options": [
+      "Pehla",
+      "Dusra (Evil Twin)",
+      "Dono safe",
+      "Dono nakli"
+    ],
+    "answer": 1,
+    "explain": "Duplicate naam wala evil twin ho sakta."
+  },
+  {
+    "q": "BEC me sabse common kya?",
+    "options": [
+      "Virus",
+      "Wire transfer request from 'CEO'",
+      "Password guessing",
+      "WiFi hack"
+    ],
+    "answer": 1,
+    "explain": "BEC = CEO impersonation + urgent wire transfer."
+  },
+  {
+    "q": "Spear Phishing aur Email Phishing me difference?",
+    "options": [
+      "Koi nahi",
+      "Spear targeted, email mass",
+      "Spear SMS hai",
+      "Spear purana"
+    ],
+    "answer": 1,
+    "explain": "Spear = specific target + personalized."
+  },
+  {
+    "q": "URL shortener (bit.ly) ka phishing me use?",
+    "options": [
+      "Speed",
+      "Asli destination chhupata",
+      "Security",
+      "Kuch nahi"
+    ],
+    "answer": 1,
+    "explain": "Shortened URL se asli domain chhupa jaata."
+  },
+  {
+    "q": "Punycode (xn--) kyun?",
+    "options": [
+      "Speed",
+      "Homograph attack",
+      "Legal",
+      "Mobile"
+    ],
+    "answer": 1,
+    "explain": "Punycode international chars ko ASCII me encode karta."
+  },
+  {
+    "q": "'HR' se email: 'Annual review form', domain company-hr.co. Aap kya karo?",
+    "options": [
+      "Form bhar do",
+      "HR ko company email pe verify karo",
+      "Ignore",
+      "Reply"
+    ],
+    "answer": 1,
+    "explain": "External domain suspicious. Company email pe verify."
+  },
+  {
+    "q": "Popup: 'Virus detected! Microsoft ko call karo'. Ye kya?",
+    "options": [
+      "Asli alert",
+      "Tech support scam",
+      "Windows update",
+      "Antivirus"
+    ],
+    "answer": 1,
+    "explain": "Microsoft popup se alert nahi bhejta."
+  },
+  {
+    "q": "2FA me SMS OTP vs Authenticator App — safer?",
+    "options": [
+      "SMS",
+      "Authenticator App",
+      "Same",
+      "Koi nahi"
+    ],
+    "answer": 1,
+    "explain": "App SIM swap se safe."
+  },
+  {
+    "q": "Clone Phishing kaise pehchane?",
+    "options": [
+      "URL",
+      "Same email dobara with 'updated' version",
+      "Sender naam",
+      "Size"
+    ],
+    "answer": 1,
+    "explain": "Clone = original email ka copy, thoda modify."
+  },
+  {
+    "q": "Watering Hole attack?",
+    "options": [
+      "WiFi hack",
+      "Website compromise karke visitors target",
+      "Password guessing",
+      "Email spam"
+    ],
+    "answer": 1,
+    "explain": "Sher paani ke hole pe wait karta."
+  },
+  {
+    "q": "URL me '@': http://google.com@evil.com",
+    "options": [
+      "Email",
+      "Browser google dikhata, evil khulta",
+      "Error",
+      "Facebook"
+    ],
+    "answer": 1,
+    "explain": "'@' ke pehle ka part ignore hota."
+  },
+  {
+    "q": "Angler Phishing?",
+    "options": [
+      "Fish",
+      "Fake social media support",
+      "Email spam",
+      "Virus"
+    ],
+    "answer": 1,
+    "explain": "Fake 'support' handle jo DM me le jaata."
+  },
+  {
+    "q": "Pretexting ka core?",
+    "options": [
+      "Virus",
+      "Believable fake story",
+      "Network",
+      "Email address"
+    ],
+    "answer": 1,
+    "explain": "Pretext = fake backstory."
+  },
+  {
+    "q": "Password manager phishing se kaise bachata?",
+    "options": [
+      "Strong banata",
+      "Sirf asli domain pe autofill",
+      "Speed",
+      "Kuch nahi"
+    ],
+    "answer": 1,
+    "explain": "Domain match karta — nakli site pe fill nahi."
+  },
+  {
+    "q": "Phishing ka shikaar ho gaye, pehla kaam?",
+    "options": [
+      "Wait",
+      "Password change + 2FA",
+      "Kuch nahi",
+      "Friend ko batao"
+    ],
+    "answer": 1,
+    "explain": "Turant password change + 2FA."
+  },
+  {
+    "q": "Defense in depth matlab?",
+    "options": [
+      "Ek strong password",
+      "Multiple layers",
+      "Firewall only",
+      "Antivirus only"
+    ],
+    "answer": 1,
+    "explain": "Multiple layers — 2FA + strong password + awareness."
+  },
+  {
+    "q": "AI-Generated Phishing me sabse badi challenge?",
+    "options": [
+      "Virus",
+      "Perfect grammar (purane 'tell' nahi)",
+      "Speed",
+      "Cost"
+    ],
+    "answer": 1,
+    "explain": "AI se grammar perfect — spelling mistakes wala tell nahi."
+  },
+  {
+    "q": "Deepfake phishing ka common sign?",
+    "options": [
+      "Spelling mistake",
+      "Emergency + secrecy + verification avoid",
+      "Bad grammar",
+      "Long URL"
+    ],
+    "answer": 1,
+    "explain": "Deepfake me usually emergency + verification avoid."
+  },
+  {
+    "q": "QR code phishing me pehla step?",
+    "options": [
+      "Scan karo",
+      "Scan se pehle URL preview dekho",
+      "Call karo",
+      "Photo lo"
+    ],
+    "answer": 1,
+    "explain": "Browser scan ke baad URL dikhata — verify karo."
+  },
+  {
+    "q": "OAuth consent phishing me hacker ko kya milta?",
+    "options": [
+      "Password",
+      "Access token (password nahi chahiye)",
+      "Virus",
+      "WiFi"
+    ],
+    "answer": 1,
+    "explain": "OAuth token se full access — bina password."
+  },
+  {
+    "q": "Supply chain attack (SolarWinds) kya hai?",
+    "options": [
+      "Email spam",
+      "Trusted software update me malware",
+      "WiFi hack",
+      "Pop-up"
+    ],
+    "answer": 1,
+    "explain": "Trusted vendor ke updates me backdoor."
+  },
+  {
+    "q": "Calendar phishing me common bait?",
+    "options": [
+      "Menu",
+      "Salary/Bonus meeting invite",
+      "WiFi",
+      "Antivirus"
+    ],
+    "answer": 1,
+    "explain": "Emotional bait + auto-accepted invites."
+  },
+  {
+    "q": "Voicemail phishing me typical attachment?",
+    "options": [
+      "PDF",
+      "vm.wav.exe (double extension)",
+      "JPG",
+      "MP4"
+    ],
+    "answer": 1,
+    "explain": "Malware disguised as .wav."
+  },
+  {
+    "q": "SMS Sender ID spoofing kya?",
+    "options": [
+      "Number hide",
+      "Sender ID 'HDFCBK' ban jata",
+      "OTP chori",
+      "Kuch nahi"
+    ],
+    "answer": 1,
+    "explain": "Sender ID same — asli thread me message."
+  },
+  {
+    "q": "Crypto wallet drain karne ka common trick?",
+    "options": [
+      "Seed phrase maangna",
+      "Wallet connect + malicious sign",
+      "Password",
+      "WiFi"
+    ],
+    "answer": 1,
+    "explain": "Fake 'connect wallet' + malicious 'sign'."
+  },
+  {
+    "q": "Instagram Reels phishing ka sign?",
+    "options": [
+      "Long video",
+      "Free iPhone / earn ₹5000/day bait",
+      "Verified account",
+      "PDF"
+    ],
+    "answer": 1,
+    "explain": "Too-good-to-be-true offers."
+  },
+  {
+    "q": "MFA fatigue attack me attacker kya karta?",
+    "options": [
+      "Password guess",
+      "Baar-baar 2FA push bhejta",
+      "WiFi hack",
+      "Email spam"
+    ],
+    "answer": 1,
+    "explain": "Victim annoyed hoke approve kar deta."
+  },
+  {
+    "q": ".pdf.exe extension ka matlab?",
+    "options": [
+      "PDF hai",
+      "Executable hai (PDF jaisa dikhta)",
+      "Image hai",
+      "Text hai"
+    ],
+    "answer": 1,
+    "explain": "Double extension = executable file."
+  },
+  {
+    "q": "Typosquatting example?",
+    "options": [
+      "google.com",
+      "gooogle.com",
+      "mail.google.com",
+      "google.co.in"
+    ],
+    "answer": 1,
+    "explain": "Extra 'o' — common typosquat."
+  },
+  {
+    "q": "DNS spoofing / Pharming ka main defence?",
+    "options": [
+      "Antivirus",
+      "DNSSEC + secure DNS (1.1.1.1)",
+      "Firewall",
+      "VPN only"
+    ],
+    "answer": 1,
+    "explain": "DNSSEC se DNS poisoning se bacha jaata."
+  },
+  {
+    "q": "Public WiFi pe kya zaroori?",
+    "options": [
+      "Kuch nahi",
+      "VPN on karo",
+      "Speed test",
+      "Password share"
+    ],
+    "answer": 1,
+    "explain": "VPN public WiFi pe essential."
+  },
+  {
+    "q": "'Click here to claim your prize' — ye kya?",
+    "options": [
+      "Genuine",
+      "Phishing bait",
+      "Newsletter",
+      "Ad"
+    ],
+    "answer": 1,
+    "explain": "Prize claim = classic phishing."
+  },
+  {
+    "q": "Sender vs Reply-To mismatch ka matlab?",
+    "options": [
+      "Kuch nahi",
+      "Spoofing ka sign",
+      "Forward",
+      "CC"
+    ],
+    "answer": 1,
+    "explain": "Reply-To alag = suspicious."
+  },
+  {
+    "q": "Hover link check karne ka faayda?",
+    "options": [
+      "Style dekho",
+      "Asli URL dekho",
+      "Color",
+      "Font"
+    ],
+    "answer": 1,
+    "explain": "Status bar me asli destination dikhti."
+  },
+  {
+    "q": "Whaling ka target?",
+    "options": [
+      "Everyone",
+      "CEO/CFO/Board",
+      "Students",
+      "Kids"
+    ],
+    "answer": 1,
+    "explain": "Senior executives ko target karta."
+  },
+  {
+    "q": "Zero-day vulnerability?",
+    "options": [
+      "Purani",
+      "Unknown (patch nahi hai)",
+      "Bug fix",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Attackers ke paas already exploit ho sakta."
+  },
+  {
+    "q": "Remote Access Trojan (RAT)?",
+    "options": [
+      "Antivirus",
+      "Full remote control malware",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": 1,
+    "explain": "Hacker poora system control karta."
+  },
+  {
+    "q": "Email header 'SPF: Fail' matlab?",
+    "options": [
+      "Speed issue",
+      "Sender authorize nahi hai",
+      "Size bada",
+      "Encrypted"
+    ],
+    "answer": 1,
+    "explain": "SPF fail = spoofed email."
+  },
+  {
+    "q": "Best 2FA type?",
+    "options": [
+      "SMS",
+      "Email OTP",
+      "Hardware key",
+      "Security question"
+    ],
+    "answer": 2,
+    "explain": "Hardware key (YubiKey) sabse secure."
+  },
+  {
+    "q": "'Have I Been Pwned' ka kaam?",
+    "options": [
+      "Antivirus",
+      "Data breach check",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": 1,
+    "explain": "Aapka email breach me hai ya nahi — check karo."
+  },
+  {
+    "q": "Password reuse ka risk?",
+    "options": [
+      "Kuch nahi",
+      "Ek breach se sab accounts khatre me",
+      "Speed slow",
+      "Logout"
+    ],
+    "answer": 1,
+    "explain": "Ek account compromise = sab compromise."
+  },
+  {
+    "q": "Password manager use karne ka best reason?",
+    "options": [
+      "Fast typing",
+      "Unique passwords + domain matching",
+      "Free",
+      "Fancy UI"
+    ],
+    "answer": 1,
+    "explain": "Har account ka unique + autofill sirf asli domain pe."
+  },
+  {
+    "q": "Phishing report kahan karein (India)?",
+    "options": [
+      "Twitter",
+      "cybercrime.gov.in / 1930",
+      "Facebook",
+      "Local police station only"
+    ],
+    "answer": 1,
+    "explain": "National cyber crime portal — 1930 helpline."
+  },
+  {
+    "q": "IT Act 2000 me identity theft (66C) ki saza?",
+    "options": [
+      "Fine only",
+      "3 saal jail + fine",
+      "Warning",
+      "Kuch nahi"
+    ],
+    "answer": 1,
+    "explain": "Section 66C — 3 saal + ₹1 lakh fine."
+  },
+  {
+    "q": "'Digital arrest' scam kya?",
+    "options": [
+      "Real arrest",
+      "Fake police video call se fraud",
+      "Court order",
+      "Legal notice"
+    ],
+    "answer": 1,
+    "explain": "Fake CBI/Police video call — money demand."
+  },
+  {
+    "q": "Phishing site ko report karne ka faayda?",
+    "options": [
+      "Kuch nahi",
+      "Site block hoti hai + future victims bachte",
+      "Personal satisfaction",
+      "Money milta"
+    ],
+    "answer": 1,
+    "explain": "Google Safe Browsing + registrar tak report pahunchti."
+  },
+  {
+    "q": "Phishing ka sabse common delivery method?",
+    "options": [
+      "SMS",
+      "Email",
+      "Phone call",
+      "QR code"
+    ],
+    "answer": 1,
+    "explain": "Email #1 hai — 3.4 billion phishing emails/day."
+  },
+  {
+    "q": "URL me 'https' hone se kya guarantee hai?",
+    "options": [
+      "Site safe hai",
+      "Encryption hai",
+      "Site asli hai",
+      "Kuch nahi"
+    ],
+    "answer": 1,
+    "explain": "Sirf encryption. Free SSL se hackers bhi use karte."
+  },
+  {
+    "q": "Suspicious email me pehla kaam kya?",
+    "options": [
+      "Reply",
+      "Open attachment",
+      "Sender address check karo",
+      "Forward karo"
+    ],
+    "answer": 2,
+    "explain": "Sender address asli domain verify karo."
+  },
+  {
+    "q": "Spear phishing aur phishing me key difference?",
+    "options": [
+      "Speed",
+      "Personalization",
+      "Cost",
+      "Time"
+    ],
+    "answer": 1,
+    "explain": "Spear = targeted + researched."
+  },
+  {
+    "q": "Password manager phishing se bachata hai kyunki?",
+    "options": [
+      "Strong banata",
+      "Domain-bound autofill",
+      "Fast",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Sirf asli domain pe fill karta."
+  },
+  {
+    "q": "Public WiFi pe banking karna chahiye?",
+    "options": [
+      "Haan",
+      "VPN ke saath",
+      "Nahi",
+      "Kabhi bhi"
+    ],
+    "answer": 1,
+    "explain": "VPN ke saath ya cellular data use karo."
+  },
+  {
+    "q": "Smishing ka matlab?",
+    "options": [
+      "Email phishing",
+      "SMS phishing",
+      "Voice phishing",
+      "Social phishing"
+    ],
+    "answer": 1,
+    "explain": "SMS + Phishing."
+  },
+  {
+    "q": "Deepfake attack se bachne ka best tareeka?",
+    "options": [
+      "Video call",
+      "Code word/out-of-band verify",
+      "Email confirm",
+      "SMS"
+    ],
+    "answer": 1,
+    "explain": "Code word + callback = only reliable defense."
+  },
+  {
+    "q": "2FA me sabse safe option?",
+    "options": [
+      "SMS OTP",
+      "Email OTP",
+      "Hardware key",
+      "Security question"
+    ],
+    "answer": 2,
+    "explain": "YubiKey type hardware keys phishing-proof hain."
+  },
+  {
+    "q": "Phishing site pe credentials daal diye. First step?",
+    "options": [
+      "Ignore",
+      "Password change + 2FA",
+      "Wait",
+      "Logout"
+    ],
+    "answer": 1,
+    "explain": "Turant password change karo + 2FA on."
+  },
+  {
+    "q": "Email 'Reply-To' alag ho to?",
+    "options": [
+      "Normal hai",
+      "Spoofing sign",
+      "Forward",
+      "Auto-reply"
+    ],
+    "answer": 1,
+    "explain": "Reply-To mismatch = phishing indicator."
+  },
+  {
+    "q": "URL shortener phishing me kyun use hota?",
+    "options": [
+      "Fast",
+      "Hide destination",
+      "Cheap",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Asli domain chhupata hai."
+  },
+  {
+    "q": "'Dear Customer' greeting kya indicate karta?",
+    "options": [
+      "Personal",
+      "Mass email",
+      "Official",
+      "Important"
+    ],
+    "answer": 1,
+    "explain": "Generic greeting = mass phishing."
+  },
+  {
+    "q": "Hover link se kya pata chalta?",
+    "options": [
+      "Color",
+      "Asli URL",
+      "Font",
+      "Size"
+    ],
+    "answer": 1,
+    "explain": "Status bar me asli destination dikhti."
+  },
+  {
+    "q": "HTTPS ke bina site pe password daalna?",
+    "options": [
+      "Safe",
+      "Unsafe",
+      "Same",
+      "OK"
+    ],
+    "answer": 1,
+    "explain": "HTTP me credentials plain text me jaate hain."
+  },
+  {
+    "q": "BEC ka target kaunsa department?",
+    "options": [
+      "IT",
+      "HR",
+      "Finance",
+      "Marketing"
+    ],
+    "answer": 2,
+    "explain": "Finance/wire transfer team."
+  },
+  {
+    "q": "Vishing kis type ka attack?",
+    "options": [
+      "Email",
+      "Phone call",
+      "SMS",
+      "WiFi"
+    ],
+    "answer": 1,
+    "explain": "Voice + Phishing = Vishing."
+  },
+  {
+    "q": "QR code phishing ka naam?",
+    "options": [
+      "Smishing",
+      "Vishing",
+      "Quishing",
+      "Pharming"
+    ],
+    "answer": 2,
+    "explain": "QR + Phishing = Quishing."
+  },
+  {
+    "q": "CEO fraud kis type ka phishing?",
+    "options": [
+      "Email",
+      "Whaling",
+      "Spear",
+      "Vishing"
+    ],
+    "answer": 1,
+    "explain": "Whaling = executive targeting."
+  },
+  {
+    "q": "Zero-day vulnerability matlab?",
+    "options": [
+      "Purani",
+      "Unknown (patch nahi)",
+      "Free",
+      "New fix"
+    ],
+    "answer": 1,
+    "explain": "Attacker ke paas exploit already ho sakta."
+  },
+  {
+    "q": "Phishing URL me IP address (jaise 192.168.x.x) kyun suspicious?",
+    "options": [
+      "Fast",
+      "No domain",
+      "Cheap",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Legit sites domain use karti, IP nahi."
+  },
+  {
+    "q": "Email attachment .exe ho to?",
+    "options": [
+      "Open",
+      "Don't open",
+      "Save",
+      "Print"
+    ],
+    "answer": 1,
+    "explain": "Executable files malware ho sakti."
+  },
+  {
+    "q": "Instagram fake DM 'copyright strike' ka matlab?",
+    "options": [
+      "Asli notice",
+      "Phishing",
+      "Legal",
+      "Update"
+    ],
+    "answer": 1,
+    "explain": "Instagram DM me copyright nahi bhejta."
+  },
+  {
+    "q": "WiFi 'Free_Airport_WiFi_2' suspicious kyun?",
+    "options": [
+      "Fast",
+      "Duplicate naam",
+      "Cheap",
+      "Slow"
+    ],
+    "answer": 1,
+    "explain": "Duplicate naam = evil twin."
+  },
+  {
+    "q": "Password 12+ characters kyun?",
+    "options": [
+      "Style",
+      "Brute-force resist",
+      "Fashion",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Lamba password todna mushkil."
+  },
+  {
+    "q": "CEO emergency wire transfer email — pehla step?",
+    "options": [
+      "Send money",
+      "Call CEO to verify",
+      "Reply",
+      "Forward"
+    ],
+    "answer": 1,
+    "explain": "Verbal callback se verify karo."
+  },
+  {
+    "q": "Smishing me link shortener common kyun?",
+    "options": [
+      "Fast",
+      "Hide destination",
+      "Cheap",
+      "Style"
+    ],
+    "answer": 1,
+    "explain": "Asli URL chhupane ke liye."
+  },
+  {
+    "q": "Phishing me urgency kyun create hoti?",
+    "options": [
+      "Fast",
+      "Victim jaldi soche bina click",
+      "Style",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Panic me logic skip hota."
+  },
+  {
+    "q": "Bank kabhi OTP maangta hai kya?",
+    "options": [
+      "Haan",
+      "Nahi",
+      "Kabhi-kabhi",
+      "Emergency me"
+    ],
+    "answer": 1,
+    "explain": "Banks NEVER OTP maangte."
+  },
+  {
+    "q": "Public charger 'juice jacking' kya?",
+    "options": [
+      "Theft",
+      "Malware via USB",
+      "Slow charge",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "USB data lines se malware transfer."
+  },
+  {
+    "q": "Firewall kya rokta?",
+    "options": [
+      "Virus",
+      "Unauthorized network access",
+      "Spam",
+      "Phishing"
+    ],
+    "answer": 1,
+    "explain": "Firewall network access control."
+  },
+  {
+    "q": "Dark web pe credentials bikte kyun?",
+    "options": [
+      "Free",
+      "Breach data",
+      "Legal",
+      "New"
+    ],
+    "answer": 1,
+    "explain": "Data breaches se stolen credential market."
+  },
+  {
+    "q": "AI-generated phishing ka biggest sign?",
+    "options": [
+      "Typos",
+      "Perfect grammar",
+      "Long",
+      "Short"
+    ],
+    "answer": 1,
+    "explain": "Purane phishing me typos thi — AI ne fix ki."
+  },
+  {
+    "q": "'Have I Been Pwned' website kaam?",
+    "options": [
+      "Antivirus",
+      "Email breach check",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Kya aapka email/data breach me hai."
+  },
+  {
+    "q": "Passkey kya hai?",
+    "options": [
+      "Password",
+      "FIDO2 credential",
+      "PIN",
+      "Token"
+    ],
+    "answer": 1,
+    "explain": "Passwordless FIDO2 standard."
+  },
+  {
+    "q": "Passkey phishing-proof kyun?",
+    "options": [
+      "Long",
+      "Domain-bound",
+      "Fast",
+      "Cheap"
+    ],
+    "answer": 1,
+    "explain": "Sirf asli domain pe kaam karti."
+  },
+  {
+    "q": "AI voice clone se bachne ka tareeka?",
+    "options": [
+      "Block number",
+      "Family code word",
+      "Ignore",
+      "Reply"
+    ],
+    "answer": 1,
+    "explain": "Code word AI mimic nahi kar sakti."
+  },
+  {
+    "q": "Prompt injection kya?",
+    "options": [
+      "SQL",
+      "AI me hidden instruction",
+      "Virus",
+      "Worm"
+    ],
+    "answer": 1,
+    "explain": "AI ke context me malicious prompt."
+  },
+  {
+    "q": "OAuth consent phishing me victim kya karta?",
+    "options": [
+      "Password daalta",
+      "App ko Allow karta",
+      "Payment",
+      "Click"
+    ],
+    "answer": 1,
+    "explain": "Fake app ko access de deta."
+  },
+  {
+    "q": "Supply chain attack (SolarWinds) me?",
+    "options": [
+      "Email",
+      "Trusted update me malware",
+      "Phone",
+      "WiFi"
+    ],
+    "answer": 1,
+    "explain": "Vendor software update me backdoor."
+  },
+  {
+    "q": "Calendar phishing me typical bait?",
+    "options": [
+      "Meeting invite",
+      "Salary Revision",
+      "WiFi",
+      "Antivirus"
+    ],
+    "answer": 1,
+    "explain": "Emotional + auto-accept invite."
+  },
+  {
+    "q": "Domain age check karne ka tool?",
+    "options": [
+      "Google",
+      "whois",
+      "Bing",
+      "Firefox"
+    ],
+    "answer": 1,
+    "explain": "whois se domain registration date pata."
+  },
+  {
+    "q": "URL me 'xn--' kya indicate karta?",
+    "options": [
+      "Fast",
+      "Punycode/homograph",
+      "Mobile",
+      "New"
+    ],
+    "answer": 1,
+    "explain": "International character encoding."
+  },
+  {
+    "q": "Spear phishing successful kyun hoti?",
+    "options": [
+      "Mass",
+      "Personalized",
+      "Cheap",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Researched + believable."
+  },
+  {
+    "q": "Phishing me 'threat' kyun daalte hain?",
+    "options": [
+      "Style",
+      "Fear exploit",
+      "Legal",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Account block/legal action ka darr."
+  },
+  {
+    "q": "Tabnabbing me kya hota?",
+    "options": [
+      "Tab opens",
+      "Inactive tab content change",
+      "Close tab",
+      "New window"
+    ],
+    "answer": 1,
+    "explain": "Background tab fake login dikhata."
+  },
+  {
+    "q": "Angler phishing kahan?",
+    "options": [
+      "Email",
+      "Social media support",
+      "SMS",
+      "Phone"
+    ],
+    "answer": 1,
+    "explain": "Fake 'support' account on social media."
+  },
+  {
+    "q": "Whaling ka target?",
+    "options": [
+      "Everyone",
+      "Executive (CEO/CFO)",
+      "Students",
+      "Kids"
+    ],
+    "answer": 1,
+    "explain": "Senior executives — big money."
+  },
+  {
+    "q": "Punycode attack se bachne ka tareeka?",
+    "options": [
+      "Ignore",
+      "Only ASCII domains",
+      "Fast",
+      "VPN"
+    ],
+    "answer": 1,
+    "explain": "Browser ko non-ASCII warn kare."
+  },
+  {
+    "q": "Email attachment 'invoice.pdf.exe' matlab?",
+    "options": [
+      "PDF",
+      "Executable",
+      "Image",
+      "Text"
+    ],
+    "answer": 1,
+    "explain": "Double extension = executable."
+  },
+  {
+    "q": "Phishing report kahan (India)?",
+    "options": [
+      "Twitter",
+      "cybercrime.gov.in",
+      "Facebook",
+      "Reddit"
+    ],
+    "answer": 1,
+    "explain": "National portal — 1930 helpline."
+  },
+  {
+    "q": "1930 helpline kis liye?",
+    "options": [
+      "Police",
+      "Cyber crime financial fraud",
+      "Fire",
+      "Ambulance"
+    ],
+    "answer": 1,
+    "explain": "Cyber financial fraud report."
+  },
+  {
+    "q": "IT Act 2000 Section 66C kya?",
+    "options": [
+      "Theft",
+      "Identity theft",
+      "Hacking",
+      "Spam"
+    ],
+    "answer": 1,
+    "explain": "3 saal jail + fine."
+  },
+  {
+    "q": "Phishing site pe kabhi password reuse karna?",
+    "options": [
+      "OK",
+      "Never",
+      "Sometimes",
+      "Rarely"
+    ],
+    "answer": 1,
+    "explain": "Ek leak se sab accounts khatre me."
+  },
+  {
+    "q": "2FA SMS ka weakness?",
+    "options": [
+      "Slow",
+      "SIM swap vulnerable",
+      "Cheap",
+      "Old"
+    ],
+    "answer": 1,
+    "explain": "SIM hijack se OTP intercept."
+  },
+  {
+    "q": "Authenticator app SMS se better kyun?",
+    "options": [
+      "Fast",
+      "Device-bound",
+      "Free",
+      "New"
+    ],
+    "answer": 1,
+    "explain": "No SIM dependency."
+  },
+  {
+    "q": "Recovery email secure rakho kyunki?",
+    "options": [
+      "Legal",
+      "Account recovery hijack",
+      "Fast",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Agar attacker recovery email access kare to full account."
+  },
+  {
+    "q": "Browser extensions risk?",
+    "options": [
+      "Fast",
+      "Data read/write",
+      "Cheap",
+      "Old"
+    ],
+    "answer": 1,
+    "explain": "Malicious extensions data chori karti."
+  },
+  {
+    "q": "App permissions audit kyun zaroori?",
+    "options": [
+      "Style",
+      "Data privacy",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Excess permission = data leak risk."
+  },
+  {
+    "q": "VPN kya karta?",
+    "options": [
+      "Antivirus",
+      "Encrypts traffic",
+      "Firewall",
+      "Spam"
+    ],
+    "answer": 1,
+    "explain": "Traffic encryption + IP hide."
+  },
+  {
+    "q": "Public WiFi pe HTTPS enough?",
+    "options": [
+      "Haan",
+      "Nahi, VPN bhi",
+      "Kabhi",
+      "Kuch nahi"
+    ],
+    "answer": 1,
+    "explain": "HTTPS + VPN dono better."
+  },
+  {
+    "q": "Evil twin WiFi kaise pehchano?",
+    "options": [
+      "Color",
+      "Duplicate naam",
+      "Speed",
+      "Password"
+    ],
+    "answer": 1,
+    "explain": "Same naam se suspicious."
+  },
+  {
+    "q": "Encrypted WiFi (WPA3) safe kya?",
+    "options": [
+      "Always",
+      "Better but not foolproof",
+      "Same",
+      "Worse"
+    ],
+    "answer": 1,
+    "explain": "Password strong rakho + HTTPS."
+  },
+  {
+    "q": "DNS spoofing se bachne ka tool?",
+    "options": [
+      "Antivirus",
+      "DNSSEC + 1.1.1.1",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": 1,
+    "explain": "Verified DNS + DNSSEC."
+  },
+  {
+    "q": "Public DNS 8.8.8.8 kiska?",
+    "options": [
+      "Amazon",
+      "Google",
+      "Microsoft",
+      "Cloudflare"
+    ],
+    "answer": 1,
+    "explain": "Google DNS."
+  },
+  {
+    "q": "1.1.1.1 kiska DNS?",
+    "options": [
+      "Google",
+      "Cloudflare",
+      "Amazon",
+      "Microsoft"
+    ],
+    "answer": 1,
+    "explain": "Cloudflare — fast + private."
+  },
+  {
+    "q": "Browser 'Safe Browsing' kya?",
+    "options": [
+      "Anti-virus",
+      "Known malicious site warning",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": 1,
+    "explain": "Google ka blocklist system."
+  },
+  {
+    "q": "Ad blocker phishing rokta?",
+    "options": [
+      "Fully",
+      "Partially (malicious ads)",
+      "Nahi",
+      "Always"
+    ],
+    "answer": 1,
+    "explain": "Malicious ads block karta."
+  },
+  {
+    "q": "Email 'SPF fail' matlab?",
+    "options": [
+      "Spam",
+      "Sender authorize nahi",
+      "Virus",
+      "Encrypted"
+    ],
+    "answer": 1,
+    "explain": "Sender authentication fail."
+  },
+  {
+    "q": "DKIM kya verify karta?",
+    "options": [
+      "Speed",
+      "Email signature",
+      "Size",
+      "Encrypt"
+    ],
+    "answer": 1,
+    "explain": "Email integrity signature."
+  },
+  {
+    "q": "DMARC policy kya?",
+    "options": [
+      "Speed",
+      "SPF + DKIM alignment",
+      "Size",
+      "Style"
+    ],
+    "answer": 1,
+    "explain": "Domain-level email authentication."
+  },
+  {
+    "q": "CEO ke naam se email — pehla check?",
+    "options": [
+      "Content",
+      "Sender address",
+      "Signature",
+      "Font"
+    ],
+    "answer": 1,
+    "explain": "Email address real domain check."
+  },
+  {
+    "q": "Vendor ka bank account change request?",
+    "options": [
+      "Process",
+      "Verbal verify first",
+      "Reply",
+      "Ignore"
+    ],
+    "answer": 1,
+    "explain": "Phone pe verify zaroori."
+  },
+  {
+    "q": "Fake invoice attack se bachne ka best way?",
+    "options": [
+      "Fast process",
+      "Dual approval",
+      "Ignore",
+      "Reply"
+    ],
+    "answer": 1,
+    "explain": "Two-person sign-off."
+  },
+  {
+    "q": "Lookalike domain check kaise?",
+    "options": [
+      "Fast",
+      "Character-by-character",
+      "Color",
+      "Font"
+    ],
+    "answer": 1,
+    "explain": "Har char dhyaan se padho."
+  },
+  {
+    "q": "Homograph attack ka example?",
+    "options": [
+      "google.com",
+      "g00gle.com",
+      "mail.google.com",
+      "gmail.com"
+    ],
+    "answer": 1,
+    "explain": "0 ki jagah O."
+  },
+  {
+    "q": "Typo-squatting ka example?",
+    "options": [
+      "google.com",
+      "gooogle.com",
+      "mail.google",
+      "gmail"
+    ],
+    "answer": 1,
+    "explain": "Extra 'o'."
+  },
+  {
+    "q": "TLD '.tk' kaisa?",
+    "options": [
+      "Safe",
+      "Free, risky",
+      "Premium",
+      "Government"
+    ],
+    "answer": 1,
+    "explain": "Free TLD — phishing common."
+  },
+  {
+    "q": "Konsa TLD sabse trusted?",
+    "options": [
+      ".tk",
+      ".com",
+      ".xyz",
+      ".gq"
+    ],
+    "answer": 1,
+    "explain": ".com mainstream + verified."
+  },
+  {
+    "q": "'.gov.in' vs 'gov-in.co.in' — konsa asli?",
+    "options": [
+      "Second",
+      "First",
+      "Dono",
+      "Koi nahi"
+    ],
+    "answer": 1,
+    "explain": ".gov.in government exclusive."
+  },
+  {
+    "q": "Email me 'unsubscribe' link safe?",
+    "options": [
+      "Always",
+      "Hover check karo",
+      "Ignore",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Hover se destination verify karo."
+  },
+  {
+    "q": "Email tracker pixel kya?",
+    "options": [
+      "Virus",
+      "1x1 image tracking opens",
+      "Spam",
+      "Encrypt"
+    ],
+    "answer": 1,
+    "explain": "Tracking open confirm karne ke liye."
+  },
+  {
+    "q": "Images block karna email me?",
+    "options": [
+      "Slow",
+      "Tracker block",
+      "Legal",
+      "Old"
+    ],
+    "answer": 1,
+    "explain": "Auto-load off karo images."
+  },
+  {
+    "q": "Email forwarding rule attack?",
+    "options": [
+      "Legal",
+      "Attacker auto-forward set",
+      "Fast",
+      "New"
+    ],
+    "answer": 1,
+    "explain": "Inbox rules se data exfiltration."
+  },
+  {
+    "q": "Mailbox rules audit kyun?",
+    "options": [
+      "Style",
+      "Detect hijack",
+      "Fast",
+      "Cheap"
+    ],
+    "answer": 1,
+    "explain": "Unexpected rules = compromise."
+  },
+  {
+    "q": "Session hijack kya?",
+    "options": [
+      "Legal",
+      "Cookie steal",
+      "Fast",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Cookie chori se account access."
+  },
+  {
+    "q": "HTTPS cookie 'Secure' flag?",
+    "options": [
+      "Style",
+      "HTTPS-only send",
+      "Fast",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Plain HTTP pe cookie nahi jaati."
+  },
+  {
+    "q": "Cookie 'HttpOnly' flag?",
+    "options": [
+      "Fast",
+      "JS access nahi",
+      "Legal",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "XSS se cookie protect."
+  },
+  {
+    "q": "CSRF attack kya?",
+    "options": [
+      "Legal",
+      "Cross-site request forgery",
+      "Fast",
+      "Virus"
+    ],
+    "answer": 1,
+    "explain": "Site pe unauthorized action."
+  },
+  {
+    "q": "Clickjacking kya?",
+    "options": [
+      "Fast",
+      "Invisible overlay click",
+      "Legal",
+      "Style"
+    ],
+    "answer": 1,
+    "explain": "Fake UI pe click karwana."
+  },
+  {
+    "q": "Phishing page kitna real dikhta?",
+    "options": [
+      "Fake",
+      "Perfect copy",
+      "Simple",
+      "Broken"
+    ],
+    "answer": 1,
+    "explain": "Brand exact copy hota."
+  },
+  {
+    "q": "Copy-pasted brand logo ka matlab?",
+    "options": [
+      "Real",
+      "Possible fake",
+      "Free",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Logo alone proof nahi."
+  },
+  {
+    "q": "Padlock icon in address bar?",
+    "options": [
+      "Site verified",
+      "Just HTTPS",
+      "Government",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Sirf HTTPS, site identity nahi."
+  },
+  {
+    "q": "EV certificate (green bar)?",
+    "options": [
+      "Full trust",
+      "Verified company",
+      "Old",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Company identity verify — still not 100%."
+  },
+  {
+    "q": "Extended Validation cert kab use?",
+    "options": [
+      "Always",
+      "Rarely (banks/govt)",
+      "Never",
+      "Only US"
+    ],
+    "answer": 1,
+    "explain": "Some banks use — mostly deprecated."
+  },
+  {
+    "q": "URL padhne ka tareeka?",
+    "options": [
+      "Left to right",
+      "Right to left (domain)",
+      "Skip",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Asli domain aakhri 2 parts."
+  },
+  {
+    "q": "Subdomain count zyada ho to?",
+    "options": [
+      "Safe",
+      "Suspicious",
+      "Fast",
+      "New"
+    ],
+    "answer": 1,
+    "explain": "Confusion create karte."
+  },
+  {
+    "q": "Path me '//' ho to?",
+    "options": [
+      "Fast",
+      "Open redirect possible",
+      "Legal",
+      "Normal"
+    ],
+    "answer": 1,
+    "explain": "Double slash = redirect trick."
+  },
+  {
+    "q": "URL me '@' ka matlab?",
+    "options": [
+      "Email",
+      "User@host — before ignored",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "google.com@evil.com = evil opens."
+  },
+  {
+    "q": "Percent-encoding zyada ho to?",
+    "options": [
+      "Normal",
+      "Obfuscated",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Hiding technique."
+  },
+  {
+    "q": "AI phishing me kitne variants bana sakte?",
+    "options": [
+      "10",
+      "1000+",
+      "50",
+      "5"
+    ],
+    "answer": 1,
+    "explain": "Scale — har email unique."
+  },
+  {
+    "q": "ChatGPT se phishing easy kyun?",
+    "options": [
+      "Free",
+      "Perfect language",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Grammar + tone + personalization."
+  },
+  {
+    "q": "Deepfake video me AV desync ka matlab?",
+    "options": [
+      "Good",
+      "Audio-video mismatch",
+      "Fast",
+      "Style"
+    ],
+    "answer": 1,
+    "explain": "Lip sync off — deepfake sign."
+  },
+  {
+    "q": "Real-time voice clone kitne audio se?",
+    "options": [
+      "1 hour",
+      "3 seconds",
+      "10 min",
+      "1 day"
+    ],
+    "answer": 1,
+    "explain": "3 sec sample kaafi 2026 me."
+  },
+  {
+    "q": "AI video conference attack ka sign?",
+    "options": [
+      "Fast",
+      "Sab faces slightly off",
+      "Legal",
+      "Normal"
+    ],
+    "answer": 1,
+    "explain": "All participants fake."
+  },
+  {
+    "q": "Multimodal attack ka matlab?",
+    "options": [
+      "Single channel",
+      "Multi-channel (email+voice+video)",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Consistent story across channels."
+  },
+  {
+    "q": "Prompt worm kya karta?",
+    "options": [
+      "Slow",
+      "Self-replicate via AI",
+      "Legal",
+      "Style"
+    ],
+    "answer": 1,
+    "explain": "AI-to-AI spread."
+  },
+  {
+    "q": "Morris II worm kis ne banaya?",
+    "options": [
+      "Google",
+      "Cornell researchers",
+      "Microsoft",
+      "Apple"
+    ],
+    "answer": 1,
+    "explain": "2024 — AI prompt worm."
+  },
+  {
+    "q": "AI browser agent hijack me?",
+    "options": [
+      "Fast",
+      "Hidden instructions in page",
+      "Legal",
+      "Slow"
+    ],
+    "answer": 1,
+    "explain": "Page me instructions AI follow karta."
+  },
+  {
+    "q": "Prompt injection OWASP list me rank?",
+    "options": [
+      "10",
+      "#1 LLM risk",
+      "5",
+      "Not listed"
+    ],
+    "answer": 1,
+    "explain": "LLM applications #1 risk."
+  },
+  {
+    "q": "AI agent ko production me kaise secure karo?",
+    "options": [
+      "Ignore",
+      "Sandbox + permissions + audit",
+      "Fast",
+      "Cheap"
+    ],
+    "answer": 1,
+    "explain": "Least privilege + monitoring."
+  },
+  {
+    "q": "Human-in-the-loop kya?",
+    "options": [
+      "AI replace",
+      "Human approval mandatory",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Sensitive actions pe human review."
+  },
+  {
+    "q": "Passkey hardware vs software?",
+    "options": [
+      "Same",
+      "Hardware more secure",
+      "Software better",
+      "Both free"
+    ],
+    "answer": 1,
+    "explain": "Hardware = phishing-proof (YubiKey)."
+  },
+  {
+    "q": "Passkey 'domain-bound' matlab?",
+    "options": [
+      "Fast",
+      "Sirf registered domain pe kaam",
+      "Free",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Phishing site pe fail."
+  },
+  {
+    "q": "Passkey backup kaise?",
+    "options": [
+      "Print",
+      "Cloud sync (iCloud/Google)",
+      "Email",
+      "None"
+    ],
+    "answer": 1,
+    "explain": "Multi-device sync hoti."
+  },
+  {
+    "q": "Passkey setup kahan se?",
+    "options": [
+      "Site settings",
+      "OS security settings",
+      "Email",
+      "VPN"
+    ],
+    "answer": 1,
+    "explain": "Device + account settings."
+  },
+  {
+    "q": "SMS OTP 'legacy' kyun?",
+    "options": [
+      "Fast",
+      "SIM swap + intercept",
+      "Legal",
+      "New"
+    ],
+    "answer": 1,
+    "explain": "Weakest 2FA."
+  },
+  {
+    "q": "WebAuthn kya?",
+    "options": [
+      "W3C standard",
+      "Browser API",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Passkey/passwordless web standard."
+  },
+  {
+    "q": "FIDO2 kya?",
+    "options": [
+      "Browser",
+      "FIDO alliance standard",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "WebAuthn + CTAP2."
+  },
+  {
+    "q": "Hardware key ka example?",
+    "options": [
+      "Google",
+      "YubiKey",
+      "Chrome",
+      "Firefox"
+    ],
+    "answer": 1,
+    "explain": "Physical USB/NFC key."
+  },
+  {
+    "q": "Quantum computer RSA kab todega?",
+    "options": [
+      "2025",
+      "2030-2035 (estimate)",
+      "2100",
+      "Never"
+    ],
+    "answer": 1,
+    "explain": "NSA/CISA timeline."
+  },
+  {
+    "q": "PQC NIST standard 2024?",
+    "options": [
+      "RSA2",
+      "ML-KEM (Kyber)",
+      "AES2",
+      "SHA3"
+    ],
+    "answer": 1,
+    "explain": "Lattice-based KEM."
+  },
+  {
+    "q": "'Harvest now decrypt later' kya?",
+    "options": [
+      "Store encrypted",
+      "Legal",
+      "Fast",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Attacker aaj copy, quantum ke baad decrypt."
+  },
+  {
+    "q": "Signal app quantum-safe kab?",
+    "options": [
+      "2010",
+      "2023 (PQXDH)",
+      "2025",
+      "Never"
+    ],
+    "answer": 1,
+    "explain": "Post-quantum extension added."
+  },
+  {
+    "q": "Chrome PQC support kab?",
+    "options": [
+      "2020",
+      "2023+",
+      "2015",
+      "Never"
+    ],
+    "answer": 1,
+    "explain": "Kyber hybrid key exchange."
+  },
+  {
+    "q": "Crypto wallet seed phrase kabhi share?",
+    "options": [
+      "Yes",
+      "Never",
+      "Sometimes",
+      "Family"
+    ],
+    "answer": 1,
+    "explain": "Seed = full wallet control."
+  },
+  {
+    "q": "Wallet connect karte waqt?",
+    "options": [
+      "Any site",
+      "Trusted only",
+      "Fast",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Fake site wallet drain karti."
+  },
+  {
+    "q": "NFT airdrop me 'approve all' se?",
+    "options": [
+      "Safe",
+      "Wallet drain",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Malicious contract."
+  },
+  {
+    "q": "Crypto me irreversible transaction?",
+    "options": [
+      "Reversible",
+      "Irreversible",
+      "Bank recover",
+      "Insurance"
+    ],
+    "answer": 1,
+    "explain": "Once sent, gone."
+  },
+  {
+    "q": "Hardware wallet use kyun?",
+    "options": [
+      "Fast",
+      "Keys offline",
+      "Cheap",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Private key never online."
+  },
+  {
+    "q": "Revoke.cash ka kaam?",
+    "options": [
+      "Revoke app tokens",
+      "Speed",
+      "Mining",
+      "VPN"
+    ],
+    "answer": 1,
+    "explain": "Old wallet approvals revoke."
+  },
+  {
+    "q": "MFA fatigue attack me attacker?",
+    "options": [
+      "Password guess",
+      "Push flood",
+      "WiFi",
+      "Email"
+    ],
+    "answer": 1,
+    "explain": "Continuous 2FA prompts."
+  },
+  {
+    "q": "Number matching kaise help?",
+    "options": [
+      "Fast",
+      "Attacker ko number nahi pata",
+      "Cheap",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Push me number prompt + app me number enter."
+  },
+  {
+    "q": "Uber MFA fatigue me attack?",
+    "options": [
+      "2018",
+      "2022",
+      "2024",
+      "2020"
+    ],
+    "answer": 1,
+    "explain": "Verified breach."
+  },
+  {
+    "q": "Cisco MFA fatigue me?",
+    "options": [
+      "Yes",
+      "No",
+      "Same",
+      "Different"
+    ],
+    "answer": 0,
+    "explain": "2022 me Cisco VPN victim."
+  },
+  {
+    "q": "MFA flood aane pe kya karo?",
+    "options": [
+      "Approve",
+      "Password change + report",
+      "Ignore",
+      "Restart"
+    ],
+    "answer": 1,
+    "explain": "Attacker ke paas password hai."
+  },
+  {
+    "q": "SIM swap me attacker?",
+    "options": [
+      "Password",
+      "Number port",
+      "VPN",
+      "WiFi"
+    ],
+    "answer": 1,
+    "explain": "Victim number attacker SIM pe."
+  },
+  {
+    "q": "Carrier PIN lock help?",
+    "options": [
+      "Fast",
+      "SIM swap rokta",
+      "Free",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Additional layer."
+  },
+  {
+    "q": "Bank 'voice print' secure?",
+    "options": [
+      "Always",
+      "Deepfake se vulnerable",
+      "Fast",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "AI voice clone defeat kar sakti."
+  },
+  {
+    "q": "Video KYC se bypass?",
+    "options": [
+      "Easy",
+      "Deepfake possible",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Banks me issue."
+  },
+  {
+    "q": "Liveness check ka matlab?",
+    "options": [
+      "Fast",
+      "Real person verify",
+      "Legal",
+      "Cheap"
+    ],
+    "answer": 1,
+    "explain": "Random challenge se deepfake defeat."
+  },
+  {
+    "q": "3D depth camera liveness?",
+    "options": [
+      "Same",
+      "Better",
+      "Worse",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Face depth se 2D spoof rok."
+  },
+  {
+    "q": "Digital arrest scam ka sign?",
+    "options": [
+      "Video call police",
+      "Money demand",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 0,
+    "explain": "Fake CBI/police video call."
+  },
+  {
+    "q": "'Court notice' WhatsApp pe?",
+    "options": [
+      "Real",
+      "Fake",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Court WhatsApp pe notice nahi bhejta."
+  },
+  {
+    "q": "Lottery win message?",
+    "options": [
+      "Real",
+      "Scam",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Jeeta nahi to jeeta nahi."
+  },
+  {
+    "q": "Work from home 'no investment' but fee?",
+    "options": [
+      "Real",
+      "Scam",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Upfront fee = scam."
+  },
+  {
+    "q": "'Free Netflix' link se?",
+    "options": [
+      "Free",
+      "Credentials chori",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Too-good-to-be-true."
+  },
+  {
+    "q": "Instagram giveaway DM?",
+    "options": [
+      "Real",
+      "Scam",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Fake account."
+  },
+  {
+    "q": "Crypto 'double money' scheme?",
+    "options": [
+      "Real",
+      "Ponzi/scam",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Guaranteed returns = scam."
+  },
+  {
+    "q": "Fake job offer me typical ask?",
+    "options": [
+      "Resume",
+      "Fee or credentials",
+      "Photo",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Registration fee = red flag."
+  },
+  {
+    "q": "Real job me Aadhaar initial stage pe?",
+    "options": [
+      "Normal",
+      "Suspicious",
+      "Legal",
+      "Standard"
+    ],
+    "answer": 1,
+    "explain": "Joining ke baad hi verify."
+  },
+  {
+    "q": "Interview fee maange to?",
+    "options": [
+      "Pay",
+      "Scam",
+      "Legal",
+      "Discount"
+    ],
+    "answer": 1,
+    "explain": "Legit companies fee nahi leti."
+  },
+  {
+    "q": "Fake HR email ka sign?",
+    "options": [
+      "Logo",
+      "Generic domain",
+      "Fast",
+      "Fancy"
+    ],
+    "answer": 1,
+    "explain": "company-hr.co type domain."
+  },
+  {
+    "q": "Amazon 'seller' verification scam?",
+    "options": [
+      "Real",
+      "Fake",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Amazon seller email se nahi."
+  },
+  {
+    "q": "'Your parcel on hold' SMS?",
+    "options": [
+      "Real",
+      "Likely scam",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Courier SMS me link nahi bhejta."
+  },
+  {
+    "q": "'Aapka KYC expire' SMS me?",
+    "options": [
+      "Link click",
+      "Bank app use",
+      "Call",
+      "Reply"
+    ],
+    "answer": 1,
+    "explain": "Official app pe login karo."
+  },
+  {
+    "q": "ITR refund SMS me link?",
+    "options": [
+      "Click",
+      "Don't click",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "IT Dept SMS me link nahi."
+  },
+  {
+    "q": "Bank SMS me shortened URL?",
+    "options": [
+      "Real",
+      "Suspicious",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Banks direct shortlinks nahi bhejti."
+  },
+  {
+    "q": "Phone call 'Amazon refund' me?",
+    "options": [
+      "Give OTP",
+      "Hang up + app",
+      "Pay",
+      "Wait"
+    ],
+    "answer": 1,
+    "explain": "Call cut karo, app check karo."
+  },
+  {
+    "q": "Tech support 'Microsoft' call?",
+    "options": [
+      "Trust",
+      "Ignore",
+      "Remote install",
+      "Pay"
+    ],
+    "answer": 1,
+    "explain": "Microsoft kabhi call nahi karta."
+  },
+  {
+    "q": "Remote access app mangna?",
+    "options": [
+      "Normal",
+      "Red flag",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "AnyDesk/TeamViewer = scam sign."
+  },
+  {
+    "q": "'Gift card se pay karo' request?",
+    "options": [
+      "Normal",
+      "Scam",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Gift cards = irreversible + untraceable."
+  },
+  {
+    "q": "Crypto only payment demand?",
+    "options": [
+      "Normal",
+      "Scam",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Irreversible crypto = scam red flag."
+  },
+  {
+    "q": "Wire transfer 'confidential' urge?",
+    "options": [
+      "Normal",
+      "Verify first",
+      "Send",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Secrecy + urgency = BEC."
+  },
+  {
+    "q": "CEO 'meeting me hoon' wire?",
+    "options": [
+      "Send",
+      "Verify callback",
+      "Legal",
+      "Trust"
+    ],
+    "answer": 1,
+    "explain": "Classic BEC line."
+  },
+  {
+    "q": "Vendor 'bank change' email?",
+    "options": [
+      "Update",
+      "Verbal verify",
+      "Reply",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Callback se verify zaroori."
+  },
+  {
+    "q": "Dual approval ka fayda?",
+    "options": [
+      "Fast",
+      "Fraud rok",
+      "Legal",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Two-person sign-off."
+  },
+  {
+    "q": "Accounts payable ko train kyun?",
+    "options": [
+      "Style",
+      "BEC target",
+      "Legal",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Primary target of BEC."
+  },
+  {
+    "q": "Email forwarding rule check?",
+    "options": [
+      "Optional",
+      "Critical",
+      "Legal",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Malicious auto-forwards detect."
+  },
+  {
+    "q": "Email 'SPF softfail' matlab?",
+    "options": [
+      "Good",
+      "Sender partially authorized",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Suspicious sender."
+  },
+  {
+    "q": "DMARC 'quarantine' policy?",
+    "options": [
+      "Spam folder",
+      "Reject",
+      "Deliver",
+      "Forward"
+    ],
+    "answer": 0,
+    "explain": "Suspicious email spam folder me."
+  },
+  {
+    "q": "DMARC 'reject' policy?",
+    "options": [
+      "Deliver",
+      "Block",
+      "Spam",
+      "Forward"
+    ],
+    "answer": 1,
+    "explain": "Hard block — best policy."
+  },
+  {
+    "q": "Email header kaun sa sabse important?",
+    "options": [
+      "Subject",
+      "Received + From",
+      "Signature",
+      "Date"
+    ],
+    "answer": 1,
+    "explain": "Path + sender address."
+  },
+  {
+    "q": "'Received' header order?",
+    "options": [
+      "Bottom-up",
+      "Top-down",
+      "Random",
+      "Same"
+    ],
+    "answer": 1,
+    "explain": "Latest received top pe."
+  },
+  {
+    "q": "Google 'Show original' kahan?",
+    "options": [
+      "Settings",
+      "3-dot menu",
+      "Right click",
+      "Toolbar"
+    ],
+    "answer": 1,
+    "explain": "Full email headers view."
+  },
+  {
+    "q": "Email me BCC me kyun daalte?",
+    "options": [
+      "Style",
+      "Privacy",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Aur log ko dikhe bina."
+  },
+  {
+    "q": "Phishing me attachment vs link?",
+    "options": [
+      "Same",
+      "Both dangerous",
+      "Attachment safer",
+      "Link safer"
+    ],
+    "answer": 1,
+    "explain": "Dono risk hain."
+  },
+  {
+    "q": "Macro-enabled Office file?",
+    "options": [
+      "Safe",
+      "Dangerous",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "VBA macro = malware vector."
+  },
+  {
+    "q": "Enable editing/Enable content click?",
+    "options": [
+      "Yes",
+      "No, avoid",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Macro execute ho sakta."
+  },
+  {
+    "q": "PDF me embedded link?",
+    "options": [
+      "Safe",
+      "Dangerous",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "PDF link bhi phishing."
+  },
+  {
+    "q": "ZIP file password?",
+    "options": [
+      "Safe",
+      "Bypasses AV",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Encrypted ZIP = AV scan bypass."
+  },
+  {
+    "q": "'Invoice.pdf' but 2MB+ size?",
+    "options": [
+      "Normal",
+      "Suspicious",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "PDF me executable chhupa ho sakta."
+  },
+  {
+    "q": "File extension hidden option?",
+    "options": [
+      "Default",
+      "Turn off",
+      "Legal",
+      "Fast"
+    ],
+    "answer": 1,
+    "explain": "Windows me extensions show karo."
+  },
+  {
+    "q": "File magic bytes check?",
+    "options": [
+      "Fast",
+      "Real file type",
+      "Legal",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Extension vs actual type."
+  },
+  {
+    "q": "VirusTotal ka kaam?",
+    "options": [
+      "Antivirus",
+      "Multi-engine scan",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "70+ engines ek jagah."
+  },
+  {
+    "q": "VirusTotal pe sensitive file upload?",
+    "options": [
+      "OK",
+      "Avoid",
+      "Fast",
+      "Legal"
+    ],
+    "answer": 1,
+    "explain": "Data public ho jaata."
+  },
+  {
+    "q": "Sandbox me file open kyun?",
+    "options": [
+      "Fast",
+      "Isolated test",
+      "Legal",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Safe environment me behavior dekho."
+  },
+  {
+    "q": "EDR kya?",
+    "options": [
+      "Antivirus",
+      "Endpoint Detection & Response",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Advanced endpoint security."
+  },
+  {
+    "q": "XDR kya?",
+    "options": [
+      "Virus",
+      "Extended Detection & Response",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Cross-platform threat detection."
+  },
+  {
+    "q": "SIEM kya?",
+    "options": [
+      "VPN",
+      "Security Info & Event Mgmt",
+      "Firewall",
+      "Antivirus"
+    ],
+    "answer": 1,
+    "explain": "Log aggregation + analysis."
+  },
+  {
+    "q": "SOAR kya?",
+    "options": [
+      "Virus",
+      "Security Orchestration Auto Response",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Automated security response."
+  },
+  {
+    "q": "IOC kya?",
+    "options": [
+      "Virus",
+      "Indicator of Compromise",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Malicious IP/domain/hash."
+  },
+  {
+    "q": "TTP matlab?",
+    "options": [
+      "Tools",
+      "Tactics, Techniques, Procedures",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "MITRE ATT&CK me use."
+  },
+  {
+    "q": "MITRE ATT&CK kya?",
+    "options": [
+      "Virus",
+      "Knowledge base of TTPs",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Adversary behavior framework."
+  },
+  {
+    "q": "Cyber kill chain ka pehla phase?",
+    "options": [
+      "Exploit",
+      "Reconnaissance",
+      "Delivery",
+      "Action"
+    ],
+    "answer": 1,
+    "explain": "Recce se shuru hoti attack."
+  },
+  {
+    "q": "'Defense in depth' matlab?",
+    "options": [
+      "One tool",
+      "Layered security",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Multiple layers of protection."
+  },
+  {
+    "q": "Zero Trust principle?",
+    "options": [
+      "Trust all",
+      "Never trust, always verify",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Har request verify."
+  },
+  {
+    "q": "Least privilege principle?",
+    "options": [
+      "Admin all",
+      "Minimum needed access",
+      "VPN",
+      "Firewall"
+    ],
+    "answer": 1,
+    "explain": "Jitna zaroori utna access."
+  },
+  {
+    "q": "Security awareness training kyun?",
+    "options": [
+      "Legal",
+      "Human firewall",
+      "VPN",
+      "Free"
+    ],
+    "answer": 1,
+    "explain": "Employees = first line of defense."
+  },
+  {
+    "q": "Simulated phishing campaign kya?",
+    "options": [
+      "Real attack",
+      "Training exercise",
+      "Legal",
+      "Illegal"
+    ],
+    "answer": 1,
+    "explain": "Employees ko test + train karne ke liye."
+  }
+]

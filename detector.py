@@ -484,3 +484,420 @@ def detect(url):
     else: v,c = "PHISHING","red"
     return {"url":url,"risk":score,"verdict":v,"color":c,
             "findings":findings,"host":_host_of(url)[0]}
+
+
+# ============================================================
+# PASSWORD STRENGTH CHECKER
+# ============================================================
+def analyze_password(password):
+    """Analyze password strength. Returns score 0-100 + feedback."""
+    if not password:
+        return {"score": 0, "label": "EMPTY", "color": "red", "issues": [], "tips": []}
+
+    score = 0
+    issues = []
+    tips = []
+    p = password
+
+    # Length
+    length = len(p)
+    if length < 8:
+        issues.append(f"Bahut chhota ({length} chars)")
+        tips.append("8+ characters rakho (12+ better)")
+    elif length < 12:
+        score += 15
+        tips.append("12+ characters recommended")
+    elif length < 16:
+        score += 25
+    else:
+        score += 35
+
+    # Character types
+    has_lower = any(c.islower() for c in p)
+    has_upper = any(c.isupper() for c in p)
+    has_digit = any(c.isdigit() for c in p)
+    has_symbol = any(c in "!@#$%^&*()_+-=[]{}|;:',.<>/?~`" for c in p)
+    types = sum([has_lower, has_upper, has_digit, has_symbol])
+    score += types * 10
+
+    if not has_lower: tips.append("Lowercase letters add karo")
+    if not has_upper: tips.append("Uppercase letters add karo")
+    if not has_digit: tips.append("Numbers add karo")
+    if not has_symbol: tips.append("Symbols add karo (!@#$...)")
+
+    # Common passwords
+    common = ["password", "123456", "qwerty", "admin", "letmein", "welcome",
+              "monkey", "dragon", "master", "sunshine", "iloveyou", "abc123",
+              "12345678", "1234567890", "football", "baseball", "starwars"]
+    pl = p.lower()
+    if pl in common:
+        return {"score": 5, "label": "COMMON", "color": "red",
+                "issues": ["Ye password top-100 common list me hai"],
+                "tips": ["Turant change karo"]}
+    for c in common:
+        if c in pl and len(c) >= 4:
+            issues.append(f"'{c}' common word hai")
+            score -= 15
+
+    # Patterns
+    if re.search(r"(.)\1{2,}", p):
+        issues.append("Repeated characters (aaa, 111)")
+        score -= 10
+    if re.search(r"(012|123|234|345|456|567|678|789|890|abc|bcd|cde|def|xyz)", pl):
+        issues.append("Sequential pattern (123, abc)")
+        score -= 10
+    if re.search(r"(qwerty|asdf|zxcv|poiu|lkjh)", pl):
+        issues.append("Keyboard pattern (qwerty, asdf)")
+        score -= 15
+
+    # Bonus: passphrase (4+ words)
+    words = p.split()
+    if len(words) >= 4:
+        score += 15
+        tips.append("Passphrase detect hua — good!")
+
+    score = max(0, min(100, score))
+
+    # Label
+    if score < 25: label, color = "VERY WEAK", "red"
+    elif score < 45: label, color = "WEAK", "red"
+    elif score < 65: label, color = "MEDIUM", "orange"
+    elif score < 85: label, color = "STRONG", "green"
+    else: label, color = "VERY STRONG", "green"
+
+    # Estimate crack time (rough)
+    charset = 0
+    if has_lower: charset += 26
+    if has_upper: charset += 26
+    if has_digit: charset += 10
+    if has_symbol: charset += 32
+    if charset == 0: charset = 26
+    combinations = charset ** length
+    guesses_per_sec = 1e10  # 10 billion/sec (modern GPU)
+    seconds = combinations / guesses_per_sec / 2
+
+    def fmt_time(s):
+        if s < 1: return "instant"
+        if s < 60: return f"{int(s)} seconds"
+        if s < 3600: return f"{int(s/60)} minutes"
+        if s < 86400: return f"{int(s/3600)} hours"
+        if s < 2592000: return f"{int(s/86400)} days"
+        if s < 31536000: return f"{int(s/2592000)} months"
+        if s < 31536000*1000: return f"{int(s/31536000)} years"
+        return "centuries+"
+
+    return {
+        "score": score, "label": label, "color": color,
+        "issues": issues, "tips": tips[:4],
+        "length": length, "types": types,
+        "crack_time": fmt_time(seconds),
+        "entropy": round(length * (charset.bit_length() - 1), 1),
+    }
+
+
+# ============================================================
+# EMAIL PHISHING ANALYZER
+# ============================================================
+def analyze_email(text):
+    """Analyze email text for phishing indicators. Returns findings."""
+    if not text or not text.strip():
+        return {"score": 0, "findings": [], "verdict": "EMPTY"}
+
+    text_l = text.lower()
+    findings = []
+    score = 0
+
+    # Check 1: Urgency words
+    urgency = ["urgent", "immediately", "act now", "24 hours", "48 hours",
+               "today only", "expires", "final notice", "last warning",
+               "turant", "abhi", "jaldi", "khatam"]
+    hits = [w for w in urgency if w in text_l]
+    if hits:
+        findings.append({
+            "level": "warn", "msg": f"Urgency words: {', '.join(hits[:4])}",
+            "detail": "Phishing aksar urgency create karta hai."
+        })
+        score += 15
+
+    # Check 2: Threats
+    threats = ["account will be", "suspend", "blocked", "deleted",
+               "legal action", "arrest", "penalty", "freeze",
+               "band ho", "block ho", "delete ho"]
+    hits = [w for w in threats if w in text_l]
+    if hits:
+        findings.append({
+            "level": "warn", "msg": f"Threat language: {', '.join(hits[:3])}",
+            "detail": "Fear exploit karna phishing ka common trick."
+        })
+        score += 15
+
+    # Check 3: Requests for sensitive info
+    sensitive = ["otp", "password", "pin", "cvv", "credit card",
+                 "aadhaar", "pan", "ssn", "net banking",
+                 "seed phrase", "recovery phrase", "private key"]
+    hits = [w for w in sensitive if w in text_l]
+    if hits:
+        findings.append({
+            "level": "critical", "msg": f"Sensitive info request: {', '.join(hits[:3])}",
+            "detail": "Koi bhi legitimate org email se OTP/password nahi maangta."
+        })
+        score += 40
+
+    # Check 4: Links
+    urls = re.findall(r"https?://[^\s\)\]\}]+", text)
+    if urls:
+        for url in urls[:5]:
+            r = detect(url)
+            if r["risk"] >= 40:
+                findings.append({
+                    "level": "critical",
+                    "msg": f"Suspicious URL: {url[:60]}",
+                    "detail": f"Risk {r['risk']}/100 — {r['verdict']}"
+                })
+                score += 25
+            elif r["risk"] >= 15:
+                findings.append({
+                    "level": "warn",
+                    "msg": f"URL check: {url[:60]}",
+                    "detail": f"Risk {r['risk']}/100 — {', '.join(f['msg'] for f in r['findings'][:2])}"
+                })
+                score += 10
+
+    # Check 5: Generic greeting
+    generic = ["dear customer", "dear user", "dear member", "dear sir/madam",
+               "valued customer", "dear account holder", "dear taxpayer"]
+    hits = [w for w in generic if w in text_l]
+    if hits:
+        findings.append({
+            "level": "warn", "msg": f"Generic greeting: {hits[0]}",
+            "detail": "Asli companies aapka naam use karti hain."
+        })
+        score += 10
+
+    # Check 6: Too-good-to-be-true
+    bait = ["free", "winner", "won ", "prize", "lottery", "claim",
+            "gift card", "cash reward", "lottery", "£", "crore", "lakh"]
+    hits = [w for w in bait if w in text_l]
+    if hits:
+        findings.append({
+            "level": "warn", "msg": f"Bait words: {', '.join(hits[:3])}",
+            "detail": "Free money/prize offers mostly scams hote hain."
+        })
+        score += 10
+
+    # Check 7: Suspicious sender patterns
+    if re.search(r"@[\w-]+\.(tk|ml|ga|cf|gq|xyz|top|click)\b", text_l):
+        findings.append({
+            "level": "critical",
+            "msg": "Sender domain sasta/free TLD",
+            "detail": ".tk, .ml, .xyz jaise TLD phishing me common."
+        })
+        score += 30
+
+    # Check 8: Misleading display names
+    if re.search(r'["\']?(amazon|paypal|google|microsoft|apple|netflix|hdfc|sbi|icici)["\']?\s*<[\w.-]+@(?!\1)', text_l):
+        findings.append({
+            "level": "critical",
+            "msg": "Brand name with non-brand email",
+            "detail": "Display name asli, par email address alag domain."
+        })
+        score += 30
+
+    score = min(score, 100)
+    if score == 0: verdict, color = "LOOKS SAFE", "green"
+    elif score < 25: verdict, color = "LOW RISK", "yellow"
+    elif score < 55: verdict, color = "SUSPICIOUS", "orange"
+    else: verdict, color = "LIKELY PHISHING", "red"
+
+    return {
+        "score": score, "verdict": verdict, "color": color,
+        "findings": findings,
+        "url_count": len(urls),
+    }
+
+
+# ============================================================
+# PASSWORD STRENGTH CHECKER
+# ============================================================
+def analyze_password(password):
+    """Analyze password strength. Returns score 0-100 + feedback."""
+    if not password:
+        return {"score": 0, "label": "EMPTY", "color": "red", "issues": [], "tips": []}
+
+    score = 0
+    issues = []
+    tips = []
+    p = password
+    length = len(p)
+
+    if length < 8:
+        issues.append("Bahut chhota (" + str(length) + " chars)")
+        tips.append("8+ characters rakho (12+ better)")
+    elif length < 12:
+        score += 15
+        tips.append("12+ characters recommended")
+    elif length < 16:
+        score += 25
+    else:
+        score += 35
+
+    has_lower = any(c.islower() for c in p)
+    has_upper = any(c.isupper() for c in p)
+    has_digit = any(c.isdigit() for c in p)
+    has_symbol = any(c in "!@#$%^&*()_+-=[]{}|;:',.<>/?~`" for c in p)
+    types = sum([has_lower, has_upper, has_digit, has_symbol])
+    score += types * 10
+
+    if not has_lower: tips.append("Lowercase letters add karo")
+    if not has_upper: tips.append("Uppercase letters add karo")
+    if not has_digit: tips.append("Numbers add karo")
+    if not has_symbol: tips.append("Symbols add karo")
+
+    common = ["password", "123456", "qwerty", "admin", "letmein", "welcome",
+              "monkey", "dragon", "master", "sunshine", "iloveyou", "abc123",
+              "12345678", "1234567890", "football", "baseball", "starwars"]
+    pl = p.lower()
+    if pl in common:
+        return {"score": 5, "label": "COMMON", "color": "red",
+                "issues": ["Ye password top-100 common list me hai"],
+                "tips": ["Turant change karo"],
+                "length": length, "types": types,
+                "crack_time": "instant", "entropy": 0}
+
+    for cw in common:
+        if cw in pl and len(cw) >= 4:
+            issues.append("'" + cw + "' common word hai")
+            score -= 15
+
+    if re.search(r"(.)\1{2,}", p):
+        issues.append("Repeated characters (aaa, 111)")
+        score -= 10
+    if re.search(r"(012|123|234|345|456|567|678|789|890|abc|bcd|cde|def|xyz)", pl):
+        issues.append("Sequential pattern (123, abc)")
+        score -= 10
+    if re.search(r"(qwerty|asdf|zxcv|poiu|lkjh)", pl):
+        issues.append("Keyboard pattern (qwerty, asdf)")
+        score -= 15
+
+    words = p.split()
+    if len(words) >= 4:
+        score += 15
+        tips.append("Passphrase detect hua — good!")
+
+    score = max(0, min(100, score))
+
+    if score < 25: label, color = "VERY WEAK", "red"
+    elif score < 45: label, color = "WEAK", "red"
+    elif score < 65: label, color = "MEDIUM", "orange"
+    elif score < 85: label, color = "STRONG", "green"
+    else: label, color = "VERY STRONG", "green"
+
+    charset = 0
+    if has_lower: charset += 26
+    if has_upper: charset += 26
+    if has_digit: charset += 10
+    if has_symbol: charset += 32
+    if charset == 0: charset = 26
+    combinations = charset ** length
+    guesses_per_sec = 1e10
+    seconds = combinations / guesses_per_sec / 2
+
+    def fmt_time(s):
+        if s < 1: return "instant"
+        if s < 60: return str(int(s)) + " seconds"
+        if s < 3600: return str(int(s/60)) + " minutes"
+        if s < 86400: return str(int(s/3600)) + " hours"
+        if s < 2592000: return str(int(s/86400)) + " days"
+        if s < 31536000: return str(int(s/2592000)) + " months"
+        if s < 31536000*1000: return str(int(s/31536000)) + " years"
+        return "centuries+"
+
+    return {
+        "score": score, "label": label, "color": color,
+        "issues": issues, "tips": tips[:4],
+        "length": length, "types": types,
+        "crack_time": fmt_time(seconds),
+        "entropy": round(length * (charset.bit_length() - 1), 1),
+    }
+
+
+# ============================================================
+# EMAIL PHISHING ANALYZER
+# ============================================================
+def analyze_email(text):
+    """Analyze email text for phishing indicators."""
+    if not text or not text.strip():
+        return {"score": 0, "findings": [], "verdict": "EMPTY", "color": "green", "url_count": 0}
+
+    text_l = text.lower()
+    findings = []
+    score = 0
+
+    urgency = ["urgent", "immediately", "act now", "24 hours", "48 hours",
+               "today only", "expires", "final notice", "last warning",
+               "turant", "abhi", "jaldi", "khatam"]
+    hits = [w for w in urgency if w in text_l]
+    if hits:
+        findings.append({"level": "warn", "msg": "Urgency words: " + ", ".join(hits[:4]),
+                         "detail": "Phishing aksar urgency create karta hai."})
+        score += 15
+
+    threats = ["account will be", "suspend", "blocked", "deleted",
+               "legal action", "arrest", "penalty", "freeze",
+               "band ho", "block ho", "delete ho"]
+    hits = [w for w in threats if w in text_l]
+    if hits:
+        findings.append({"level": "warn", "msg": "Threat language: " + ", ".join(hits[:3]),
+                         "detail": "Fear exploit karna phishing ka common trick."})
+        score += 15
+
+    sensitive = ["otp", "password", "pin", "cvv", "credit card",
+                 "aadhaar", "pan", "ssn", "net banking",
+                 "seed phrase", "recovery phrase", "private key"]
+    hits = [w for w in sensitive if w in text_l]
+    if hits:
+        findings.append({"level": "critical", "msg": "Sensitive info request: " + ", ".join(hits[:3]),
+                         "detail": "Koi bhi legitimate org email se OTP/password nahi maangta."})
+        score += 40
+
+    urls = re.findall(r"https?://[^\s\)\]\}]+", text)
+    for url in urls[:5]:
+        r = detect(url)
+        if r["risk"] >= 40:
+            findings.append({"level": "critical", "msg": "Suspicious URL: " + url[:60],
+                             "detail": "Risk " + str(r["risk"]) + "/100 — " + r["verdict"]})
+            score += 25
+        elif r["risk"] >= 15:
+            findings.append({"level": "warn", "msg": "URL check: " + url[:60],
+                             "detail": "Risk " + str(r["risk"]) + "/100"})
+            score += 10
+
+    generic = ["dear customer", "dear user", "dear member", "dear sir/madam",
+               "valued customer", "dear account holder", "dear taxpayer"]
+    hits = [w for w in generic if w in text_l]
+    if hits:
+        findings.append({"level": "warn", "msg": "Generic greeting: " + hits[0],
+                         "detail": "Asli companies aapka naam use karti hain."})
+        score += 10
+
+    bait = ["free", "winner", "won ", "prize", "lottery", "claim",
+            "gift card", "cash reward", "crore", "lakh"]
+    hits = [w for w in bait if w in text_l]
+    if hits:
+        findings.append({"level": "warn", "msg": "Bait words: " + ", ".join(hits[:3]),
+                         "detail": "Free money/prize offers mostly scams hote hain."})
+        score += 10
+
+    if re.search(r"@[\w-]+\.(tk|ml|ga|cf|gq|xyz|top|click)\b", text_l):
+        findings.append({"level": "critical", "msg": "Sender domain sasta/free TLD",
+                         "detail": ".tk, .ml, .xyz jaise TLD phishing me common."})
+        score += 30
+
+    score = min(score, 100)
+    if score == 0: verdict, color = "LOOKS SAFE", "green"
+    elif score < 25: verdict, color = "LOW RISK", "yellow"
+    elif score < 55: verdict, color = "SUSPICIOUS", "orange"
+    else: verdict, color = "LIKELY PHISHING", "red"
+
+    return {"score": score, "verdict": verdict, "color": color,
+            "findings": findings, "url_count": len(urls)}
